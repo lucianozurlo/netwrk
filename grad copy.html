@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .circular-div {
+            width: 785.5px;
+            height: 785.5px;
+            border-radius: 10px;
+            background: linear-gradient(284.59deg, rgba(255, 255, 255, 0.06) 15%, rgba(17, 17, 17, 0) 100%);
+            position: relative;
+            margin: 50px auto;
+            /* filter: blur(37.5px); */
+        }
+
+        .circular-div::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 10px;
+            background: linear-gradient(130deg, rgba(255, 255, 255, 0.95) 0%, #22222200 40%, #22222200 60%, rgba(255, 255, 255, 0.3) 100%);
+            mask:
+                radial-gradient(circle, transparent 70.3%, black 71%);
+            -webkit-mask:
+                radial-gradient(circle, transparent 70.3%, black 71%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circular-div"></div>
+
+</body>
+
+</html>
