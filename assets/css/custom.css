@@ -17,7 +17,7 @@ body {
 }
 
 main {
-    background: linear-gradient(180deg, #222 0%, #000 70.88%), #fff;
+    /* background: linear-gradient(180deg, #222 0%, #000 70.88%), #fff; */
 }
 
 header {
@@ -299,7 +299,7 @@ header #navbarNav .offcanvas-body ul li a {
     max-height: 88%;
 }
 
-
+/* 
 #aboutus .container {
     display: flex;
     flex-direction: column;
@@ -356,7 +356,7 @@ header #navbarNav .offcanvas-body ul li a {
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-}
+} */
 
 /* #aboutus .cards .cards-content {
     width: 100%;
@@ -366,7 +366,7 @@ header #navbarNav .offcanvas-body ul li a {
     padding: 0 12px;
     width: 100%;
 } */
-
+/* 
 #aboutus .cards .card-body {
     padding: 0 12px;
     width: 100%;
@@ -465,4 +465,4 @@ header #navbarNav .offcanvas-body ul li a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
+} */

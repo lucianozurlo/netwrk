@@ -1,0 +1,70 @@
+/** INVESTORS **/
+#investors .investors-container {
+    max-width: 1118.21px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 64px 48px;
+    transition: all .2s ease-in-out;
+}
+
+#investors .style-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    color: #fff !important;
+    border-radius: 19.4px;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+}
+
+
+#investors .style-content img {
+    z-index: 1111;
+    width: 80%;
+    max-height: 65%;
+    transition: all .2s ease-in-out;
+}
+
+#investors .style-content:before {
+    border-radius: 19.4px;
+    z-index: 11111111;
+    cursor: pointer;
+    background: linear-gradient(160deg,
+            #ffffff80 0%,
+            #22222200 33%,
+            #22222200 60%,
+            #ffffff24 100%);
+    transition: all .2s ease-in-out;
+}
+
+#investors .style-content:hover:before {
+    background: linear-gradient(160deg,
+            #ffffffed 0%,
+            #22222200 33%,
+            #22222200 60%,
+            #ffffff80 100%);
+}
+
+#investors .style-content:hover,
+#investors .style-content:active {
+    border-radius: 19.4px;
+    transition: all .2s ease-in-out;
+}
+
+#investors .investors-container a {
+    width: 340.74px;
+    height: 129.31px;
+    border-radius: 19.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+
+#investors .style-fill {
+    border-radius: 19.4px;
+}

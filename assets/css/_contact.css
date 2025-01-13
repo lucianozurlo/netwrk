@@ -1,22 +1,21 @@
-/** ABOUT US **/
-#aboutus .allcards {
+/** SERVICES **/
+#services .allcards {
     display: flex;
     padding-top: 130px;
     width: 1128px;
     gap: 24px;
 }
 
-#aboutus .allcards h3 {
+#services .allcards h3 {
     font-family: 'PP Telegraf';
     font-weight: 800;
     font-size: 24px;
     line-height: 33px;
     margin: 0 0 17px;
     letter-spacing: .5px;
-    color: #fff !important;
 }
 
-#aboutus .allcards p {
+#services .allcards p {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 16px;
@@ -25,7 +24,7 @@
     margin: 0;
 }
 
-#aboutus .cardX {
+#services .card {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -33,24 +32,19 @@
     position: relative;
     color: #fff !important;
     border-radius: 10px;
-
-    background-color: unset !important;
-
-
-
     transition: all .2s ease-in-out;
 }
 
-#aboutus .cardX:before {
+#services .card:before {
     border-radius: 10px;
 }
 
-#aboutus .cardX:hover,
-#aboutus .cardX:active {
+#services .card:hover,
+#services .card:active {
     border-radius: 10px;
 }
 
-#aboutus .card-image {
+#services .card-image {
     transform: translateY(-60px) !important;
     width: 100px;
     height: 100px;
@@ -63,7 +57,7 @@
     transition: all .2s ease-in-out;
 }
 
-#aboutus .card-image:before {
+#services .card-image:before {
     content: "";
     position: absolute;
     top: 0;
@@ -81,15 +75,15 @@
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
-    z-index: 3;
+    z-index: -1;
 }
 
-#aboutus .card-image .style-fill {
+#services .card-image .style-fill {
     border-radius: 50%;
 }
 
-#aboutus .cardX:hover .card-image,
-#aboutus .cardX:active .card-image {
+#services .card:hover .card-image,
+#services .card:active .card-image {
     top: 0;
     left: 0;
     right: 0;
@@ -102,12 +96,12 @@
     left: calc(50% - 50px);
 }
 
-#aboutus .card-image img {
+#services .card-image img {
     width: 55px;
     z-index: 4;
 }
 
-#aboutus .card-body {
+#services .card-body {
     padding: 85px 45px 82px 35px;
     display: flex;
     flex-direction: column;
@@ -116,12 +110,12 @@
     z-index: 2;
 }
 
-#aboutus .style-content:hover .card-image:before,
-#aboutus .style-content:active .card-image:before {
+.style-content:hover .card-image:before,
+.style-content:active .card-image:before {
     background: linear-gradient(130deg,
             #ffffffed 0%,
             #22222200 30%,
             #22222200 60%,
             #ffffff80 100%);
-    z-index: 3;
+    z-index: -5;
 }

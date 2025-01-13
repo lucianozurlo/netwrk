@@ -1,0 +1,85 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+h3 {
+    color: #fff !important;
+}
+
+/* STYLES */
+
+.style-content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.25px;
+    background: linear-gradient(130deg,
+            #ffffff80 0%,
+            #22222200 30%,
+            #22222200 60%,
+            #ffffff24 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 2;
+}
+
+.style-content:hover,
+.style-content:active {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.style-content:hover:before,
+.style-content:active:before {
+    background: linear-gradient(130deg,
+            #ffffffed 0%,
+            #22222200 30%,
+            #22222200 60%,
+            #ffffff80 100%);
+    z-index: 5;
+}
+
+.style-fill {
+    position: absolute;
+    background: linear-gradient(284.59deg,
+            #ffffff0d 0%,
+            #11111100 100%);
+    opacity: 1 !important;
+    background-color: #111 !important;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.style-fill.style-hover {
+    background: linear-gradient(284.59deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    opacity: 0 !important;
+    z-index: 1;
+    transition: all .35s ease-in-out;
+}
+
+.style-content:hover .style-fill {
+    opacity: 0;
+}
+
+.style-content:hover .style-fill.style-hover {
+    opacity: 1 !important;
+}
+
+.style-content:hover .style-fill.style-hover.bs {
+    box-shadow: 0 0 22px #ffffff55;
+}
