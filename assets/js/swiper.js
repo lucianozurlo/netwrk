@@ -79,11 +79,11 @@ function initializeSwipers (containerSelector) {
 
       if (containerSelector === '#tools') {
         container.style.maxWidth = swiper.activeIndex === 2
-          ? '760px'
+          ? '857px'
           : '1150px';
       } else {
         container.style.maxWidth = swiper.activeIndex === 1
-          ? '760px'
+          ? '857px'
           : '1150px';
       }
 

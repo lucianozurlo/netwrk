@@ -3,23 +3,13 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Netwrk</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-	<link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
-	<link rel="stylesheet" media="screen" href="assets/css/preload.css">
-	<link rel="stylesheet" media="screen" href="assets/css/custom.css">
-	<link rel="stylesheet" media="screen" href="assets/css/_X_styles.css">
-	<link rel="stylesheet" media="screen" href="assets/css/_aboutus.css">
-	<link rel="stylesheet" media="screen" href="assets/css/_team.css">
-	<link rel="stylesheet" media="screen" href="assets/css/_key.css">
-	<link rel="stylesheet" media="screen" href="assets/css/_investors.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" media="screen" href="assets/css/__styles.css">
 	<link rel="stylesheet" media="screen" href="assets/css/_contact.css">
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="assets/js/preload.js"></script>
+	<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+
 </head>
 
 <body>
@@ -168,11 +158,6 @@
 		</section>
 
 	</main>
-	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-	<script src="assets/vendor/shufflejs/dist/shuffle.min.js"></script>
-	<script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
-	<script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
-	<script src="assets/js/theme.min.js"></script>
 	<script src="assets/js/swiper.js"></script>
 
 	<script>
@@ -226,69 +211,6 @@
 
 		// Inicializar las áreas
 		initializeDragAndDrop('company-deck');
-
-	</script>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const cards = document.querySelectorAll('.cardX');
-			let maxHeight = 0;
-
-			cards.forEach(card => {
-				card.style.height = 'auto';
-				const cardHeight = card.offsetHeight;
-				if (cardHeight > maxHeight) {
-					maxHeight = cardHeight;
-				}
-			});
-
-			cards.forEach(card => {
-				card.style.height = `${maxHeight}px`;
-			});
-
-
-		});
-	</script>
-
-	<script>
-		// Seleccionamos todos los elementos que pueden recibir la clase .active
-		const targetIds = ["#hypercard", "#peregrine", "#spacex", "#mikeshothoney", "#coframe", "#arena"];
-		const observerTargets = targetIds.map(id => document.querySelector(id));
-
-		const observerCallback = (mutationsList) => {
-			mutationsList.forEach(mutation => {
-				if (mutation.type === "attributes" && mutation.attributeName === "class") {
-					const targetElement = mutation.target;
-					if (targetElement.classList.contains("active")) {
-						// Obtenemos la clase que corresponde al id actual
-						const relatedClass = targetElement.id;
-						// Buscamos el elemento correspondiente en .box-shadow-container
-						const boxShadowElement = document.querySelector(`.box-shadow.${relatedClass}`);
-						if (boxShadowElement) {
-							boxShadowElement.classList.add("active");
-						}
-					} else {
-						// Si se quita la clase .active, también la removemos en .box-shadow
-						const relatedClass = targetElement.id;
-						const boxShadowElement = document.querySelector(`.box-shadow.${relatedClass}`);
-						if (boxShadowElement) {
-							boxShadowElement.classList.remove("active");
-						}
-					}
-				}
-			});
-		};
-
-		// Configuramos el observer para observar cambios en los atributos
-		const observerOptions = {attributes: true, attributeFilter: ["class"]};
-
-		// Creamos el observer y lo aplicamos a cada elemento target
-		const observer = new MutationObserver(observerCallback);
-		observerTargets.forEach(target => {
-			if (target) {
-				observer.observe(target, observerOptions);
-			}
-		});
 
 	</script>
 

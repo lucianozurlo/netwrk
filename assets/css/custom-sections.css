@@ -83,25 +83,189 @@ h3 {
     box-shadow: 0 0 22px #ffffff55;
 }
 
+
+/** INTRO **/
+
+#intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#intro .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 
+#intro .container .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 48px;
+} */
+
+#intro .text-content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#intro .text-content p.lead {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #fff;
+}
+
+#intro .text-content h1 {
+    font-family: 'PP Telegraf';
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 96px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0 !important;
+}
+
+#intro .text-content p {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: #fff;
+    margin-bottom: 0 !important;
+}
+
+#intro .bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-size: 33.33333%;
+    background-repeat: no-repeat;
+}
+
+#intro .bg1 {
+    background-image: url('../img/intro-bg1.png');
+    background-position: right top;
+}
+
+#intro .bg2 {
+    background-image: url('../img/intro-bg2.png');
+    background-position: left 110%;
+}
+
+
 /** ABOUT US **/
+#aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+#aboutus .aboutus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 64px;
+    width: 842px;
+}
+
+#aboutus .aboutus-content .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 64px;
+}
+
+#aboutus .aboutus-content h1 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+#aboutus .aboutus-content .text-content .sub-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+}
+
+#aboutus .aboutus-content h3 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
+#aboutus .aboutus-content p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+}
+
 #aboutus .allcards {
     display: flex;
-    padding-top: 130px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
     width: 1128px;
-    gap: 24px;
 }
 
 #aboutus .allcards h3 {
     font-family: 'PP Telegraf';
-    font-weight: 800;
-    font-size: 24px;
-    line-height: 33px;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
+    margin-bottom: 108px;
+    text-align: center;
+    color: #fff;
+}
+
+#aboutus .allcards-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    width: 100%;
+}
+
+#aboutus .allcards-content h3 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
     margin: 0 0 17px;
     letter-spacing: .5px;
     color: #fff !important;
+    text-align: center;
 }
 
-#aboutus .allcards p {
+#aboutus .allcards-content p {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 16px;
@@ -118,11 +282,7 @@ h3 {
     position: relative;
     color: #fff !important;
     border-radius: 10px;
-
     background-color: unset !important;
-
-
-
     transition: all .2s ease-in-out;
 }
 
@@ -211,10 +371,200 @@ h3 {
     z-index: 3;
 }
 
+/*** circle ***/
+
+#brands {
+    margin-bottom: 200px;
+}
+
+#brands .circles {
+    z-index: 1;
+}
+
+.circles .parallaxx {
+    z-index: 11;
+    pointer-events: unset !important;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-layer>.circle-div {
+    display: block;
+}
+
+.circle-div {
+    width: 785.5px;
+    height: 785.5px;
+    border-radius: 50%;
+    background: linear-gradient(284.59deg,
+            rgba(255, 255, 255, 0.06) 15%,
+            rgba(17, 17, 17, 0) 100%);
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.circle-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: linear-gradient(130deg,
+            rgba(255, 255, 255, 0.95) 0%,
+            #22222200 40%, #22222200 60%,
+            rgba(255, 255, 255, 0.3) 100%);
+    mask:
+        radial-gradient(circle,
+            transparent 70.2%,
+            black 71%);
+    -webkit-mask:
+        radial-gradient(circle,
+            transparent 70.2%,
+            black 71%);
+    pointer-events: none;
+}
+
+.parallax-layer.circle1 .circle-div {
+    width: 1050.348px;
+    height: 1050.348px;
+}
+
+.parallax-layer.circle2 .circle-div {
+    width: 913.9px;
+    height: 913.9px;
+}
+
+.parallax-layer.circle3 .circle-div {
+    width: 747.73px;
+    height: 747.73px;
+}
+
+.parallax-layer.circle4 .circle-div {
+    width: 581.57px;
+    height: 581.57px;
+}
+
+.parallax-layer.circle5 .circle-div {
+    width: 415.41px;
+    height: 415.41px;
+}
+
+.parallax-layer.circle6 .circle-div {
+    width: 249.24px;
+    height: 249.24px;
+}
+
+.parallax-layer .iso {
+    width: 172.22px;
+    height: 172.22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-layer .iso a {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-layer .iso a>* {
+    transition: all .75s ease-in-out;
+}
+
+.parallax-layer .iso a p {
+    position: absolute;
+    margin: 0 !important;
+    font-family: 'PP Telegraf';
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0;
+    transform: scale(.9);
+}
+
+.parallax-layer .iso a:hover p {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.parallax-layer .iso a:hover img {
+    filter: blur(25px) drop-shadow(0 0 25px #fff);
+}
+
+.parallax-layer.brand .base {
+    position: absolute;
+    width: 104.69px;
+    height: 104.69px;
+    left: 0%;
+    top: 0%;
+    background: linear-gradient(284.59deg,
+            rgba(255, 255, 255, 0.06) 0%,
+            rgba(17, 17, 17, 0) 100%);
+    backdrop-filter: blur(20.3927px);
+    border-radius: 8.1571px;
+}
+
+.parallax-layer.brand .square {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 8.1571px;
+    background: url(../../assets/img/brands/brand.png);
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+}
+
+.parallax-layer.brand .square img {
+    max-height: 88%;
+    width: 100%;
+}
+
+.parallax-layer.brand .square img.w90 {
+    width: 90%;
+}
+
+.parallax-layer.brand .square img.w80 {
+    width: 80%;
+}
+
+
 /** TEAM **/
 #team {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin-bottom: 200px;
+}
+
+#team h1 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    color: #fff;
+    margin: 0;
 }
 
 #team .team-content {
@@ -225,6 +575,7 @@ h3 {
     gap: 128px;
     justify-content: center;
 }
+
 
 #team .team-frame {
     gap: 64px;
@@ -302,6 +653,36 @@ h3 {
 }
 
 /** KEY **/
+
+
+/* Key Investments */
+#key-investments {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin-bottom: 200px;
+    transition: all .2s ease-in-out;
+}
+
+#key-investments h1 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    color: #fff;
+    margin: 0;
+}
+
+#key-investments .key-content {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 1127px;
+    transition: all .2s ease-in-out;
+}
+
 #key-investments .nav-tabs .nav-link.active,
 #key-investments .nav-tabs .nav-item.show .nav-link {
     background-color: unset;
@@ -312,12 +693,6 @@ h3 {
     opacity: 1 !important;
 }
 
-#key-investments {
-    gap: 0;
-    width: 100vw;
-    align-items: center;
-    transition: all .2s ease-in-out;
-}
 
 #key-investments .nav {
     width: 288px;
@@ -353,7 +728,6 @@ h3 {
     position: absolute;
     width: 269px;
     height: 80px;
-    /* background-color: yellow; */
     left: 0;
     top: 0;
     opacity: 0;
@@ -423,7 +797,6 @@ h3 {
 
 #key-investments li.nav-item .nav-link.active .style-fill {
     width: 300px;
-    /* background-color: violet; */
     opacity: 0 !important;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -431,16 +804,6 @@ h3 {
     pointer-events: none;
     background: unset;
 }
-
-/* #key-investments li.nav-item .nav-link.active .back-fill {
-    width: 300px;
-    background-color: violet; 
-    opacity: 1;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    pointer-events: none;
-}
-*/
 
 #key-investments li.nav-item .nav-link.active .back-fill.style-fill,
 #key-investments li.nav-item .nav-link.active .back-fill.style-fill.style-hover {
@@ -482,10 +845,6 @@ h3 {
     opacity: 1;
     transition: all 1.25s ease-in-out;
 }
-
-
-
-
 
 #key-investments .tab-content {
     width: 839px;
@@ -573,6 +932,25 @@ h3 {
 }
 
 /** INVESTORS **/
+#investors {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin-bottom: 200px;
+    transition: all .2s ease-in-out;
+}
+
+#investors h1 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    color: #fff;
+    margin: 0;
+}
+
 #investors .investors-container {
     max-width: 1118.21px;
     display: flex;
@@ -644,19 +1022,44 @@ h3 {
 }
 
 /** CONTACT **/
-
 #contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 150px;
+    gap: 64px;
     padding: 64px 0;
     background-color: #fff;
+    margin-bottom: 86px;
 }
 
+#contact .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+}
 
+#contact .text-content h2 {
+    font-family: 'PP Telegraf';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #222;
+    margin: 0;
+}
+
+#contact .text-content p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #222;
+    margin: 0;
+}
 
 #contact .swiper-container {
     margin: 0 auto;
@@ -804,7 +1207,6 @@ h3 {
 #contact .swiper-slide form .form-inputs h4 {
     padding-left: 12px;
     font-family: 'PP Telegraf';
-    font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 130%;
@@ -836,7 +1238,6 @@ h3 {
 #contact .swiper-slide form .form-inputs .column-input label {
     height: 21px;
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
@@ -898,7 +1299,6 @@ h3 {
     text-align: center;
     cursor: pointer;
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     color: #222;
@@ -941,6 +1341,7 @@ h3 {
     align-items: center;
     align-content: center;
     padding: 0px;
+    margin-top: 86px;
     gap: 16px;
 }
 
@@ -950,7 +1351,6 @@ h3 {
 
 #contact #footer p {
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
