@@ -159,7 +159,7 @@ h3 {
 
 #intro .bg2 {
     background-image: url('../img/intro-bg2.png');
-    background-position: left 110%;
+    background-position: left bottom;
 }
 
 
@@ -654,7 +654,6 @@ h3 {
 
 /** KEY **/
 
-
 /* Key Investments */
 #key-investments {
     display: flex;
@@ -678,7 +677,7 @@ h3 {
 #key-investments .key-content {
     display: flex;
     flex-direction: row;
-    gap: 0;
+    gap: 19px;
     width: 1127px;
     transition: all .2s ease-in-out;
 }
@@ -693,9 +692,8 @@ h3 {
     opacity: 1 !important;
 }
 
-
 #key-investments .nav {
-    width: 288px;
+    width: 269px;
     margin-bottom: 0;
     gap: 24px;
     z-index: 1111;
@@ -705,9 +703,7 @@ h3 {
 #key-investments li.nav-item {
     width: 269px;
     height: 80px;
-    margin-right: 27px;
-    margin-bottom: 0;
-    padding-right: 0;
+    margin: 0;
     padding: 0;
     border-radius: 10px;
     transition: all .2s ease-in-out;
@@ -763,10 +759,7 @@ h3 {
 }
 
 #key-investments li.nav-item .nav-link.active:before {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 0;
+    border-radius: 10px;
     background: linear-gradient(130deg,
             #ffffff00 0%,
             #22222200 30%,
@@ -784,22 +777,16 @@ h3 {
 }
 
 #key-investments li.nav-item .nav-link.active {
-    margin-right: 0;
-    padding-right: 27px;
     position: relative;
-    width: 300px;
+    width: 269px;
     height: 80px;
     z-index: 11;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     pointer-events: none;
 }
 
 #key-investments li.nav-item .nav-link.active .style-fill {
-    width: 300px;
+    width: 269px;
     opacity: 0 !important;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
     box-shadow: unset;
     pointer-events: none;
     background: unset;
@@ -822,7 +809,7 @@ h3 {
 }
 
 #key-investments .box-shadow-container {
-    width: 288px;
+    width: 269px;
     height: 600px;
     position: absolute;
     margin-bottom: 0;
@@ -833,7 +820,7 @@ h3 {
 }
 
 #key-investments .box-shadow-container .box-shadow {
-    width: 300px;
+    width: 269px;
     height: 80px;
     border-radius: 10px;
     box-shadow: 0 0 22px #ffffff55;
