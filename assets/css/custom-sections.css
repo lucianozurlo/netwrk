@@ -164,14 +164,14 @@ h3 {
 
 
 /** ABOUT US **/
-#aboutus {
+#AboutUs {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 200px;
 }
 
-#aboutus .aboutus-content {
+#AboutUs .aboutus-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,7 +180,7 @@ h3 {
     width: 842px;
 }
 
-#aboutus .aboutus-content .text-content {
+#AboutUs .aboutus-content .text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,7 +188,7 @@ h3 {
     gap: 64px;
 }
 
-#aboutus .aboutus-content h1 {
+#AboutUs .aboutus-content h1 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 60px;
@@ -198,7 +198,7 @@ h3 {
     color: #fff;
 }
 
-#aboutus .aboutus-content .text-content .sub-content {
+#AboutUs .aboutus-content .text-content .sub-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -206,7 +206,7 @@ h3 {
     gap: 24px;
 }
 
-#aboutus .aboutus-content h3 {
+#AboutUs .aboutus-content h3 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 26px;
@@ -216,7 +216,7 @@ h3 {
     color: #fff;
 }
 
-#aboutus .aboutus-content p {
+#AboutUs .aboutus-content p {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 16px;
@@ -226,7 +226,7 @@ h3 {
     color: #fff;
 }
 
-#aboutus .allcards {
+#AboutUs .allcards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +234,7 @@ h3 {
     width: 1128px;
 }
 
-#aboutus .allcards h3 {
+#AboutUs .allcards h3 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 26px;
@@ -244,7 +244,7 @@ h3 {
     color: #fff;
 }
 
-#aboutus .allcards-content {
+#AboutUs .allcards-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -254,7 +254,7 @@ h3 {
     width: 100%;
 }
 
-#aboutus .allcards-content h3 {
+#AboutUs .allcards-content h3 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 26px;
@@ -265,7 +265,7 @@ h3 {
     text-align: center;
 }
 
-#aboutus .allcards-content p {
+#AboutUs .allcards-content p {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 16px;
@@ -274,7 +274,7 @@ h3 {
     margin: 0;
 }
 
-#aboutus .cardX {
+#AboutUs .cardX {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -286,16 +286,16 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#aboutus .cardX:before {
+#AboutUs .cardX:before {
     border-radius: 10px;
 }
 
-#aboutus .cardX:hover,
-#aboutus .cardX:active {
+#AboutUs .cardX:hover,
+#AboutUs .cardX:active {
     border-radius: 10px;
 }
 
-#aboutus .card-image {
+#AboutUs .card-image {
     transform: translateY(-60px) !important;
     width: 100px;
     height: 100px;
@@ -308,7 +308,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#aboutus .card-image:before {
+#AboutUs .card-image:before {
     content: "";
     position: absolute;
     top: 0;
@@ -329,12 +329,12 @@ h3 {
     z-index: 3;
 }
 
-#aboutus .card-image .style-fill {
+#AboutUs .card-image .style-fill {
     border-radius: 50%;
 }
 
-#aboutus .cardX:hover .card-image,
-#aboutus .cardX:active .card-image {
+#AboutUs .cardX:hover .card-image,
+#AboutUs .cardX:active .card-image {
     top: 0;
     left: 0;
     right: 0;
@@ -347,12 +347,12 @@ h3 {
     left: calc(50% - 50px);
 }
 
-#aboutus .card-image img {
+#AboutUs .card-image img {
     width: 55px;
     z-index: 4;
 }
 
-#aboutus .card-body {
+#AboutUs .card-body {
     padding: 85px 45px 82px 35px;
     display: flex;
     flex-direction: column;
@@ -361,8 +361,8 @@ h3 {
     z-index: 2;
 }
 
-#aboutus .style-content:hover .card-image:before,
-#aboutus .style-content:active .card-image:before {
+#AboutUs .style-content:hover .card-image:before,
+#AboutUs .style-content:active .card-image:before {
     background: linear-gradient(130deg,
             #ffffffed 0%,
             #22222200 30%,
@@ -549,7 +549,7 @@ h3 {
 
 
 /** TEAM **/
-#team {
+#TheTeam {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -558,7 +558,7 @@ h3 {
     margin-bottom: 200px;
 }
 
-#team h1 {
+#TheTeam h1 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 60px;
@@ -567,7 +567,7 @@ h3 {
     margin: 0;
 }
 
-#team .team-content {
+#TheTeam .team-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -577,15 +577,15 @@ h3 {
 }
 
 
-#team .team-frame {
+#TheTeam .team-frame {
     gap: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#team .style-content:before,
-#team .team-img {
+#TheTeam .style-content:before,
+#TheTeam .team-img {
     position: relative;
     width: 300px;
     height: 300px;
@@ -596,14 +596,14 @@ h3 {
     justify-content: center;
 }
 
-#team .team-img:hover:before,
-#team .team-img:active:before {
+#TheTeam .team-img:hover:before,
+#TheTeam .team-img:active:before {
     width: 300px;
     height: 300px;
     border-radius: 50%;
 }
 
-#team .team-img img {
+#TheTeam .team-img img {
     position: absolute;
     width: 225px;
     height: 225px;
@@ -611,18 +611,18 @@ h3 {
     transition: all .3s ease-in-out;
 }
 
-#team .team-img:hover img {
+#TheTeam .team-img:hover img {
     transform: scale(1.066666);
 }
 
 
-#team .style-fill {
+#TheTeam .style-fill {
     width: 300px;
     height: 300px;
     border-radius: 50%;
 }
 
-#team .team-txt {
+#TheTeam .team-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -634,19 +634,19 @@ h3 {
     text-align: center !important;
 }
 
-#team .team-txt>* {
+#TheTeam .team-txt>* {
     font-family: 'PP Telegraf';
     margin: 0;
     text-align: center;
 }
 
-#team .team-txt h3 {
+#TheTeam .team-txt h3 {
     font-weight: 400;
     font-size: 30px;
     line-height: 41px;
 }
 
-#team .team-txt p {
+#TheTeam .team-txt p {
     font-weight: 800;
     font-size: 24px;
     line-height: 33px;
@@ -655,7 +655,7 @@ h3 {
 /** KEY **/
 
 /* Key Investments */
-#key-investments {
+#KeyInvestments {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -665,7 +665,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments h1 {
+#KeyInvestments h1 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 60px;
@@ -674,7 +674,7 @@ h3 {
     margin: 0;
 }
 
-#key-investments .key-content {
+#KeyInvestments .key-content {
     display: flex;
     flex-direction: row;
     gap: 19px;
@@ -682,17 +682,17 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments .nav-tabs .nav-link.active,
-#key-investments .nav-tabs .nav-item.show .nav-link {
+#KeyInvestments .nav-tabs .nav-link.active,
+#KeyInvestments .nav-tabs .nav-item.show .nav-link {
     background-color: unset;
 }
 
-#key-investments .style-content:hover .style-fill.style-hover {
+#KeyInvestments .style-content:hover .style-fill.style-hover {
     box-shadow: unset !important;
     opacity: 1 !important;
 }
 
-#key-investments .nav {
+#KeyInvestments .nav {
     width: 269px;
     margin-bottom: 0;
     gap: 24px;
@@ -700,7 +700,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments li.nav-item {
+#KeyInvestments li.nav-item {
     width: 269px;
     height: 80px;
     margin: 0;
@@ -709,7 +709,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments li.nav-item:before {
+#KeyInvestments li.nav-item:before {
     width: 269px;
     height: 80px;
     border-radius: 10px;
@@ -720,7 +720,7 @@ h3 {
     bottom: unset;
 }
 
-#key-investments li.nav-item .nav-link .back-fill {
+#KeyInvestments li.nav-item .nav-link .back-fill {
     position: absolute;
     width: 269px;
     height: 80px;
@@ -730,7 +730,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments .nav-tabs .nav-link {
+#KeyInvestments .nav-tabs .nav-link {
     padding: 0;
     backdrop-filter: blur(0);
     background-color: unset !important;
@@ -744,14 +744,14 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments .nav-tabs .nav-link:before {
+#KeyInvestments .nav-tabs .nav-link:before {
     background: linear-gradient(160deg, #ffffff80 0%, #22222200 40%, #22222200 60%, #ffffff24 100%);
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
 
 
-#key-investments .nav-tabs .nav-link img {
+#KeyInvestments .nav-tabs .nav-link img {
     width: 100%;
     max-width: 154px;
     max-height: 60px;
@@ -760,7 +760,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments li.nav-item .nav-link.active:before {
+#KeyInvestments li.nav-item .nav-link.active:before {
     border-radius: 10px;
     background: linear-gradient(160deg,
             #ffffff00 0%,
@@ -771,14 +771,14 @@ h3 {
 
 }
 
-#key-investments li:hover .nav-link img,
-#key-investments li.nav-item .nav-link.active img {
+#KeyInvestments li:hover .nav-link img,
+#KeyInvestments li.nav-item .nav-link.active img {
     opacity: 1;
     pointer-events: none;
     transition: all .2s ease-in-out;
 }
 
-#key-investments li.nav-item .nav-link.active {
+#KeyInvestments li.nav-item .nav-link.active {
     position: relative;
     width: 269px;
     height: 80px;
@@ -786,7 +786,7 @@ h3 {
     pointer-events: none;
 }
 
-#key-investments li.nav-item .nav-link.active .style-fill {
+#KeyInvestments li.nav-item .nav-link.active .style-fill {
     width: 269px;
     opacity: 0 !important;
     box-shadow: unset;
@@ -794,8 +794,8 @@ h3 {
     background: unset;
 }
 
-#key-investments li.nav-item .nav-link.active .back-fill.style-fill,
-#key-investments li.nav-item .nav-link.active .back-fill.style-fill.style-hover {
+#KeyInvestments li.nav-item .nav-link.active .back-fill.style-fill,
+#KeyInvestments li.nav-item .nav-link.active .back-fill.style-fill.style-hover {
     background: linear-gradient(284.59deg,
             rgba(17, 17, 17, 1) 30%,
             rgba(17, 17, 17, 0) 100%) !important;
@@ -805,13 +805,13 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments .box-shadow-all {
+#KeyInvestments .box-shadow-all {
     width: 1127px;
     height: 600px;
     position: absolute;
 }
 
-#key-investments .box-shadow-container {
+#KeyInvestments .box-shadow-container {
     width: 269px;
     height: 600px;
     position: absolute;
@@ -822,7 +822,7 @@ h3 {
     z-index: 0;
 }
 
-#key-investments .box-shadow-container .box-shadow {
+#KeyInvestments .box-shadow-container .box-shadow {
     width: 269px;
     height: 80px;
     border-radius: 10px;
@@ -831,12 +831,12 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments .box-shadow-container .box-shadow.active {
+#KeyInvestments .box-shadow-container .box-shadow.active {
     opacity: 1;
     transition: all .2s ease-in-out;
 }
 
-#key-investments .tab-content {
+#KeyInvestments .tab-content {
     width: 839px;
     height: 600px;
     z-index: 111;
@@ -845,7 +845,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#key-investments .tab-content .style-content {
+#KeyInvestments .tab-content .style-content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -853,7 +853,7 @@ h3 {
     align-items: center;
 }
 
-#key-investments .tab-content .style-content:before {
+#KeyInvestments .tab-content .style-content:before {
     border-radius: 10px;
     background: linear-gradient(130deg,
             #ffffff00 0%, #22222200 30%,
@@ -861,20 +861,20 @@ h3 {
             #ffffff80 100%);
 }
 
-#key-investments .tab-content>.tab-pane {
+#KeyInvestments .tab-content>.tab-pane {
     position: absolute;
     width: 839px;
     height: 600px;
     transition: all .2s ease-in-out;
 }
 
-#key-investments .tab-content>.tab-pane.active {
+#KeyInvestments .tab-content>.tab-pane.active {
     width: 839px;
     height: 600px;
     padding: 100px;
 }
 
-#key-investments .tab-content>.tab-pane .back-fill.style-fill {
+#KeyInvestments .tab-content>.tab-pane .back-fill.style-fill {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -884,13 +884,13 @@ h3 {
     pointer-events: none;
 }
 
-#key-investments .tab-content>.tab-pane .back-fill {
+#KeyInvestments .tab-content>.tab-pane .back-fill {
     padding: 0px;
     gap: 16px;
     color: #fff;
 }
 
-#key-investments .tab-content>.tab-pane .back-fill h3 {
+#KeyInvestments .tab-content>.tab-pane .back-fill h3 {
     width: 533px;
     font-family: 'PP Telegraf';
     font-weight: 400;
@@ -900,7 +900,7 @@ h3 {
     color: #fff;
 }
 
-#key-investments .tab-content>.tab-pane .back-fill p {
+#KeyInvestments .tab-content>.tab-pane .back-fill p {
     width: 533px;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -910,7 +910,7 @@ h3 {
     color: #fff;
 }
 
-#key-investments .tab-content>.tab-pane .back-fill-image {
+#KeyInvestments .tab-content>.tab-pane .back-fill-image {
     background-image: url('../img/iso.svg');
     background-repeat: no-repeat;
     height: 100%;
@@ -922,7 +922,7 @@ h3 {
 }
 
 /** INVESTORS **/
-#investors {
+#OurNetwork {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -932,7 +932,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#investors h1 {
+#OurNetwork h1 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 60px;
@@ -941,7 +941,7 @@ h3 {
     margin: 0;
 }
 
-#investors .investors-container {
+#OurNetwork .investors-container {
     max-width: 1118.21px;
     display: flex;
     flex-direction: row;
@@ -952,7 +952,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#investors .style-content {
+#OurNetwork .style-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -964,14 +964,14 @@ h3 {
 }
 
 
-#investors .style-content img {
+#OurNetwork .style-content img {
     z-index: 1111;
     width: 80%;
     max-height: 65%;
     transition: all .2s ease-in-out;
 }
 
-#investors .style-content:before {
+#OurNetwork .style-content:before {
     border-radius: 19.4px;
     z-index: 11111111;
     cursor: pointer;
@@ -983,7 +983,7 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#investors .style-content:hover:before {
+#OurNetwork .style-content:hover:before {
     background: linear-gradient(160deg,
             #ffffffed 0%,
             #22222200 33%,
@@ -991,13 +991,13 @@ h3 {
             #ffffff80 100%);
 }
 
-#investors .style-content:hover,
-#investors .style-content:active {
+#OurNetwork .style-content:hover,
+#OurNetwork .style-content:active {
     border-radius: 19.4px;
     transition: all .2s ease-in-out;
 }
 
-#investors .investors-container a {
+#OurNetwork .investors-container a {
     width: 340.74px;
     height: 129.31px;
     border-radius: 19.4px;
@@ -1007,12 +1007,12 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#investors .style-fill {
+#OurNetwork .style-fill {
     border-radius: 19.4px;
 }
 
 /** CONTACT **/
-#contact {
+#Contact {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -1024,7 +1024,7 @@ h3 {
     margin-bottom: 86px;
 }
 
-#contact .text-content {
+#Contact .text-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1032,7 +1032,7 @@ h3 {
     gap: 16px;
 }
 
-#contact .text-content h2 {
+#Contact .text-content h2 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 40px;
@@ -1042,7 +1042,7 @@ h3 {
     margin: 0;
 }
 
-#contact .text-content p {
+#Contact .text-content p {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 18px;
@@ -1051,7 +1051,7 @@ h3 {
     margin: 0;
 }
 
-#contact .swiper-container {
+#Contact .swiper-container {
     margin: 0 auto;
     border-radius: 5px;
     display: flex;
@@ -1068,7 +1068,7 @@ h3 {
     min-height: 287px !important;
 }
 
-#contact .swiper-container .selector-container {
+#Contact .swiper-container .selector-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1080,7 +1080,7 @@ h3 {
     border-radius: 50px;
 }
 
-#contact .swiper-container .selector-container:before {
+#Contact .swiper-container .selector-container:before {
     content: "";
     position: relative;
     top: 0;
@@ -1103,12 +1103,12 @@ h3 {
     z-index: 0;
 }
 
-/* #contact .swiper {
+/* #Contact .swiper {
     width: 100%;
     height: 100%;
 } */
 
-#contact .swiper.mySwiper {
+#Contact .swiper.mySwiper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1117,14 +1117,14 @@ h3 {
     width: 100%;
 }
 
-#contact .swiper-container .selector-container .selector {
+#Contact .swiper-container .selector-container .selector {
     position: absolute;
     display: inline-block;
     border-radius: 500px;
     margin: 10px;
 }
 
-#contact .swiper-container .selector-container .selector .go-to-slide {
+#Contact .swiper-container .selector-container .selector .go-to-slide {
     width: 235px;
     height: 40px;
     text-decoration: none !important;
@@ -1143,17 +1143,17 @@ h3 {
     transition: all 0.2s ease-in-out;
 }
 
-#contact .swiper-container .selector-container .selector .go-to-slide:hover {
+#Contact .swiper-container .selector-container .selector .go-to-slide:hover {
     opacity: 1;
 }
 
-#contact .swiper-container .selector-container .selector .go-to-slide.active {
+#Contact .swiper-container .selector-container .selector .go-to-slide.active {
     color: #fff;
     opacity: 1;
     pointer-events: none;
 }
 
-#contact .swiper-container .selector-container .selector .highlight {
+#Contact .swiper-container .selector-container .selector .highlight {
     position: absolute;
     top: 0;
     left: 0;
@@ -1164,7 +1164,7 @@ h3 {
     z-index: 0;
 }
 
-#contact .swiper-slide {
+#Contact .swiper-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1173,13 +1173,13 @@ h3 {
     width: 100%;
 }
 
-#contact .swiper-slide {
+#Contact .swiper-slide {
     padding: 0px;
     gap: 131px;
     text-align: left;
 }
 
-#contact .swiper-slide form {
+#Contact .swiper-slide form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1188,7 +1188,7 @@ h3 {
     width: 100%;
 }
 
-#contact .swiper-slide form .form-inputs {
+#Contact .swiper-slide form .form-inputs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1197,7 +1197,7 @@ h3 {
     width: 100%;
 }
 
-#contact .swiper-slide form .form-inputs h4 {
+#Contact .swiper-slide form .form-inputs h4 {
     padding-left: 12px;
     font-family: 'PP Telegraf';
     font-weight: 800;
@@ -1207,7 +1207,7 @@ h3 {
     margin: 0;
 }
 
-#contact .swiper-slide form .form-inputs .row-input {
+#Contact .swiper-slide form .form-inputs .row-input {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1219,7 +1219,7 @@ h3 {
     margin-bottom: 14px;
 }
 
-#contact .swiper-slide form .form-inputs .column-input {
+#Contact .swiper-slide form .form-inputs .column-input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1228,7 +1228,7 @@ h3 {
     width: calc(50% - 24px);
 }
 
-#contact .swiper-slide form .form-inputs .column-input label {
+#Contact .swiper-slide form .form-inputs .column-input label {
     height: 21px;
     font-family: 'Montserrat';
     font-weight: 400;
@@ -1237,12 +1237,12 @@ h3 {
     color: #222;
 }
 
-#contact .swiper-slide form .form-inputs .column-input label span {
+#Contact .swiper-slide form .form-inputs .column-input label span {
     font-size: 12px;
 }
 
-#contact .swiper-slide form .form-inputs .column-input input,
-#contact .swiper-slide form .form-inputs .column-input textarea {
+#Contact .swiper-slide form .form-inputs .column-input input,
+#Contact .swiper-slide form .form-inputs .column-input textarea {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
@@ -1254,18 +1254,18 @@ h3 {
     font-size: 14px;
 }
 
-#contact .swiper-slide form .form-inputs .column-input textarea {
+#Contact .swiper-slide form .form-inputs .column-input textarea {
     height: 80px;
 }
 
-#contact .swiper-slide form .form-inputs .column-input input:focus,
-#contact .swiper-slide form .form-inputs .column-input textarea:focus {
+#Contact .swiper-slide form .form-inputs .column-input input:focus,
+#Contact .swiper-slide form .form-inputs .column-input textarea:focus {
     box-shadow: 0 0 11px #22222244;
     border: 2px solid #222 !important;
     transition: all .1s ease-in-out;
 }
 
-#contact .swiper-slide form input[type="submit"] {
+#Contact .swiper-slide form input[type="submit"] {
     width: 150px;
     height: 40px;
     margin: 22px auto 86px;
@@ -1279,12 +1279,13 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#contact .swiper-slide form input[type="submit"]:hover {
+#Contact .swiper-slide form input[type="submit"]:hover {
     box-shadow: 0 0 22px #222222aa;
 }
 
-#contact .drag-drop-area {
+#Contact .drag-drop-area {
     width: 100%;
+    max-width: 392px;
     height: 80px;
     border: none !important;
     border-radius: 10px;
@@ -1305,27 +1306,27 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#contact .drag-drop-area:hover {
+#Contact .drag-drop-area:hover {
     box-shadow: 0 0 22px #22222233;
 }
 
-#contact .drag-drop-area.drag-over {
+#Contact .drag-drop-area.drag-over {
     background-color: #222;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%23fff' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='7' stroke-linecap='round'/%3e%3c/svg%3e");
     color: #fff;
 }
 
-#contact .drag-drop-area p {
+#Contact .drag-drop-area p {
     margin: 0 0 0 -24px;
 }
 
-#contact .drag-drop-area img {
+#Contact .drag-drop-area img {
     position: absolute;
     margin-left: 8px;
     margin-top: 2px;
 }
 
-#contact #footer {
+#Contact #footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -1337,11 +1338,11 @@ h3 {
     gap: 16px;
 }
 
-#contact #footer img {
+#Contact #footer img {
     width: 166.73px;
 }
 
-#contact #footer p {
+#Contact #footer p {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 18px;

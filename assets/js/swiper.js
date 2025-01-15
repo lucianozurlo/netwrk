@@ -96,5 +96,5 @@ function initializeSwipers (containerSelector) {
 
 // Inicializar Swipers cuando el DOM esté cargado
 document.addEventListener ('DOMContentLoaded', () => {
-  initializeSwipers ('#contact');
+  initializeSwipers ('#Contact');
 });
