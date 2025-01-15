@@ -733,6 +733,7 @@ h3 {
 #key-investments .nav-tabs .nav-link {
     padding: 0;
     backdrop-filter: blur(0);
+    background-color: unset !important;
     border-radius: 10px;
     height: 100%;
     width: 100%;
@@ -744,6 +745,7 @@ h3 {
 }
 
 #key-investments .nav-tabs .nav-link:before {
+    background: linear-gradient(160deg, #ffffff80 0%, #22222200 40%, #22222200 60%, #ffffff24 100%);
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
@@ -760,7 +762,7 @@ h3 {
 
 #key-investments li.nav-item .nav-link.active:before {
     border-radius: 10px;
-    background: linear-gradient(130deg,
+    background: linear-gradient(160deg,
             #ffffff00 0%,
             #22222200 30%,
             #22222200 60%,
@@ -772,8 +774,8 @@ h3 {
 #key-investments li:hover .nav-link img,
 #key-investments li.nav-item .nav-link.active img {
     opacity: 1;
-    transition: all .2s ease-in-out;
     pointer-events: none;
+    transition: all .2s ease-in-out;
 }
 
 #key-investments li.nav-item .nav-link.active {
@@ -794,12 +796,13 @@ h3 {
 
 #key-investments li.nav-item .nav-link.active .back-fill.style-fill,
 #key-investments li.nav-item .nav-link.active .back-fill.style-fill.style-hover {
-    background: linear-gradient(90deg,
-            rgba(17, 17, 17, 1) 96%,
+    background: linear-gradient(284.59deg,
+            rgba(17, 17, 17, 1) 30%,
             rgba(17, 17, 17, 0) 100%) !important;
     background-color: unset !important;
     opacity: 1 !important;
-    z-index: -11111111;
+    z-index: 2;
+    transition: all .2s ease-in-out;
 }
 
 #key-investments .box-shadow-all {
@@ -830,7 +833,7 @@ h3 {
 
 #key-investments .box-shadow-container .box-shadow.active {
     opacity: 1;
-    transition: all 1.25s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 #key-investments .tab-content {
@@ -1050,7 +1053,6 @@ h3 {
 
 #contact .swiper-container {
     margin: 0 auto;
-    transition: max-width 0.5s ease-in-out;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -1059,6 +1061,7 @@ h3 {
     padding: 0px;
     gap: 64px;
     width: 857px;
+    transition: max-width 0.5s ease-in-out;
 }
 
 #contact .swiper-container .selector-container {
@@ -1276,7 +1279,6 @@ h3 {
     box-shadow: 0 0 22px #222222aa;
 }
 
-
 #contact .drag-drop-area {
     width: 100%;
     height: 80px;
@@ -1290,7 +1292,6 @@ h3 {
     font-size: 14px;
     color: #222;
     display: flex;
-    transition: background-color 0.2s ease;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
