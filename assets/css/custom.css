@@ -96,6 +96,7 @@ header #navbarNav .offcanvas-body ul li a:before {
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     z-index: 111;
+    transform: scale(.95);
     transition: all .2s ease-in-out;
 }
 
@@ -103,5 +104,6 @@ header #navbarNav .offcanvas-body ul li a:hover:before,
 header #navbarNav .offcanvas-body ul li a:focus:before,
 header #navbarNav .offcanvas-body ul li a:active {
     opacity: 1;
+    transform: scale(1);
     transition: all .2s ease-in-out;
 }
