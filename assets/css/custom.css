@@ -28,6 +28,7 @@ header {
 }
 
 .navbar.navbar-stuck {
+    z-index: 111111111;
     background-color: unset;
 }
 
@@ -50,19 +51,20 @@ header #navbarNav {
     flex-direction: row;
     align-items: center;
     padding: 0px !important;
-    gap: 325px;
-    width: 756px;
-    height: 40px;
+    /* gap: 325px; */
+    /* width: 708px; */
+    /* height: 40px; */
 }
 
 header #navbarNav .offcanvas-body ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding: 12px 48px;
-    gap: 64px;
-    width: 756px;
+    padding: 0;
+    gap: 24px;
+    /* width: 708px; */
+    margin: 0 auto;
     height: 40px;
 }
 
@@ -70,8 +72,36 @@ header #navbarNav .offcanvas-body ul li a {
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 14px;
-    padding: 0;
     line-height: 17px;
     text-align: center;
-    color: #FFFFFF;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+header #navbarNav .offcanvas-body ul li a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    padding: 1px;
+    background: linear-gradient(130deg, #dedede 0%, #dedede25 60%, #dedede00 100%);
+    border-radius: 50px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 111;
+    transition: all .2s ease-in-out;
+}
+
+header #navbarNav .offcanvas-body ul li a:hover:before,
+header #navbarNav .offcanvas-body ul li a:focus:before,
+header #navbarNav .offcanvas-body ul li a:active {
+    opacity: 1;
+    transition: all .2s ease-in-out;
 }

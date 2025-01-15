@@ -1064,6 +1064,10 @@ h3 {
     transition: max-width 0.5s ease-in-out;
 }
 
+.swiper-autoheight .swiper-wrapper {
+    min-height: 287px !important;
+}
+
 #contact .swiper-container .selector-container {
     display: flex;
     flex-direction: row;
@@ -1167,7 +1171,6 @@ h3 {
     align-items: center;
     font-size: 18px;
     width: 100%;
-
 }
 
 #contact .swiper-slide {
@@ -1180,7 +1183,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 0;
     gap: 15px;
     width: 100%;
 }
@@ -1257,14 +1260,15 @@ h3 {
 
 #contact .swiper-slide form .form-inputs .column-input input:focus,
 #contact .swiper-slide form .form-inputs .column-input textarea:focus {
-    box-shadow: 0 0 12px #222222aa;
-    transition: all .3s ease-in-out;
+    box-shadow: 0 0 11px #22222244;
+    border: 2px solid #222 !important;
+    transition: all .1s ease-in-out;
 }
 
 #contact .swiper-slide form input[type="submit"] {
     width: 150px;
     height: 40px;
-    margin: 22px auto 0;
+    margin: 22px auto 86px;
     background: #222;
     border-radius: 50px;
     font-family: 'Montserrat';
@@ -1328,8 +1332,8 @@ h3 {
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding: 0px;
-    margin-top: 86px;
+    padding: 0;
+    margin: 0;
     gap: 16px;
 }
 
