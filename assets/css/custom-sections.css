@@ -236,9 +236,9 @@ h3 {
 
 #AboutUs .allcards h3 {
     font-family: 'PP Telegraf';
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 35px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
     margin-bottom: 108px;
     text-align: center;
     color: #fff;
@@ -256,9 +256,9 @@ h3 {
 
 #AboutUs .allcards-content h3 {
     font-family: 'PP Telegraf';
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 35px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
     margin: 0 0 17px;
     letter-spacing: .5px;
     color: #fff !important;
@@ -406,7 +406,7 @@ h3 {
     height: 785.5px;
     border-radius: 50%;
     background: linear-gradient(284.59deg,
-            rgba(255, 255, 255, 0.06) 15%,
+            rgba(255, 255, 255, 0.045) 15%,
             rgba(17, 17, 17, 0) 100%);
     position: relative;
     backdrop-filter: blur(10px);
@@ -433,6 +433,10 @@ h3 {
             transparent 70.2%,
             black 71%);
     pointer-events: none;
+}
+
+.parallax-layer.circle1 {
+    opacity: 0;
 }
 
 .parallax-layer.circle1 .circle-div {
@@ -574,14 +578,22 @@ h3 {
     padding: 0px;
     gap: 128px;
     justify-content: center;
+    width: 1000px;
 }
-
 
 #TheTeam .team-frame {
     gap: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* Frame 9 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 64px;
+    width: 441px;
 }
 
 #TheTeam .style-content:before,
@@ -750,6 +762,10 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
+#KeyInvestments .nav-tabs .nav-link:hover:before {
+    background: linear-gradient(160deg, #ffffffff 0%, #22222200 40%, #22222200 60%, #ffffff80 100%);
+
+}
 
 #KeyInvestments .nav-tabs .nav-link img {
     width: 100%;
@@ -768,7 +784,6 @@ h3 {
             #22222200 60%,
             #ffffff00 100%);
     transition: all .2s ease-in-out;
-
 }
 
 #KeyInvestments li:hover .nav-link img,
@@ -778,29 +793,29 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-#KeyInvestments li.nav-item .nav-link.active {
+/* #KeyInvestments li.nav-item .nav-link.active {
     position: relative;
     width: 269px;
     height: 80px;
     z-index: 11;
     pointer-events: none;
-}
+} */
 
-#KeyInvestments li.nav-item .nav-link.active .style-fill {
+/* #KeyInvestments li.nav-item .nav-link.active .style-fill {
     width: 269px;
     opacity: 0 !important;
     box-shadow: unset;
     pointer-events: none;
     background: unset;
-}
+} */
 
 #KeyInvestments li.nav-item .nav-link.active .back-fill.style-fill,
 #KeyInvestments li.nav-item .nav-link.active .back-fill.style-fill.style-hover {
-    background: linear-gradient(284.59deg,
+    /* background: linear-gradient(284.59deg,
             rgba(17, 17, 17, 1) 30%,
-            rgba(17, 17, 17, 0) 100%) !important;
-    background-color: unset !important;
-    opacity: 1 !important;
+            rgba(17, 17, 17, 0) 100%) !important; */
+    background-color: rgb(17, 17, 17) !important;
+    opacity: 0.3 !important;
     z-index: 2;
     transition: all .2s ease-in-out;
 }
