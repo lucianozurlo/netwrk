@@ -22,11 +22,78 @@
 
     header .navbar-brand img {
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 34;
+        left: 34;
         z-index: 999999;
         width: 35px;
-        background-color: red;
+    }
+
+    section>* {
+        padding: 0 40px !important;
+    }
+
+
+    #home {
+        margin-bottom: 160px;
+    }
+
+    #home .container {
+        padding: 0 34px;
+    }
+
+    #home .text-content p.lead {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    #home .text-content h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    #home .text-content p {
+        font-size: 16px;
+    }
+
+    #home .text-content span {
+        display: block;
+    }
+
+    #home .bg {
+        background-size: 55%;
+    }
+
+
+
+
+    #AboutUs {
+        margin-bottom: 200px;
+    }
+
+    #AboutUs .aboutus-content {
+        gap: 100px;
+    }
+
+    #AboutUs .aboutus-content>* {
+        padding: 0 34px;
+    }
+
+    #AboutUs .aboutus-content h1 {
+        font-size: 38px;
+        line-height: 52px;
+    }
+
+    #AboutUs .aboutus-content h3 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    #AboutUs .aboutus-content p {
+        font-size: 14px;
+    }
+
+    #AboutUs .allcards-content {
+        flex-direction: column;
     }
 
 
@@ -39,8 +106,9 @@
 
 
 
-    #home,
-    #AboutUs,
+
+
+
     #brands,
     #TheTeam,
     #KeyInvestments,
