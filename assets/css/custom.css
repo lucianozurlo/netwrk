@@ -22,15 +22,25 @@ main {
 
 header {
     height: 61px;
-    background: linear-gradient(284.59deg, rgba(255, 255, 255, 0.1) 0%, rgba(17, 17, 17, 0) 100%);
-    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    background: linear-gradient(284.59deg, #ffffff1a 0%, #11111100 100%);
+    filter: drop-shadow(0px 4px 10px #00000040);
     backdrop-filter: blur(18.0481px);
 }
 
 .navbar.navbar-stuck {
     z-index: 111111111;
-    background-color: unset;
+    background-color: unset
 }
+
+header.navbar.navbar-stuck {
+    background-color: #22222200 !important;
+    transition: background-color 0.3s ease;
+}
+
+header.navbar.navbar-stuck.bg-white {
+    background-color: #22222280 !important;
+}
+
 
 header .navbar-brand {
     position: absolute;

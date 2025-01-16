@@ -1,48 +1,62 @@
 document.addEventListener ('DOMContentLoaded', function () {
   const sections = document.querySelectorAll ('section[id]');
   const navLinks = document.querySelectorAll ('header .nav-link');
-  const highlight = document.querySelector ('.nav-highlight');
-  const firstLink = navLinks[0];
+  const headerEl = document.querySelector ('header');
+
+  // Mapeo opcional si los IDs de secciones no coinciden con los href
+  const sectionToNavLink = {
+    AboutUs: '#AboutUs',
+    TheTeam: '#TheTeam',
+    brands: '#TheTeam',
+    KeyInvestments: '#KeyInvestments',
+    OurNetwork: '#OurNetwork',
+    Contact: '#Contact',
+  };
 
   let observer;
 
   function observerCallback (entries) {
-    // Mapeo de secciones -> links, si es que los IDs no coinciden
-    const sectionToNavLink = {
-      AboutUs: '#AboutUs',
-      TheTeam: '#TheTeam',
-      brands: '#TheTeam',
-      KeyInvestments: '#KeyInvestments',
-      OurNetwork: '#OurNetwork',
-      Contact: '#Contact',
-    };
+    /*
+     * 1) Filtramos solamente las secciones que están
+     *    "intersectando" (es decir, tienen algo de visibilidad).
+     */
+    const visibleSections = entries.filter (entry => entry.isIntersecting);
 
-    entries.forEach (entry => {
-      if (entry.isIntersecting) {
-        // Removemos 'active' de todos los enlaces
-        navLinks.forEach (link => link.classList.remove ('active'));
+    // Si no hay secciones visibles, no hay nada que actualizar.
+    if (visibleSections.length === 0) return;
 
-        // Por default, se asume que el link href="#<idDeLaSeccion>"
-        let activeLinkSelector = `header .nav-link[href="#${entry.target.id}"]`;
+    /*
+     * 2) Ordenamos de mayor a menor intersectionRatio.
+     *    La primera en la lista será la "más visible"
+     *    en este instante.
+     */
+    visibleSections.sort ((a, b) => b.intersectionRatio - a.intersectionRatio);
 
-        // Pero si los IDs difieren, usamos el mapeo
-        if (sectionToNavLink.hasOwnProperty (entry.target.id)) {
-          activeLinkSelector = `header .nav-link[href="${sectionToNavLink[entry.target.id]}"]`;
-        }
+    const topEntry = visibleSections[0]; // la de mayor ratio
+    const topId = topEntry.target.id;
 
-        const activeLink = document.querySelector (activeLinkSelector);
-        if (activeLink) {
-          activeLink.classList.add ('active');
-          // Si quieres seguir usando tu barra highlight, la mueves:
-          moveHighlight (activeLink);
-          highlight.classList.remove ('hide');
-        } else {
-          // Caso en que ninguna sección coincida
-          moveHighlight (firstLink);
-          highlight.classList.add ('hide');
-        }
-      }
-    });
+    // 3) Quitamos .active de todos los links antes de asignar
+    navLinks.forEach (link => link.classList.remove ('active'));
+
+    // 4) Construimos el selector del link correspondiente a esa sección
+    let activeLinkSelector = `header .nav-link[href="#${topId}"]`;
+    if (sectionToNavLink.hasOwnProperty (topId)) {
+      activeLinkSelector = `header .nav-link[href="${sectionToNavLink[topId]}"]`;
+    }
+
+    // 5) Agregamos .active al link de la sección más visible
+    const activeLink = document.querySelector (activeLinkSelector);
+    if (activeLink) {
+      activeLink.classList.add ('active');
+    }
+
+    // 6) Si es la sección Contact, agregamos .bg-light al header
+    //    En caso contrario, la removemos
+    if (topId === 'Contact') {
+      headerEl.classList.add ('bg-white');
+    } else {
+      headerEl.classList.remove ('bg-white');
+    }
   }
 
   function createObserver () {
@@ -50,42 +64,18 @@ document.addEventListener ('DOMContentLoaded', function () {
 
     observer = new IntersectionObserver (observerCallback, {
       root: null,
-      rootMargin: '0px 0px 0px 0px',
-      // threshold: 0.3 o el que desees
-      threshold: 0.3,
+      rootMargin: '0px',
+      // Usar un único valor de threshold reduce el parpadeo:
+      threshold: 0.5,
     });
 
     sections.forEach (section => observer.observe (section));
   }
 
-  function moveHighlight (activeLink) {
-    // ... todo tu código existente para la barra highlight ...
-    // Puedes eliminarlo si ya no quieres la barra animada
-  }
-
-  // Inicialización
   createObserver ();
 
-  // En la carga inicial
-  const initialActiveLink = document.querySelector ('header .nav-link.active');
-  if (initialActiveLink) {
-    moveHighlight (initialActiveLink);
-    highlight.classList.remove ('hide');
-  } else {
-    moveHighlight (firstLink);
-    highlight.classList.add ('hide');
-  }
-
-  // Manejo de resize
+  // Re-crear el observer al hacer resize, por si cambian las dimensiones
   window.addEventListener ('resize', () => {
     createObserver ();
-    const activeLink = document.querySelector ('header .nav-link.active');
-    if (activeLink) {
-      moveHighlight (activeLink);
-      highlight.classList.remove ('hide');
-    } else {
-      moveHighlight (firstLink);
-      highlight.classList.add ('hide');
-    }
   });
 });
