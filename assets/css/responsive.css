@@ -1,0 +1,51 @@
+@media (max-width: 999px) {
+    .mob-ok {
+        display: inherit !important;
+    }
+
+    .mob-no {
+        display: none !important;
+    }
+
+    header.navbar.navbar-stuck {
+        height: 103px;
+        background: none;
+        background-color: unset;
+        box-shadow: unset;
+        filter: unset;
+        backdrop-filter: unset;
+    }
+
+    header .navbar-brand {
+        left: 34px;
+    }
+
+    header .navbar-brand img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+        width: 35px;
+        background-color: red;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    #home,
+    #AboutUs,
+    #brands,
+    #TheTeam,
+    #KeyInvestments,
+    #OurNetwork,
+    #Contact {
+        display: none;
+    }
+}

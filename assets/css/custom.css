@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+.mob-ok {
+    display: none !important;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,6 +13,22 @@ body {
     margin-bottom: 200px !important;
 }
 
+h6,
+.h6,
+h5,
+.h5,
+h4,
+.h4,
+h3,
+.h3,
+h2,
+.h2,
+h1,
+.h1,
+p {
+    z-index: 1;
+}
+
 .montserrat {
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
@@ -16,8 +36,14 @@ body {
     font-style: normal;
 }
 
-main {
+.main-bg {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
     background: linear-gradient(180deg, #222 0%, #000 70.88%), #fff;
+    z-index: -1;
 }
 
 header {
