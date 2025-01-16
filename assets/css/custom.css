@@ -80,6 +80,10 @@ header #navbarNav .offcanvas-body ul li a {
     transition: all .2s ease-in-out;
 }
 
+header #navbarNav .offcanvas-body ul li a.active {
+    color: #fff !important;
+}
+
 header #navbarNav .offcanvas-body ul li a:before {
     content: "";
     position: absolute;
@@ -100,9 +104,12 @@ header #navbarNav .offcanvas-body ul li a:before {
     transition: all .2s ease-in-out;
 }
 
-header #navbarNav .offcanvas-body ul li a:hover:before,
-header #navbarNav .offcanvas-body ul li a:focus:before,
-header #navbarNav .offcanvas-body ul li a:active {
+header #navbarNav .offcanvas-body ul li a:focus:before {
+    opacity: 0;
+}
+
+header #navbarNav .offcanvas-body ul li a.active:before,
+header #navbarNav .offcanvas-body ul li a:hover:before {
     opacity: 1;
     transform: scale(1);
     transition: all .2s ease-in-out;
