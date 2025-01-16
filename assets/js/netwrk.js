@@ -1,19 +1,6 @@
-/**
- * netwrk | Multipurpose Bootstrap 5 Template & UI Kit
- * Copyright 2023 Createx Studio
- * Theme scripts
- *
- * @author Createx Studio
- * @version 1.6.0
- */
 !(function () {
   'use strict';
-  /*!
-    * Bootstrap v5.3.2 (https://getbootstrap.com/)
-    * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-    */ var e,
-    t;
+  var e, t;
   !(function (e, t) {
     'object' == typeof exports && 'undefined' != typeof module
       ? (module.exports = t ())
