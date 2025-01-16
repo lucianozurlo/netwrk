@@ -8,14 +8,14 @@
     height: 100%;
     -webkit-transition: all .4s .2s ease-in-out;
     transition: all .4s .2s ease-in-out;
-    background-color: #fff;
+    background-color: #000;
     opacity: 0;
     visibility: hidden;
     z-index: 9999;
 }
 
 [data-bs-theme="dark"] .page-loading {
-    background-color: #0b0f19;
+    background-color: #000;
 }
 
 .page-loading.active {
@@ -44,7 +44,7 @@
     display: block;
     font-size: 1rem;
     font-weight: normal;
-    color: #9397ad;
+    color: #fff;
 }
 
 [data-bs-theme="dark"] .page-loading-inner>span {
