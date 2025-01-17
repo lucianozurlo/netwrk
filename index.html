@@ -792,11 +792,13 @@
 
 		<section id="Contact">
 			<div class="text-content">
-				<h2>Let’s Build the <span>Future Together</span></h2>
-				<p>We make early-stage investments <span>across all industries and around</span> the globe.</p>
+				<h2>Let’s Build the<span>Future Together</span></h2>
+				<p>We make early-stage investments <span>across all industries and around</span> the globe.
+				</p>
 			</div>
 
 			<div class="container swiper-container">
+
 				<div class="swiper mySwiper">
 					<div class="selector-container">
 						<div class="selector">
@@ -808,128 +810,100 @@
 
 					<div class="swiper-wrapper">
 
-						<!-- Slide 1 (Formulario 1) -->
 						<div class="swiper-slide slide1">
-							<form name="investWithUs" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-								<!-- Campo oculto para que Netlify sepa el nombre del formulario -->
-								<input type="hidden" name="form-name" value="investWithUs">
-
-								<!-- Campo honeypot para spam (lo ocultarás con CSS) -->
-								<p style="display: none;">
-									<label>Don’t fill this out if you're human: <input name="bot-field"></label>
-								</p>
-
+							<form class="needs-validation" novalidate>
 								<div class="form-inputs">
 									<h4>Contact Information</h4>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="fullname">Full Name
-												<span>(Founder/Primary Contact)</span>
-											</label>
-											<input type="text" id="fullname" name="fullname" required>
+												<span>(Founder/Primary Contact)</span></label>
+											<input type="text" id="fullname">
 										</div>
 										<div class="column-input">
 											<label for="email">Email Address</label>
-											<input type="email" id="email" name="email" required>
+											<input type="text" id="email">
 										</div>
 									</div>
 								</div>
-
-								<!-- Mensaje de estado (lo manejarás con tu redirección o JavaScript) -->
-								<div class="form-message" id="form1-message"></div>
-
 								<input type="submit" value="Submit">
 							</form>
+						</div>
 
-							<!-- Slide 2 (Formulario 2) -->
-							<div class="swiper-slide slide2">
-								<form name="applyForFunding" method="POST" data-netlify="true"
-									netlify-honeypot="bot-field">
-									<input type="hidden" name="form-name" value="applyForFunding">
-
-									<p style="display: none;">
-										<label>Don’t fill this out if you're human: <input name="bot-field"></label>
-									</p>
-
-									<div class="form-inputs">
-										<h4>Contact Information</h4>
-										<div class="row-input">
-											<div class="column-input">
-												<label for="fullname2">Full Name
-													<span>(Founder/Primary Contact)</span>
-												</label>
-												<input type="text" id="fullname2" name="fullname2" required>
-											</div>
-											<div class="column-input">
-												<label for="email2">Email Address</label>
-												<input type="email" id="email2" name="email2" required>
+						<div class="swiper-slide slide2">
+							<form class="needs-validation" novalidate>
+								<div class="form-inputs">
+									<h4>Contact Information</h4>
+									<div class="row-input">
+										<div class="column-input">
+											<label for="fullname">Full Name
+												<span>(Founder/Primary Contact)</span></label>
+											<input type="text" id="fullname">
+										</div>
+										<div class="column-input">
+											<label for="email">Email Address</label>
+											<input type="text" id="email">
+										</div>
+									</div>
+								</div>
+								<div class="form-inputs">
+									<h4>Company Information</h4>
+									<div class="row-input">
+										<div class="column-input">
+											<label for="company-name">Company Name</label>
+											<input type="text" id="company-name">
+										</div>
+									</div>
+									<div class="row-input">
+										<div class="column-input">
+											<label for="current-round">Current Round</label>
+											<input type="text" id="current-round">
+										</div>
+										<div class="column-input">
+											<label for="raise-amount">Raise Amount</label>
+											<input type="text" id="raise-amount">
+										</div>
+									</div>
+									<div class="row-input">
+										<div class="column-input">
+											<label for="valuation">Valuation</label>
+											<input type="text" id="valuation">
+										</div>
+										<div class="column-input">
+											<label for="revenue">Revenue</label>
+											<input type="text" id="revenue">
+										</div>
+									</div>
+									<div class="row-input">
+										<div class="column-input">
+											<label for="elevator-pitch">Elevator pitch</label>
+											<textarea name="elevator-pitch" id="elevator-pitch"></textarea>
+										</div>
+										<div class="column-input">
+											<label for="company-deck">Company Deck</label>
+											<div class="drag-drop-area" id="company-deck">
+												<p class="mob-no">Drag & drop or browse a file <img
+														src="assets/img/clip.svg" alt="">
+												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="">
 											</div>
 										</div>
 									</div>
+									<input type="submit" value="Submit">
+								</div>
 
-									<div class="form-inputs">
-										<h4>Company Information</h4>
-										<div class="row-input">
-											<div class="column-input">
-												<label for="company-name">Company Name</label>
-												<input type="text" id="company-name" name="company_name">
-											</div>
-										</div>
-										<div class="row-input">
-											<div class="column-input">
-												<label for="current-round">Current Round</label>
-												<input type="text" id="current-round" name="current_round">
-											</div>
-											<div class="column-input">
-												<label for="raise-amount">Raise Amount</label>
-												<input type="text" id="raise-amount" name="raise_amount">
-											</div>
-										</div>
-										<div class="row-input">
-											<div class="column-input">
-												<label for="valuation">Valuation</label>
-												<input type="text" id="valuation" name="valuation">
-											</div>
-											<div class="column-input">
-												<label for="revenue">Revenue</label>
-												<input type="text" id="revenue" name="revenue">
-											</div>
-										</div>
-										<div class="row-input">
-											<div class="column-input">
-												<label for="elevator-pitch">Elevator pitch</label>
-												<textarea name="elevator_pitch" id="elevator-pitch"></textarea>
-											</div>
-											<div class="column-input">
-												<label for="company-deck">Company Deck</label>
-												<div class="drag-drop-area" id="company-deck">
-													<p class="mob-no">Drag & drop or browse a file
-														<img src="assets/img/clip.svg" alt="">
-													</p>
-													<p class="mob-ok">Upload file
-														<img src="assets/img/clip.svg" alt="">
-													</p>
-												</div>
-											</div>
-										</div>
+							</form>
+						</div>
 
-										<!-- Mensaje de estado -->
-										<div class="form-message" id="form2-message"></div>
-
-										<input type="submit" value="Submit">
-									</div>
-								</form>
-							</div>
-
-						</div> <!-- .swiper-wrapper -->
-					</div> <!-- .swiper -->
-				</div> <!-- .container -->
-
-				<div id="footer">
-					<img src="assets/img/logo.svg" class="mob-no">
-					<img src="assets/img/iso_b.svg" class="mob-ok">
-					<p>hello@netwrkventures.com</p>
+					</div>
 				</div>
+
+			</div>
+
+			<div id="footer">
+				<img src="assets/img/logo.svg" class="mob-no">
+				<img src="assets/img/iso_b.svg" class="mob-ok">
+				<p>hello@netwrkventures.com</p>
+			</div>
 		</section>
 
 	</main>
