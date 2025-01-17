@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Ejemplo Formularios</title>
+    <meta charset="UTF-8" />
+    <title>Two Forms Example</title>
 </head>
 
 <body>
 
-    <!-- FORMULARIO 1 -->
+    <!-- FORM 1 -->
     <form id="form1" method="POST" action="sendForm.php" novalidate>
+        <input type="hidden" name="form_id" value="form1">
+
         <div class="form-inputs">
             <h4>Contact Information</h4>
             <div class="row-input">
@@ -26,8 +28,10 @@
         <input type="submit" value="Submit">
     </form>
 
-    <!-- FORMULARIO 2 -->
+    <!-- FORM 2 -->
     <form id="form2" method="POST" action="sendForm.php" novalidate>
+        <input type="hidden" name="form_id" value="form2">
+
         <div class="form-inputs">
             <h4>Contact Information</h4>
             <div class="row-input">
@@ -76,7 +80,7 @@
                 </div>
                 <div class="column-input">
                     <label for="company-deck">Company Deck</label>
-                    <!-- Ojo: si quieres subir archivos reales, debes usar "type=file" y un enctype en el form -->
+                    <!-- Example "drag & drop" area (no actual upload with this code) -->
                     <div class="drag-drop-area" id="company-deck">
                         <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt=""></p>
                         <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
@@ -87,27 +91,25 @@
         </div>
     </form>
 
-    <!-- Contenedor para mensajes de exito/error -->
+    <!-- Place to display messages -->
     <div id="msg-estado"></div>
 
-    <!-- Un poco de JS para manejar el envío asincrónico si quieres (opcional) -->
+    <!-- JavaScript to handle the AJAX submission -->
     <script>
-        // En este ejemplo, se usa el action (sendForm.php) y method POST directos.
-        // Si quieres usar envío por AJAX (fetch) y mostrar mensajes dinámicamente sin recargar, haz algo como:
-
+        // Attach 'submit' listeners to both forms
         document.getElementById('form1').addEventListener('submit', function (e) {
-            e.preventDefault(); // prevenimos el envío tradicional
-            enviarFormularioAjax(this);
+            e.preventDefault();
+            sendFormAjax(this);
         });
 
         document.getElementById('form2').addEventListener('submit', function (e) {
-            e.preventDefault(); // prevenimos el envío tradicional
-            enviarFormularioAjax(this);
+            e.preventDefault();
+            sendFormAjax(this);
         });
 
-        function enviarFormularioAjax(form) {
+        function sendFormAjax(form) {
             const msgEstado = document.getElementById("msg-estado");
-            msgEstado.innerHTML = "Enviando...";
+            msgEstado.textContent = "Sending...";
 
             const formData = new FormData(form);
 
@@ -125,7 +127,7 @@
                     }
                 })
                 .catch(err => {
-                    msgEstado.innerHTML = `<span style="color:red">Ocurrió un error: ${err}</span>`;
+                    msgEstado.innerHTML = `<span style="color:red">Error: ${err}</span>`;
                 });
         }
     </script>
