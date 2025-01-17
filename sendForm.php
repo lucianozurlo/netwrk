@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mensaje .= "Elevator Pitch: $elevator\n\n";
 
     // Datos del correo
-    $destinatario = "formtesting117@gmail.com";  // A dónde se enviará
+    $destinatario = "lucianozurlo@gmail.com";  // A dónde se enviará
     $asunto       = "Nuevo formulario de contacto - $fullname";
 
     // Cabeceras (puedes ajustar 'From', 'Reply-To', etc.)
