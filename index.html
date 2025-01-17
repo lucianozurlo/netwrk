@@ -533,9 +533,6 @@
 							<p>In May 2024, they raised a $30 million Series B round led by Friends & Family Capital and
 								Fifth Down Capital, with participation from Goldcrest Capital, Craft Ventures, and
 								Godfrey Capital.</p>
-							<p>We invested in this round and, by leveraging our network, secured a strategic allocation
-								at a 15% discount to the Series C valuation. We will also participate in the upcoming
-								Series C round.</p>
 						</div>
 						<div class="back-fill-image"></div>
 					</div>
@@ -636,9 +633,6 @@
 									<p>In May 2024, they raised a $30 million Series B round led by Friends & Family
 										Capital and Fifth Down Capital, with participation from Goldcrest Capital, Craft
 										Ventures, and Godfrey Capital.</p>
-									<p>We invested in this round and, by leveraging our network, secured a strategic
-										allocation at a 15% discount to the Series C valuation. We will also participate
-										in the upcoming Series C round.</p>
 								</div>
 							</div>
 						</div>
@@ -753,7 +747,7 @@
 			<div class="investors-container">
 
 				<div class="style-content">
-					<a href="">
+					<a href="https://foundersfund.com/" target="_blank">
 
 						<img src="assets/img/brands/co-investors/founders-fund.svg" alt="">
 						<div class="style-fill"></div>
@@ -761,14 +755,14 @@
 					</a>
 				</div>
 				<div class="style-content">
-					<a href="">
+					<a href="https://www.friendsandfamilycapital.com/" target="_blank">
 						<img src="assets/img/brands/co-investors/friends-family-capital.svg" alt="">
 						<div class="style-fill"></div>
 						<div class="style-fill style-hover"></div>
 					</a>
 				</div>
 				<div class="style-content">
-					<a href="">
+					<a href="https://www.goldcrest.com/" target="_blank">
 						<img src="assets/img/brands/co-investors/goldcrest-capital.svg" alt="" style="max-height: 47%;">
 						<div class="style-fill"></div>
 						<div class="style-fill style-hover"></div>
@@ -776,7 +770,7 @@
 				</div>
 
 				<div class="style-content">
-					<a href="">
+					<a href="https://www.khoslaventures.com/" target="_blank">
 						<img src="assets/img/brands/co-investors/khosla-ventures.svg" alt="">
 						<div class="style-fill"></div>
 						<div class="style-fill style-hover"></div>
@@ -784,7 +778,7 @@
 				</div>
 
 				<div class="style-content">
-					<a href="">
+					<a href="https://www.fifthdown.com/" target="_blank">
 						<img src="assets/img/brands/co-investors/fifth-down-dapital.svg" alt="">
 						<div class="style-fill"></div>
 						<div class="style-fill style-hover"></div>
@@ -798,13 +792,11 @@
 
 		<section id="Contact">
 			<div class="text-content">
-				<h2>Let’s Build the<span>Future Together</span></h2>
-				<p>We make early-stage investments <span>across all industries and around</span> the globe.
-				</p>
+				<h2>Let’s Build the <span>Future Together</span></h2>
+				<p>We make early-stage investments <span>across all industries and around</span> the globe.</p>
 			</div>
 
 			<div class="container swiper-container">
-
 				<div class="swiper mySwiper">
 					<div class="selector-container">
 						<div class="selector">
@@ -816,94 +808,112 @@
 
 					<div class="swiper-wrapper">
 
+						<!-- Slide 1 (Formulario 1) -->
 						<div class="swiper-slide slide1">
-							<form class="needs-validation" novalidate>
+							<form class="needs-validation" novalidate action="enviar_form_1.php" method="POST">
 								<div class="form-inputs">
 									<h4>Contact Information</h4>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="fullname">Full Name
-												<span>(Founder/Primary Contact)</span></label>
-											<input type="text" id="fullname">
+												<span>(Founder/Primary Contact)</span>
+											</label>
+											<input type="text" id="fullname" name="fullname" required>
 										</div>
 										<div class="column-input">
 											<label for="email">Email Address</label>
-											<input type="text" id="email">
+											<input type="email" id="email" name="email" required>
 										</div>
 									</div>
 								</div>
+
+								<!-- Contenedor para mensajes (éxito o error) -->
+								<div class="form-message" id="form1-message">
+									<!-- Aquí irá el mensaje de “Correo enviado” o “Error”, etc. -->
+								</div>
+
 								<input type="submit" value="Submit">
 							</form>
 						</div>
 
+						<!-- Slide 2 (Formulario 2) -->
 						<div class="swiper-slide slide2">
-							<form class="needs-validation" novalidate>
+							<form class="needs-validation" novalidate action="enviar_form_2.php" method="POST">
 								<div class="form-inputs">
 									<h4>Contact Information</h4>
 									<div class="row-input">
 										<div class="column-input">
-											<label for="fullname">Full Name
-												<span>(Founder/Primary Contact)</span></label>
-											<input type="text" id="fullname">
+											<label for="fullname2">Full Name
+												<span>(Founder/Primary Contact)</span>
+											</label>
+											<input type="text" id="fullname2" name="fullname2" required>
 										</div>
 										<div class="column-input">
-											<label for="email">Email Address</label>
-											<input type="text" id="email">
+											<label for="email2">Email Address</label>
+											<input type="email" id="email2" name="email2" required>
 										</div>
 									</div>
 								</div>
+
 								<div class="form-inputs">
 									<h4>Company Information</h4>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="company-name">Company Name</label>
-											<input type="text" id="company-name">
+											<input type="text" id="company-name" name="company_name">
 										</div>
 									</div>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="current-round">Current Round</label>
-											<input type="text" id="current-round">
+											<input type="text" id="current-round" name="current_round">
 										</div>
 										<div class="column-input">
 											<label for="raise-amount">Raise Amount</label>
-											<input type="text" id="raise-amount">
+											<input type="text" id="raise-amount" name="raise_amount">
 										</div>
 									</div>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="valuation">Valuation</label>
-											<input type="text" id="valuation">
+											<input type="text" id="valuation" name="valuation">
 										</div>
 										<div class="column-input">
 											<label for="revenue">Revenue</label>
-											<input type="text" id="revenue">
+											<input type="text" id="revenue" name="revenue">
 										</div>
 									</div>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="elevator-pitch">Elevator pitch</label>
-											<textarea name="elevator-pitch" id="elevator-pitch"></textarea>
+											<textarea name="elevator_pitch" id="elevator-pitch"></textarea>
 										</div>
 										<div class="column-input">
 											<label for="company-deck">Company Deck</label>
 											<div class="drag-drop-area" id="company-deck">
-												<p class="mob-no">Drag & drop or browse a file <img
-														src="assets/img/clip.svg" alt="">
-												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="">
+												<p class="mob-no">Drag & drop or browse a file
+													<img src="assets/img/clip.svg" alt="">
+												</p>
+												<p class="mob-ok">Upload file
+													<img src="assets/img/clip.svg" alt="">
+												</p>
 											</div>
 										</div>
 									</div>
+
+									<!-- Contenedor para mensajes (éxito o error) -->
+									<div class="form-message" id="form2-message">
+										<!-- Aquí irá el mensaje de “Correo enviado” o “Error”, etc. -->
+									</div>
+
 									<input type="submit" value="Submit">
 								</div>
-
 							</form>
 						</div>
 
-					</div>
-				</div>
-
-			</div>
+					</div> <!-- .swiper-wrapper -->
+				</div> <!-- .swiper -->
+			</div> <!-- .container -->
 
 			<div id="footer">
 				<img src="assets/img/logo.svg" class="mob-no">
