@@ -1,4 +1,57 @@
+@media (max-width: 1320px) {
+    .parallax-layer.circle1 .circle-div {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .parallax-layer.circle2 .circle-div {
+        width: 59.19vw;
+        height: 59.19vw;
+    }
+
+    .parallax-layer.circle3 .circle-div {
+        width: 48.39vw;
+        height: 48.39vw;
+    }
+
+    .parallax-layer.circle4 .circle-div {
+        width: 37.59vw;
+        height: 37.59vw;
+    }
+
+    .parallax-layer.circle5 .circle-div {
+        width: 26.78vw;
+        height: 26.78vw;
+    }
+
+    .parallax-layer.circle6 .circle-div {
+        width: 15.98vw;
+        height: 15.98vw;
+    }
+
+    .parallax-layer.button .iso {
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .parallax-layer.brand .base {
+        width: 6.85vw;
+        height: 6.85vw;
+        border-radius: .76vw;
+    }
+
+    .parallax-layer.brand .square {
+        border-radius: .76vw;
+    }
+
+
+}
+
 @media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .mob-ok {
         display: inherit !important;
     }
@@ -28,6 +81,10 @@
         width: 35px;
     }
 
+    header.navbar.navbar-stuck.bg-white {
+        background-color: transparent !important;
+    }
+
     section>* {
         padding: 0 40px !important;
     }
@@ -38,7 +95,7 @@
     }
 
     #home .container {
-        padding: 0 34px;
+        padding: 0 34px !important;
     }
 
     #home .text-content p.lead {
@@ -63,11 +120,8 @@
         background-size: 55%;
     }
 
-
-
-
     #AboutUs {
-        margin-bottom: 200px;
+        margin-bottom: 55px;
     }
 
     #AboutUs .aboutus-content {
@@ -94,26 +148,220 @@
 
     #AboutUs .allcards-content {
         flex-direction: column;
+        margin-top: 70px;
+    }
+
+    #AboutUs .card-image {
+        transform: translateY(-35px) !important;
+        width: 75px;
+        height: 75px;
+    }
+
+    #AboutUs .card-image img {
+        width: 43px
+    }
+
+    #AboutUs .cardX {
+        max-height: 190px;
+        margin-bottom: 34px;
+        pointer-events: none !important;
+    }
+
+    #AboutUs .card-body {
+        height: 190px;
+        padding: 15px 45px 0;
+        justify-content: center;
+    }
+
+    #AboutUs .allcards-content h3 {
+        font-size: 20px;
+        line-height: 27px;
+        margin-bottom: 8px;
+    }
+
+    #brands {
+        margin-bottom: 50px;
+        overflow: hidden;
+        padding: 30vw 0;
+    }
+
+    #brands .circles .parallaxx {
+        transform: scale(2);
+        margin: 30px 0 80px;
+    }
+
+    #TheTeam {
+        gap: 32px;
+        margin-bottom: 70px;
+    }
+
+    #TheTeam h1 {
+        font-size: 38px;
+        line-height: 52px;
+    }
+
+    #TheTeam .team-content {
+        flex-direction: column;
+        gap: 34px;
+    }
+
+    #TheTeam .style-content:before,
+    #TheTeam .team-img,
+    #TheTeam .team-img:hover:before,
+    #TheTeam .team-img:active:before,
+    #TheTeam .style-fill {
+        width: 250px;
+        height: 250px;
+    }
+
+    #TheTeam .team-img img {
+        position: absolute;
+        width: 188px;
+        height: 188px;
+    }
+
+    #TheTeam .team-frame {
+        gap: 20px;
+    }
+
+    #TheTeam .team-txt h3 {
+        font-size: 17.703px;
+        line-height: 24px;
+    }
+
+    #TheTeam .team-txt p {
+        font-size: 14.1624px;
+        line-height: 19px;
+    }
+
+    #KeyInvestments h1 {
+        font-size: 38px;
+        line-height: 52px;
     }
 
 
+    #OurNetwork {
+        margin-bottom: 100px;
+    }
 
+    #OurNetwork h1 {
+        font-size: 38px;
+        line-height: 52px;
+    }
 
+    #OurNetwork .investors-container {
+        flex-direction: column;
+        padding: 0px;
+        gap: 16px;
+        max-width: 286px;
+    }
 
+    #OurNetwork .style-content {
+        width: 286px;
+        height: 108.54px;
+    }
 
+    #OurNetwork .investors-container a {
+        max-width: 265px;
+        max-height: 100px;
+    }
 
-
-
-
-
-
-
-
-    #brands,
-    #TheTeam,
-    #KeyInvestments,
-    #OurNetwork,
     #Contact {
-        display: none;
+        padding: 64px 0px;
+        gap: 48px;
+        width: 100vw;
     }
+
+    #Contact .text-content {
+        gap: 16px;
+        text-align: center;
+    }
+
+    #Contact .text-content span {
+        display: block;
+    }
+
+    #Contact .text-content h2 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    #Contact .text-content p {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    #Contact .swiper-container {
+        width: 100vw;
+    }
+
+    #Contact .swiper-slide form {
+        gap: 26px;
+    }
+
+    #Contact .swiper-container .selector-container {
+        width: 314px;
+        height: 48px;
+    }
+
+    #Contact .swiper-container .selector-container .selector .go-to-slide {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 500;
+    }
+
+    #Contact .swiper-container .selector-container .selector .go-to-slide {
+        width: 150px;
+        height: 40px;
+    }
+
+    #Contact .swiper-container .selector-container:before {
+        width: 314px;
+        height: 48px;
+    }
+
+    #Contact .swiper-slide form .form-inputs h4 {
+        font-size: 16px;
+    }
+
+    #Contact .swiper-slide form .form-inputs .column-input label {
+        font-size: 14px;
+    }
+
+    #Contact .swiper-slide form .form-inputs .column-input {
+        width: 100%;
+        gap: 5px;
+    }
+
+    #Contact .swiper-slide form .form-inputs .row-input {
+        gap: 16px;
+        margin-bottom: 0;
+    }
+
+    #Contact .swiper-slide form input[type="submit"] {
+        font-size: 14px;
+        font-weight: 500;
+        gap: 10px;
+        width: 150px;
+        height: 40px;
+        margin: 10px auto 70px;
+    }
+
+    #Contact #footer img {
+        width: 37.64px;
+    }
+
+    #Contact #footer p {
+        font-size: 14px;
+    }
+
+    #Contact .drag-drop-area img {
+        position: relative;
+        margin-top: 2px;
+    }
+
+    #KeyInvestments {
+        display: none !important
+    }
+
 }
