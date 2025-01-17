@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Formularios</title>
+</head>
+
+<body>
+
+    <!-- FORMULARIO 1 -->
+    <form id="form1" method="POST" action="sendForm.php" novalidate>
+        <div class="form-inputs">
+            <h4>Contact Information</h4>
+            <div class="row-input">
+                <div class="column-input">
+                    <label for="fullname1">Full Name <span>(Founder/Primary Contact)</span></label>
+                    <input type="text" id="fullname1" name="fullname" required>
+                </div>
+                <div class="column-input">
+                    <label for="email1">Email Address</label>
+                    <input type="email" id="email1" name="email" required>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- FORMULARIO 2 -->
+    <form id="form2" method="POST" action="sendForm.php" novalidate>
+        <div class="form-inputs">
+            <h4>Contact Information</h4>
+            <div class="row-input">
+                <div class="column-input">
+                    <label for="fullname2">Full Name <span>(Founder/Primary Contact)</span></label>
+                    <input type="text" id="fullname2" name="fullname" required>
+                </div>
+                <div class="column-input">
+                    <label for="email2">Email Address</label>
+                    <input type="email" id="email2" name="email" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-inputs">
+            <h4>Company Information</h4>
+            <div class="row-input">
+                <div class="column-input">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company-name">
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="column-input">
+                    <label for="current-round">Current Round</label>
+                    <input type="text" id="current-round" name="current-round">
+                </div>
+                <div class="column-input">
+                    <label for="raise-amount">Raise Amount</label>
+                    <input type="text" id="raise-amount" name="raise-amount">
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="column-input">
+                    <label for="valuation">Valuation</label>
+                    <input type="text" id="valuation" name="valuation">
+                </div>
+                <div class="column-input">
+                    <label for="revenue">Revenue</label>
+                    <input type="text" id="revenue" name="revenue">
+                </div>
+            </div>
+            <div class="row-input">
+                <div class="column-input">
+                    <label for="elevator-pitch">Elevator pitch</label>
+                    <textarea id="elevator-pitch" name="elevator-pitch"></textarea>
+                </div>
+                <div class="column-input">
+                    <label for="company-deck">Company Deck</label>
+                    <!-- Ojo: si quieres subir archivos reales, debes usar "type=file" y un enctype en el form -->
+                    <div class="drag-drop-area" id="company-deck">
+                        <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt=""></p>
+                        <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <!-- Contenedor para mensajes de exito/error -->
+    <div id="msg-estado"></div>
+
+    <!-- Un poco de JS para manejar el envío asincrónico si quieres (opcional) -->
+    <script>
+        // En este ejemplo, se usa el action (sendForm.php) y method POST directos.
+        // Si quieres usar envío por AJAX (fetch) y mostrar mensajes dinámicamente sin recargar, haz algo como:
+
+        document.getElementById('form1').addEventListener('submit', function (e) {
+            e.preventDefault(); // prevenimos el envío tradicional
+            enviarFormularioAjax(this);
+        });
+
+        document.getElementById('form2').addEventListener('submit', function (e) {
+            e.preventDefault(); // prevenimos el envío tradicional
+            enviarFormularioAjax(this);
+        });
+
+        function enviarFormularioAjax(form) {
+            const msgEstado = document.getElementById("msg-estado");
+            msgEstado.innerHTML = "Enviando...";
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        msgEstado.innerHTML = `<span style="color:green">${data.message}</span>`;
+                        form.reset();
+                    } else {
+                        msgEstado.innerHTML = `<span style="color:red">${data.message}</span>`;
+                    }
+                })
+                .catch(err => {
+                    msgEstado.innerHTML = `<span style="color:red">Ocurrió un error: ${err}</span>`;
+                });
+        }
+    </script>
+
+</body>
+
+</html>
