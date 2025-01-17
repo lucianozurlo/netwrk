@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+	<meta charset="utf-8">
+	<title>Netwrk</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+	<link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" media="screen" href="assets/css/netwrk.css">
+	<link rel="stylesheet" media="screen" href="assets/css/preload.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="assets/js/preload.js"></script>
+	<link rel="stylesheet" media="screen" href="assets/css/fonts.css">
+	<link rel="stylesheet" media="screen" href="assets/css/custom.css">
+	<link rel="stylesheet" media="screen" href="assets/css/sections.css">
+	<link rel="stylesheet" media="screen" href="assets/css/responsive.css">
+</head>
+
+<body>
+	<main class="page-wrapper">
+
+		<div class="page-loading active">
+			<div class="page-loading-inner">
+				<div class="page-spinner"></div><span>Loading...</span>
+			</div>
+		</div>
+
+		<div class="main-bg"></div>
+
+		<header class="header navbar navbar-expand-lg navbar-dark navbar-sticky navbar-stuck">
+			<a href="#home" class="navbar-brand pe-3 scroll-link" onclick="closeNav()">
+				<img src="assets/img/logo_w.svg" alt="netwrk" class="mob-no">
+				<img src="assets/img/iso.svg" alt="netwrk" class="mob-ok iso-w">
+				<img src="assets/img/iso_b.svg" alt="netwrk" class="mob-ok iso-b">
+			</a>
+			<div class="container px-3">
+
+				<button type="button" class="navbar-toggler" onclick="openNav()">
+					<span class="navbar-toggler-icon">
+						<img src="assets/img/menu.svg" alt="">
+					</span>
+				</button>
+
+				<div id="navbarNav" class="offcanvas offcanvas-end scroll-animate bg-dark scroll-link"
+					onclick="closeNav()">
+					<div class="offcanvas-header mob-ok">
+						<button type="button" class="btn-close" onclick="closeNav()">
+							<img src="assets/img/close.svg" alt="">
+						</button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a href="#AboutUs" class="nav-link scroll-link" onclick="closeNav()">About Us</a>
+							</li>
+							<li class="nav-item">
+								<a href="#TheTeam" class="nav-link scroll-link" onclick="closeNav()">The Team</a>
+							</li>
+							<li class="nav-item">
+								<a href="#KeyInvestments" class="nav-link scroll-link" onclick="closeNav()">Key
+									Investments</a>
+							</li>
+							<li class="nav-item">
+								<a href="#OurNetwork" class="nav-link scroll-link" onclick="closeNav()">Our Network</a>
+							</li>
+							<li class="nav-item">
+								<a href="#Contact" class="nav-link scroll-link" onclick="closeNav()">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="offcanvas-footer mob-ok">
+						<img src="assets/img/iso.svg" alt="">
+					</div>
+				</div>
+				</a>
+			</div>
+		</header>
+
+
+		<section id="home">
+
+			<div class="container position-relative text-center zindex-5">
+				<div class="row">
+					<div class="col-12 text-content">
+						<p class="lead">Where Social Capital <span>Meets Real Value:</span></p>
+						<h1 class="">Driving Growth <span>Through Relationships</span></h1>
+						<p>We connect visionary founders <span>with the resources they need to fuel</span>fast-paced
+							growth.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg bg1"></div>
+			<div class="bg bg2"></div>
+
+		</section>
+
+
+		<section id="AboutUs">
+			<div class="aboutus-content">
+				<div class="text-content">
+					<h1>About us</h1>
+					<div class="sub-content">
+						<h3>Our Philosophy</h3>
+						<p>We believe true innovation thrives on meaningful connections. In a world increasingly driven
+							by AI and automation, Netwrk Ventures prioritizes authentic relationships with founders,
+							equipping them with unparalleled access and strategic insights to unlock rapid growth and
+							impactful results.</p>
+					</div>
+				</div>
+
+				<div class="allcards">
+
+					<h3>What Sets Us Apart</h3>
+
+					<div class="allcards-content">
+						<div class="cardX style-content">
+							<div class="card-image">
+								<img src="assets/img/aboutus-1.svg">
+								<div class="style-fill"></div>
+								<div class="style-fill style-hover bs"></div>
+							</div>
+							<div class="card-body">
+								<h3>Exclusive Deal Flow</h3>
+								<p>Deals sourced by our network<br />of top-tier fund founders<br />and advisors.</p>
+							</div>
+							<div class="style-fill"></div>
+							<div class="style-fill style-hover bs"></div>
+						</div>
+
+						<div class="cardX style-content">
+							<div class="card-image">
+								<img src="assets/img/aboutus-2.svg">
+								<div class="style-fill"></div>
+								<div class="style-fill style-hover bs"></div>
+							</div>
+							<div class="card-body">
+								<h3>The Netwrk</h3>
+								<p>Founder-friendly<br />collaboration through real<br />relationships, not just funding
+								</p>
+							</div>
+							<div class="style-fill style-hover bs"></div>
+							<div class="style-fill"></div>
+						</div>
+
+						<div class="cardX style-content">
+							<div class="card-image">
+								<img src="assets/img/aboutus-3.svg">
+								<div class="style-fill"></div>
+								<div class="style-fill style-hover bs"></div>
+							</div>
+							<div class="card-body">
+								<h3>Growth Acceleration</h3>
+								<p>Leveraging partnerships<br />and integrations to drive<br />immediate impact.</p>
+							</div>
+							<div class="style-fill style-hover bs"></div>
+							<div class="style-fill"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+		<section id="brands">
+			<div class="d-flex flex-column">
+
+				<div class="container position-relative zindex-2">
+
+					<div class="row align-items-center justify-content-center justify-content-md-start">
+						<div class="col-12 circles">
+
+							<div class="parallaxx">
+								<div class="parallax-layer circle1" data-depth="0.05">
+									<div class="circle-div">
+										<div class="circle-divbg"></div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.055">
+									<div class="base" style="left: 55%; top: -1%;">
+										<div class="square">
+											<img src="assets/img/brands/aloyoga.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.06">
+									<div class="base" style="left: 7%; top: 73%;">
+										<div class="square">
+											<img src="assets/img/brands/douglaselliman.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.063">
+									<div class="base" style="left: 71%; top: 6%;">
+										<div class="square">
+											<img src="assets/img/brands/groot.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.068">
+									<div class="base" style="left: 91%; top: 54%;">
+										<div class="square">
+											<img src="assets/img/brands/hydrafacial.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.07">
+									<div class="base" style="left: 5%; top: 20%;">
+										<div class="square">
+											<img src="assets/img/brands/celsius.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.073">
+									<div class="base" style="left: 90%; top: 31%;">
+										<div class="square">
+											<img src="assets/img/brands/ufc.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.078">
+									<div class="base" style="left: -1.5%; top: 44%;">
+										<div class="square">
+											<img src="assets/img/brands/cox.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.08">
+									<div class="base" style="left: 68%; top: 86%;">
+										<div class="square">
+											<img src="assets/img/brands/mikeshothoney.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.085">
+									<div class="base" style="left: 20%; top: 84.5%;">
+										<div class="square">
+											<img src="assets/img/brands/rollingloud.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.09">
+									<div class="base" style="left: 80%; top: 77%;">
+										<div class="square">
+											<img src="assets/img/brands/nksfb.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.095">
+									<div class="base" style="left: 25%; top: 3%;">
+										<div class="square">
+											<img src="assets/img/brands/bauschandlomb.svg" alt="">
+										</div>
+									</div>
+								</div>
+
+								<div class="parallax-layer circle2" data-depth="0.1">
+									<div class="circle-div"></div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.11">
+									<div class="base" style="left: 40.5%; top: 6.5%;">
+										<div class="square">
+											<img src="assets/img/brands/amex.svg" alt="" class="w80">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.115">
+									<div class="base" style="left: 55%; top: 82.5%;">
+										<div class="square">
+											<img src="assets/img/brands/livenation.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.12">
+									<div class="base" style="left: 77%; top: 22%;">
+										<div class="square">
+											<img src="assets/img/brands/pnc.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.125">
+									<div class="base" style="left: 79%; top: 64%;">
+										<div class="square">
+											<img src="assets/img/brands/nhl.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.13">
+									<div class="base" style="left: 38%; top: 84%;">
+										<div class="square">
+											<img src="assets/img/brands/caesars.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.135">
+									<div class="base" style="left: 8%; top: 57%;">
+										<div class="square">
+											<img src="assets/img/brands/caa.svg" alt="" class="w80">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.14">
+									<div class="base" style="left: 20%; top: 15%;">
+										<div class="square">
+											<img src="assets/img/brands/nba.svg" alt="" class="w90">
+										</div>
+									</div>
+								</div>
+
+								<div class="parallax-layer circle3" data-depth="0.15">
+									<div class="circle-div"></div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.155">
+									<div class="base" style="left: 33%; top: 17%;">
+										<div class="square">
+											<img src="assets/img/brands/jerseymikes.svg" alt="" class="w80">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.16">
+									<div class="base" style="left: 54%; top: 15%;">
+										<div class="square">
+											<img src="assets/img/brands/mars.svg" alt="" class="w80">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.165">
+									<div class="base" style="left: 66%; top: 69%;">
+										<div class="square">
+											<img src="assets/img/brands/arizona.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.175">
+									<div class="base" style="left: 23%; top: 68%;">
+										<div class="square">
+											<img src="assets/img/brands/nfl.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.185">
+									<div class="base" style="left: 15%; top: 35%;">
+										<div class="square">
+											<img src="assets/img/brands/fanatics.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.195">
+									<div class="base" style="left: 76.5%; top: 43%;">
+										<div class="square">
+											<img src="assets/img/brands/spacex.svg" alt="">
+										</div>
+									</div>
+								</div>
+
+								<div class="parallax-layer circle4" data-depth="0.2">
+									<div class="circle-div"></div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.22">
+									<div class="base" style="left: 62%; top: 29%;">
+										<div class="square">
+											<img src="assets/img/brands/toast.svg" alt="" class="w90">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.23">
+									<div class="base" style="left: 49%; top: 68%;">
+										<div class="square">
+											<img src="assets/img/brands/betr.svg" alt="">
+										</div>
+									</div>
+								</div>
+
+								<div class="parallax-layer circle5" data-depth="0.25">
+									<div class="circle-div"></div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.26">
+									<div class="base" style="left: 36%; top: 32%;">
+										<div class="square">
+											<img src="assets/img/brands/ripple.svg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.27">
+									<div class="base" style="left: 60%; top: 52%;">
+										<div class="square">
+											<img src="assets/img/brands/mlb.svg" alt="" class="w90">
+										</div>
+									</div>
+								</div>
+								<div class="parallax-layer brand" data-depth="0.28">
+									<div class="base" style="left: 32%; top: 54%;">
+										<div class="square">
+											<img src="assets/img/brands/walmart.svg" alt="">
+										</div>
+									</div>
+								</div>
+
+								<div class="parallax-layer circle6" data-depth="0.3">
+									<div class="circle-div"></div>
+								</div>
+								<div class="parallax-layer button" data-depth="0.35">
+									<div class="iso">
+										<a href="">
+											<p>Your Startup</p>
+											<img src="assets/img/iso.svg" alt="">
+										</a>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+		<section id="TheTeam">
+			<h1>The Team</h1>
+			<div class="team-content">
+				<div class="team-frame">
+					<div class="team-img style-content">
+						<img src="assets/img/team-nick.png" alt="">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover bs"></div>
+					</div>
+					<div class="team-txt">
+						<h3>Nick Godin</h3>
+						<p>General Partner</p>
+					</div>
+				</div>
+				<div class="team-frame">
+					<div class="team-img style-content">
+						<img src="assets/img/team-ryan.png" alt="">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover bs"></div>
+					</div>
+					<div class="team-txt">
+						<h3>Ryan Roberts</h3>
+						<p>General Partner</p>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+		<section id="KeyInvestments">
+			<h1>Key Investments</h1>
+			<div class="key-content">
+
+				<!-- DESKTOP -->
+				<ul class="nav nav-tabs flex-column mob-no" role="tablist">
+					<li class="nav-item">
+						<a href="#peregrine" class="nav-link style-content active" data-bs-toggle="tab" role="tab">
+							<img src="assets/img/brands/key-investments/peregrine.svg" alt="">
+
+							<div class="back-fill style-fill"></div>
+							<div class="back-fill style-fill style-hover"></div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#spacex" class="nav-link style-content" data-bs-toggle="tab" role="tab">
+							<img src="assets/img/brands/key-investments/spacex.svg" alt="">
+
+							<div class="back-fill style-fill"></div>
+							<div class="back-fill style-fill style-hover"></div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#arena" class="nav-link style-content" data-bs-toggle="tab" role="tab">
+							<img src="assets/img/brands/key-investments/arena.svg" alt="" style="width: 105px">
+
+							<div class="back-fill style-fill"></div>
+							<div class="back-fill style-fill style-hover"></div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#mikeshothoney" class="nav-link style-content" data-bs-toggle="tab" role="tab">
+							<img src="assets/img/brands/key-investments/mikeshothoney.svg" alt="">
+
+							<div class="back-fill style-fill"></div>
+							<div class="back-fill style-fill style-hover"></div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#coframe" class="nav-link style-content" data-bs-toggle="tab" role="tab">
+							<img src="assets/img/brands/key-investments/coframe.svg" alt="">
+
+							<div class="back-fill style-fill"></div>
+							<div class="back-fill style-fill style-hover"></div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#hypercard" class="nav-link style-content" data-bs-toggle="tab" role="tab">
+							<img src="assets/img/brands/key-investments/hypercard.svg" alt="">
+
+							<div class="back-fill style-fill"></div>
+							<div class="back-fill style-fill style-hover"></div>
+						</a>
+					</li>
+				</ul>
+
+				<div class="box-shadow-all mob-no">
+					<div class="box-shadow-container">
+						<div class="box-shadow peregrine active"></div>
+						<div class="box-shadow spacex"></div>
+						<div class="box-shadow arena"></div>
+						<div class="box-shadow mikeshothoney"></div>
+						<div class="box-shadow coframe"></div>
+						<div class="box-shadow hypercard"></div>
+					</div>
+				</div>
+
+				<div class="tab-content mob-no">
+					<div class="tab-pane fade style-content show active" id="peregrine" role="tabpanel">
+						<div class="back-fill style-fill">
+							<h3>Peregrine</h3>
+							<p>Peregrine, founded by Stanford graduates and former Palantir executives, provides a data
+								integration platform that helps government agencies improve public safety. By unifying
+								and visualizing data from multiple sources, it enables real-time, informed decisions.
+								Used by over 70 agencies, Peregrine has proven its value in enhancing safety and
+								operational efficiency.</p>
+							<p>In May 2024, they raised a $30 million Series B round led by Friends & Family Capital and
+								Fifth Down Capital, with participation from Goldcrest Capital, Craft Ventures, and
+								Godfrey Capital.</p>
+						</div>
+						<div class="back-fill-image"></div>
+					</div>
+					<div class="tab-pane fade style-content" id="spacex" role="tabpanel">
+						<div class="back-fill style-fill">
+							<h3>SpaceX</h3>
+							<p>SpaceX has revolutionized the aerospace industry with its reusable rocket technology,
+								groundbreaking satellite initiatives, and ambitious plans for Mars colonization.</p>
+							<p>The company has achieved major milestones, including deploying the Starlink satellite
+								constellation for global internet coverage and becoming the first private company to
+								send astronauts to the International Space Station with its Crew Dragon spacecraft.
+								SpaceX’s reusable rockets have significantly reduced the cost of space exploration,
+								making it a leader in commercial spaceflight.</p>
+							<p>We invested in SpaceX during its $137 billion valuation round, capitalizing on its
+								position as a dominant force in the space sector. Currently, the company is exploring
+								tender offers at a valuation of $350 billion, reflecting its continued growth and
+								success in both satellite services and government contracts.</p>
+						</div>
+						<div class="back-fill-image"></div>
+					</div>
+					<div class="tab-pane fade style-content" id="arena" role="tabpanel">
+						<div class="back-fill style-fill">
+							<h3>Arena</h3>
+							<p>Arena leverages AI-powered predictive analytics to revolutionize hiring and retention. By
+								matching candidates to roles where they are most likely to succeed, Arena helps
+								organizations improve employee satisfaction, reduce turnover, and optimize long-term
+								outcomes.</p>
+							<p>Trusted by industries like healthcare and retail, where efficient hiring is critical,
+								Arena enhances workforce quality and drives significant cost savings by minimizing the
+								expenses associated with employee turnover.</p>
+							<p>Co-investors in Arena include Goldcrest Capital, Founders Fund, Flexport, Michael Seibel,
+								Peter Thiel, and General David Petraeus.</p>
+						</div>
+						<div class="back-fill-image"></div>
+					</div>
+					<div class="tab-pane fade style-content" id="mikeshothoney" role="tabpanel">
+						<div class="back-fill style-fill">
+							<h3>Mike Shot Honey</h3>
+							<p>Mike's Hot Honey, founded by Mike Kurtz in Brooklyn, New York, specializes in
+								chili-infused honey that adds a unique sweet-heat flavor to various foods. The company
+								has become a leading brand in the U.S., described as a "cult favorite."</p>
+							<p>We invested in Mike's Hot Honey, recognizing its potential in the specialty food market.
+								Leveraging our network, we facilitated collaborations with major brands, including
+								Jersey Mike's, to expand their reach and product offerings.</p>
+							<p>As of 2024, Mike's Hot Honey is available in over 3,000 restaurants and 30,000 retail
+								establishments nationwide.</p>
+						</div>
+						<div class="back-fill-image"></div>
+					</div>
+					<div class="tab-pane fade style-content" id="coframe" role="tabpanel">
+						<div class="back-fill style-fill">
+							<h3>Coframe</h3>
+							<p>Coframe uses generative AI to optimize websites by continuously testing and improving
+								elements like text, visuals, and code, helping businesses personalize user experiences
+								and drive higher sales. In collaboration with OpenAI, they’ve developed AI models that
+								automate the creation of website user interface code, ensuring brand consistency and
+								visual alignment. </p>
+							<p>Their platform has delivered impressive results, including an average 42% increase in
+								click-through rates, with some customer segments experiencing up to a 352% lift.</p>
+							<p>Coframe recently raised a $9.3 million seed round co-led by Khosla Ventures and NFDG, an
+								AI-focused fund managed by Nat Friedman (former GitHub CEO) and Daniel Gross (former
+								Apple executive).</p>
+						</div>
+						<div class="back-fill-image"></div>
+					</div>
+					<div class="tab-pane fade style-content" id="hypercard" role="tabpanel">
+						<div class="back-fill style-fill">
+							<h3>Hypercard</h3>
+							<p>Hypercard is the first personal credit card designed as an employer-activated membership
+								experience, enabling employees to access perks, request business reimbursements
+								seamlessly, and retain loyalty rewards from personal and business spending.</p>
+							<p>As one of only ten cards in the Amex network, Hypercard offers an exclusive membership
+								experience, including TSA PreCheck and discounted ClassPass access. For employers, it
+								supports employees in building credit while enhancing brand value.</p>
+							<p>Sam Altman led Hypercard's fundraising round, and through our network, we secured their
+								official American Express partnership.</p>
+							</p>
+						</div>
+						<div class="back-fill-image"></div>
+					</div>
+				</div>
+				<!-- END DESKTOP -->
+
+				<!-- MOBILE -->
+				<div id="swiperKeyMob" class="swiper mySwiperMob mob-ok scroll-animate">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/peregrine.svg" alt=""
+										class="scroll-animate">
+									<p>Peregrine, founded by Stanford graduates and former Palantir executives, provides
+										a data integration platform that helps government agencies improve public
+										safety. By unifying and visualizing data from multiple sources, it enables
+										real-time, informed decisions. Used by over 70 agencies, Peregrine has proven
+										its value in enhancing safety and operational efficiency.</p>
+									<p>In May 2024, they raised a $30 million Series B round led by Friends & Family
+										Capital and Fifth Down Capital, with participation from Goldcrest Capital, Craft
+										Ventures, and Godfrey Capital.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/spacex.svg" alt=""
+										class="scroll-animate">
+									<p>SpaceX has revolutionized the aerospace industry with its reusable rocket
+										technology, groundbreaking satellite initiatives, and ambitious plans for Mars
+										colonization.</p>
+									<p>The company has achieved major milestones, including deploying the Starlink
+										satellite constellation for global internet coverage and becoming the first
+										private company to send astronauts to the International Space Station with its
+										Crew Dragon spacecraft. SpaceX’s reusable rockets have significantly reduced the
+										cost of space exploration, making it a leader in commercial spaceflight.</p>
+									<p>We invested in SpaceX during its $137 billion valuation round, capitalizing on
+										its position as a dominant force in the space sector. Currently, the company is
+										exploring tender offers at a valuation of $350 billion, reflecting its continued
+										growth and success in both satellite services and government contracts.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/arena.svg" alt=""
+										class="scroll-animate">
+									<p>Arena leverages AI-powered predictive analytics to revolutionize hiring and
+										retention. By matching candidates to roles where they are most likely to
+										succeed, Arena helps organizations improve employee satisfaction, reduce
+										turnover, and optimize long-term outcomes.</p>
+									<p>Trusted by industries like healthcare and retail, where efficient hiring is
+										critical, Arena enhances workforce quality and drives significant cost savings
+										by minimizing the expenses associated with employee turnover.</p>
+									<p>Co-investors in Arena include Goldcrest Capital, Founders Fund, Flexport, Michael
+										Seibel, Peter Thiel, and General David Petraeus.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/mikeshothoney.svg" alt=""
+										class="scroll-animate" style="height: 100px;">
+									<p>Mike's Hot Honey, founded by Mike Kurtz in Brooklyn, New York, specializes in
+										chili-infused honey that adds a unique sweet-heat flavor to various foods. The
+										company has become a leading brand in the U.S., described as a "cult favorite."
+									</p>
+									<p>We invested in Mike's Hot Honey, recognizing its potential in the specialty food
+										market. Leveraging our network, we facilitated collaborations with major brands,
+										including Jersey Mike's, to expand their reach and product offerings.</p>
+									<p>As of 2024, Mike's Hot Honey is available in over 3,000 restaurants and 30,000
+										retail establishments nationwide.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/coframe.svg" alt=""
+										class="scroll-animate">
+									<p>Coframe uses generative AI to optimize websites by continuously testing and
+										improving elements like text, visuals, and code, helping businesses personalize
+										user experiences and drive higher sales. In collaboration with OpenAI, they’ve
+										developed AI models that automate the creation of website user interface code,
+										ensuring brand consistency and visual alignment.</p>
+									<p>Their platform has delivered impressive results, including an average 42%
+										increase in click-through rates, with some customer segments experiencing up to
+										a 352% lift.</p>
+									<p>Coframe recently raised a $9.3 million seed round co-led by Khosla Ventures and
+										NFDG, an AI-focused fund managed by Nat Friedman (former GitHub CEO) and Daniel
+										Gross (former Apple executive).</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/hypercard.svg" alt=""
+										class="scroll-animate">
+									<p>Hypercard is the first personal credit card designed as an employer-activated
+										membership experience, enabling employees to access perks, request business
+										reimbursements seamlessly, and retain loyalty rewards from personal and business
+										spending.</p>
+									<p>As one of only ten cards in the Amex network, Hypercard offers an exclusive
+										membership experience, including TSA PreCheck and discounted ClassPass access.
+										For employers, it supports employees in building credit while enhancing brand
+										value.</p>
+									<p>Sam Altman led Hypercard's fundraising round, and through our network, we secured
+										their official American Express partnership.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- END MOBILE -->
+
+			</div>
+		</section>
+
+
+		<section id="OurNetwork">
+			<h1>Co-Investors</h1>
+
+			<div class="investors-container">
+
+				<div class="style-content">
+					<a href="https://foundersfund.com/" target="_blank">
+
+						<img src="assets/img/brands/co-investors/founders-fund.svg" alt="">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover"></div>
+					</a>
+				</div>
+				<div class="style-content">
+					<a href="https://www.friendsandfamilycapital.com/" target="_blank">
+						<img src="assets/img/brands/co-investors/friends-family-capital.svg" alt="">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover"></div>
+					</a>
+				</div>
+				<div class="style-content">
+					<a href="https://www.goldcrest.com/" target="_blank">
+						<img src="assets/img/brands/co-investors/goldcrest-capital.svg" alt="" style="max-height: 47%;">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover"></div>
+					</a>
+				</div>
+
+				<div class="style-content">
+					<a href="https://www.khoslaventures.com/" target="_blank">
+						<img src="assets/img/brands/co-investors/khosla-ventures.svg" alt="">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover"></div>
+					</a>
+				</div>
+
+				<div class="style-content">
+					<a href="https://www.fifthdown.com/" target="_blank">
+						<img src="assets/img/brands/co-investors/fifth-down-dapital.svg" alt="">
+						<div class="style-fill"></div>
+						<div class="style-fill style-hover"></div>
+					</a>
+				</div>
+
+			</div>
+
+		</section>
+
+
+		<section id="Contact">
+			<div class="text-content">
+				<h2>Let’s Build the <span>Future Together</span></h2>
+				<p>We make early-stage investments <span>across all industries and around</span> the globe.</p>
+			</div>
+
+			<div class="container swiper-container">
+				<div class="swiper mySwiper">
+					<div class="selector-container">
+						<div class="selector">
+							<div class="highlight"></div>
+							<a href="#" class="go-to-slide active" data-slide="1">Invest With Us</a>
+							<a href="#" class="go-to-slide" data-slide="2">Apply for Funding</a>
+						</div>
+					</div>
+
+					<div class="swiper-wrapper">
+
+						<!-- Slide 1 (Formulario 1) -->
+						<div class="swiper-slide slide1">
+							<form name="investWithUs" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+								<!-- Campo oculto para que Netlify sepa el nombre del formulario -->
+								<input type="hidden" name="form-name" value="investWithUs">
+
+								<!-- Campo honeypot para spam (lo ocultarás con CSS) -->
+								<p style="display: none;">
+									<label>Don’t fill this out if you're human: <input name="bot-field"></label>
+								</p>
+
+								<div class="form-inputs">
+									<h4>Contact Information</h4>
+									<div class="row-input">
+										<div class="column-input">
+											<label for="fullname">Full Name
+												<span>(Founder/Primary Contact)</span>
+											</label>
+											<input type="text" id="fullname" name="fullname" required>
+										</div>
+										<div class="column-input">
+											<label for="email">Email Address</label>
+											<input type="email" id="email" name="email" required>
+										</div>
+									</div>
+								</div>
+
+								<!-- Mensaje de estado (lo manejarás con tu redirección o JavaScript) -->
+								<div class="form-message" id="form1-message"></div>
+
+								<input type="submit" value="Submit">
+							</form>
+
+							<!-- Slide 2 (Formulario 2) -->
+							<div class="swiper-slide slide2">
+								<form name="applyForFunding" method="POST" data-netlify="true"
+									netlify-honeypot="bot-field">
+									<input type="hidden" name="form-name" value="applyForFunding">
+
+									<p style="display: none;">
+										<label>Don’t fill this out if you're human: <input name="bot-field"></label>
+									</p>
+
+									<div class="form-inputs">
+										<h4>Contact Information</h4>
+										<div class="row-input">
+											<div class="column-input">
+												<label for="fullname2">Full Name
+													<span>(Founder/Primary Contact)</span>
+												</label>
+												<input type="text" id="fullname2" name="fullname2" required>
+											</div>
+											<div class="column-input">
+												<label for="email2">Email Address</label>
+												<input type="email" id="email2" name="email2" required>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-inputs">
+										<h4>Company Information</h4>
+										<div class="row-input">
+											<div class="column-input">
+												<label for="company-name">Company Name</label>
+												<input type="text" id="company-name" name="company_name">
+											</div>
+										</div>
+										<div class="row-input">
+											<div class="column-input">
+												<label for="current-round">Current Round</label>
+												<input type="text" id="current-round" name="current_round">
+											</div>
+											<div class="column-input">
+												<label for="raise-amount">Raise Amount</label>
+												<input type="text" id="raise-amount" name="raise_amount">
+											</div>
+										</div>
+										<div class="row-input">
+											<div class="column-input">
+												<label for="valuation">Valuation</label>
+												<input type="text" id="valuation" name="valuation">
+											</div>
+											<div class="column-input">
+												<label for="revenue">Revenue</label>
+												<input type="text" id="revenue" name="revenue">
+											</div>
+										</div>
+										<div class="row-input">
+											<div class="column-input">
+												<label for="elevator-pitch">Elevator pitch</label>
+												<textarea name="elevator_pitch" id="elevator-pitch"></textarea>
+											</div>
+											<div class="column-input">
+												<label for="company-deck">Company Deck</label>
+												<div class="drag-drop-area" id="company-deck">
+													<p class="mob-no">Drag & drop or browse a file
+														<img src="assets/img/clip.svg" alt="">
+													</p>
+													<p class="mob-ok">Upload file
+														<img src="assets/img/clip.svg" alt="">
+													</p>
+												</div>
+											</div>
+										</div>
+
+										<!-- Mensaje de estado -->
+										<div class="form-message" id="form2-message"></div>
+
+										<input type="submit" value="Submit">
+									</div>
+								</form>
+							</div>
+
+						</div> <!-- .swiper-wrapper -->
+					</div> <!-- .swiper -->
+				</div> <!-- .container -->
+
+				<div id="footer">
+					<img src="assets/img/logo.svg" class="mob-no">
+					<img src="assets/img/iso_b.svg" class="mob-ok">
+					<p>hello@netwrkventures.com</p>
+				</div>
+		</section>
+
+	</main>
+
+	<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+	<script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+	<script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+	<script src="assets/js/netwrk.js"></script>
+	<script src="assets/js/header.js"></script>
+	<script src="assets/js/smooth-scroll.js"></script>
+	<script src="assets/js/swiper.js"></script>
+
+	<script>
+		function openNav() {
+			document.querySelector("#navbarNav").classList.add("active");
+		}
+		function closeNav() {
+			document.querySelector("#navbarNav").classList.remove("active");
+		}
+	</script>
+
+	<script>
+		// Función para inicializar drag and drop
+		function initializeDragAndDrop(dropAreaId) {
+			const dropArea = document.getElementById(dropAreaId);
+
+			// Evitar comportamientos predeterminados
+			['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+				dropArea.addEventListener(eventName, e => e.preventDefault());
+				dropArea.addEventListener(eventName, e => e.stopPropagation());
+			});
+
+			// Añadir estilos cuando el archivo está sobre el área
+			['dragenter', 'dragover'].forEach(eventName => {
+				dropArea.addEventListener(eventName, () => {
+					dropArea.classList.add('drag-over');
+				});
+			});
+
+			// Remover estilos cuando el archivo sale del área
+			['dragleave', 'drop'].forEach(eventName => {
+				dropArea.addEventListener(eventName, () => {
+					dropArea.classList.remove('drag-over');
+				});
+			});
+
+			// Manejar la carga del archivo
+			dropArea.addEventListener('drop', event => {
+				const files = event.dataTransfer.files;
+				handleFiles(files, dropAreaId);
+			});
+
+			// Click para subir archivos
+			dropArea.addEventListener('click', () => {
+				const input = document.createElement('input');
+				input.type = 'file';
+				input.onchange = () => handleFiles(input.files, dropAreaId);
+				input.click();
+			});
+		}
+
+		// Función para manejar los archivos
+		function handleFiles(files, dropAreaId) {
+			if (files.length > 0) {
+				const file = files[0]; // Solo procesamos el primer archivo por área
+				const dropArea = document.getElementById(dropAreaId);
+				dropArea.innerHTML = `<p>File uploaded: ${file.name}</p>`;
+			}
+		}
+
+		// Inicializar las áreas
+		initializeDragAndDrop('company-deck');
+
+	</script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll('.cardX');
+			let maxHeight = 0;
+
+			cards.forEach(card => {
+				card.style.height = 'auto';
+				const cardHeight = card.offsetHeight;
+				if (cardHeight > maxHeight) {
+					maxHeight = cardHeight;
+				}
+			});
+
+			cards.forEach(card => {
+				card.style.height = `${maxHeight}px`;
+			});
+
+
+		});
+	</script>
+
+	<script>
+		const targetIds = ["#peregrine", "#spacex", "#arena", "#mikeshothoney", "#coframe", "#hypercard"];
+		const observerTargets = targetIds.map(id => document.querySelector(id));
+
+		const observerCallback = (mutationsList) => {
+			mutationsList.forEach(mutation => {
+				if (mutation.type === "attributes" && mutation.attributeName === "class") {
+					const targetElement = mutation.target;
+					if (targetElement.classList.contains("active")) {
+						// Obtenemos la clase que corresponde al id actual
+						const relatedClass = targetElement.id;
+						// Buscamos el elemento correspondiente en .box-shadow-container
+						const boxShadowElement = document.querySelector(`.box-shadow.${relatedClass}`);
+						if (boxShadowElement) {
+							boxShadowElement.classList.add("active");
+						}
+					} else {
+						// Si se quita la clase .active, también la removemos en .box-shadow
+						const relatedClass = targetElement.id;
+						const boxShadowElement = document.querySelector(`.box-shadow.${relatedClass}`);
+						if (boxShadowElement) {
+							boxShadowElement.classList.remove("active");
+						}
+					}
+				}
+			});
+		};
+
+		// Configuramos el observer para observar cambios en los atributos
+		const observerOptions = {attributes: true, attributeFilter: ["class"]};
+
+		// Creamos el observer y lo aplicamos a cada elemento target
+		const observer = new MutationObserver(observerCallback);
+		observerTargets.forEach(target => {
+			if (target) {
+				observer.observe(target, observerOptions);
+			}
+		});
+
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const sliderContainers = ['#swiperKeyMob', '#swiperContactMob'];
+
+			function debounce(func, wait) {
+				let timeout;
+				return function (...args) {
+					const context = this;
+					clearTimeout(timeout);
+					timeout = setTimeout(() => func.apply(context, args), wait);
+				};
+			}
+
+			function checkViewportAndHandleHeight() {
+				if (window.innerWidth < 999) {
+					sliderContainers.forEach(containerSelector => {
+						const swiperWrapper = document.querySelector(`${containerSelector} .swiper-wrapper`);
+						if (swiperWrapper) {
+							const altura = swiperWrapper.offsetHeight;
+							console.log(`Altura de ${containerSelector} .swiper-wrapper:`, altura);
+
+							const swiperSlides = swiperWrapper.querySelectorAll('.swiper-slide');
+							swiperSlides.forEach(slide => {
+								slide.style.height = `${altura}px`;
+							});
+						} else {
+							console.log(`El elemento ${containerSelector} .swiper-wrapper no se encontró.`);
+						}
+					});
+				} else {
+					console.log('Viewport mayor o igual a 999px. No se define la variable.');
+
+					sliderContainers.forEach(containerSelector => {
+						const swiperSlides = document.querySelectorAll(`${containerSelector} .swiper-wrapper .swiper-slide`);
+						swiperSlides.forEach(slide => {
+							slide.style.height = '';
+						});
+					});
+				}
+			}
+
+			checkViewportAndHandleHeight();
+
+			window.addEventListener('resize', debounce(checkViewportAndHandleHeight, 200));
+		});
+	</script>
+
+
+</body>
+
+</html>
