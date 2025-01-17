@@ -91,9 +91,6 @@ header #navbarNav {
     flex-direction: row;
     align-items: center;
     padding: 0px !important;
-    /* gap: 325px; */
-    /* width: 708px; */
-    /* height: 40px; */
 }
 
 header #navbarNav .offcanvas-body ul {
@@ -103,7 +100,6 @@ header #navbarNav .offcanvas-body ul {
     align-items: center;
     padding: 0;
     gap: 24px;
-    /* width: 708px; */
     margin: 0 auto;
     height: 40px;
 }

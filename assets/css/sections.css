@@ -148,12 +148,14 @@ h3 {
 }
 
 #home .bg1 {
-    background-image: url('../img/intro-bg1.png');
-    background-position: right top;
+    background-image: url('../img/intro-bg2.gif');
+    /* background-position: right top; */
+    background-position: left bottom;
+    transform: rotate(180deg);
 }
 
 #home .bg2 {
-    background-image: url('../img/intro-bg2.png');
+    background-image: url('../img/intro-bg2.gif');
     background-position: left bottom;
 }
 
