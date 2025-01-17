@@ -77,18 +77,27 @@ function initializeSwipers (containerSelector) {
         containerSelector + ' .swiper-container'
       );
 
-      if (containerSelector === '#tools') {
+      if (containerSelector === '#KeyInvestments') {
         container.style.maxWidth = swiper.activeIndex === 2
-          ? '857px'
+          ? '760px'
           : '1150px';
       } else {
         container.style.maxWidth = swiper.activeIndex === 1
-          ? '857px'
+          ? '760px'
           : '1150px';
       }
 
+      swiper.updateAutoHeight ();
       swiper.update ();
     }, 350);
+  });
+
+  // Ajustar altura igual al iniciar en responsive
+  setEqualHeight (swiper);
+
+  // Ajustar altura igual al redimensionar
+  window.addEventListener ('resize', () => {
+    setEqualHeight (swiper);
   });
 
   updateActiveLink ();
@@ -97,4 +106,12 @@ function initializeSwipers (containerSelector) {
 // Inicializar Swipers cuando el DOM esté cargado
 document.addEventListener ('DOMContentLoaded', () => {
   initializeSwipers ('#Contact');
+  initializeSwipers ('#KeyInvestments');
+});
+
+// Swiper para Mobile
+const swiperMobile = new Swiper ('.mySwiperMob', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 20,
 });

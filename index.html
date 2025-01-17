@@ -27,40 +27,51 @@
 			</div>
 		</div>
 
-
 		<div class="main-bg"></div>
 
 		<header class="header navbar navbar-expand-lg navbar-dark navbar-sticky navbar-stuck">
-			<a href="#home" class="navbar-brand pe-3 scroll-link">
+			<a href="#home" class="navbar-brand pe-3 scroll-link" onclick="closeNav()">
 				<img src="assets/img/logo_w.svg" alt="netwrk" class="mob-no">
-				<img src="assets/img/iso.svg" alt="netwrk" class="mob-ok">
+				<img src="assets/img/iso.svg" alt="netwrk" class="mob-ok iso-w">
+				<img src="assets/img/iso_b.svg" alt="netwrk" class="mob-ok iso-b">
 			</a>
 			<div class="container px-3">
 
-				<div id="navbarNav" class="offcanvas offcanvas-end bg-dark scroll-link">
-					<div class="offcanvas-header border-bottom border-light">
-						<h5 class="offcanvas-title text-white">Menu</h5>
-						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-							aria-label="Close"></button>
+				<button type="button" class="navbar-toggler" onclick="openNav()">
+					<span class="navbar-toggler-icon">
+						<img src="assets/img/menu.svg" alt="">
+					</span>
+				</button>
+
+				<div id="navbarNav" class="offcanvas offcanvas-end scroll-animate bg-dark scroll-link"
+					onclick="closeNav()">
+					<div class="offcanvas-header mob-ok">
+						<button type="button" class="btn-close" onclick="closeNav()">
+							<img src="assets/img/close.svg" alt="">
+						</button>
 					</div>
 					<div class="offcanvas-body">
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 							<li class="nav-item">
-								<a href="#AboutUs" class="nav-link scroll-link">About Us</a>
+								<a href="#AboutUs" class="nav-link scroll-link" onclick="closeNav()">About Us</a>
 							</li>
 							<li class="nav-item">
-								<a href="#TheTeam" class="nav-link scroll-link">The Team</a>
+								<a href="#TheTeam" class="nav-link scroll-link" onclick="closeNav()">The Team</a>
 							</li>
 							<li class="nav-item">
-								<a href="#KeyInvestments" class="nav-link scroll-link">Key Investments</a>
+								<a href="#KeyInvestments" class="nav-link scroll-link" onclick="closeNav()">Key
+									Investments</a>
 							</li>
 							<li class="nav-item">
-								<a href="#OurNetwork" class="nav-link scroll-link">Our Network</a>
+								<a href="#OurNetwork" class="nav-link scroll-link" onclick="closeNav()">Our Network</a>
 							</li>
 							<li class="nav-item">
-								<a href="#Contact" class="nav-link scroll-link">Contact</a>
+								<a href="#Contact" class="nav-link scroll-link" onclick="closeNav()">Contact</a>
 							</li>
 						</ul>
+					</div>
+					<div class="offcanvas-footer mob-ok">
+						<img src="assets/img/iso.svg" alt="">
 					</div>
 				</div>
 				</a>
@@ -446,7 +457,8 @@
 			<h1>Key Investments</h1>
 			<div class="key-content">
 
-				<ul class="nav nav-tabs flex-column" role="tablist">
+				<!-- DESKTOP -->
+				<ul class="nav nav-tabs flex-column mob-no" role="tablist">
 					<li class="nav-item">
 						<a href="#peregrine" class="nav-link style-content active" data-bs-toggle="tab" role="tab">
 							<img src="assets/img/brands/key-investments/peregrine.svg" alt="">
@@ -604,6 +616,131 @@
 						<div class="back-fill-image"></div>
 					</div>
 				</div>
+				<!-- END DESKTOP -->
+
+				<!-- MOBILE -->
+				<div id="swiperKeyMob" class="swiper mySwiperMob mob-ok scroll-animate">
+					<div class="swiper-wrapper">
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/peregrine.svg" alt=""
+										class="scroll-animate">
+									<p>Peregrine, founded by Stanford graduates and former Palantir executives, provides
+										a data integration platform that helps government agencies improve public
+										safety. By unifying and visualizing data from multiple sources, it enables
+										real-time, informed decisions. Used by over 70 agencies, Peregrine has proven
+										its value in enhancing safety and operational efficiency.</p>
+									<p>In May 2024, they raised a $30 million Series B round led by Friends & Family
+										Capital and Fifth Down Capital, with participation from Goldcrest Capital, Craft
+										Ventures, and Godfrey Capital.</p>
+									<p>We invested in this round and, by leveraging our network, secured a strategic
+										allocation at a 15% discount to the Series C valuation. We will also participate
+										in the upcoming Series C round.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/spacex.svg" alt=""
+										class="scroll-animate">
+									<p>SpaceX has revolutionized the aerospace industry with its reusable rocket
+										technology, groundbreaking satellite initiatives, and ambitious plans for Mars
+										colonization.</p>
+									<p>The company has achieved major milestones, including deploying the Starlink
+										satellite constellation for global internet coverage and becoming the first
+										private company to send astronauts to the International Space Station with its
+										Crew Dragon spacecraft. SpaceX’s reusable rockets have significantly reduced the
+										cost of space exploration, making it a leader in commercial spaceflight.</p>
+									<p>We invested in SpaceX during its $137 billion valuation round, capitalizing on
+										its position as a dominant force in the space sector. Currently, the company is
+										exploring tender offers at a valuation of $350 billion, reflecting its continued
+										growth and success in both satellite services and government contracts.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/arena.svg" alt=""
+										class="scroll-animate">
+									<p>Arena leverages AI-powered predictive analytics to revolutionize hiring and
+										retention. By matching candidates to roles where they are most likely to
+										succeed, Arena helps organizations improve employee satisfaction, reduce
+										turnover, and optimize long-term outcomes.</p>
+									<p>Trusted by industries like healthcare and retail, where efficient hiring is
+										critical, Arena enhances workforce quality and drives significant cost savings
+										by minimizing the expenses associated with employee turnover.</p>
+									<p>Co-investors in Arena include Goldcrest Capital, Founders Fund, Flexport, Michael
+										Seibel, Peter Thiel, and General David Petraeus.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/mikeshothoney.svg" alt=""
+										class="scroll-animate" style="height: 100px;">
+									<p>Mike's Hot Honey, founded by Mike Kurtz in Brooklyn, New York, specializes in
+										chili-infused honey that adds a unique sweet-heat flavor to various foods. The
+										company has become a leading brand in the U.S., described as a "cult favorite."
+									</p>
+									<p>We invested in Mike's Hot Honey, recognizing its potential in the specialty food
+										market. Leveraging our network, we facilitated collaborations with major brands,
+										including Jersey Mike's, to expand their reach and product offerings.</p>
+									<p>As of 2024, Mike's Hot Honey is available in over 3,000 restaurants and 30,000
+										retail establishments nationwide.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/coframe.svg" alt=""
+										class="scroll-animate">
+									<p>Coframe uses generative AI to optimize websites by continuously testing and
+										improving elements like text, visuals, and code, helping businesses personalize
+										user experiences and drive higher sales. In collaboration with OpenAI, they’ve
+										developed AI models that automate the creation of website user interface code,
+										ensuring brand consistency and visual alignment.</p>
+									<p>Their platform has delivered impressive results, including an average 42%
+										increase in click-through rates, with some customer segments experiencing up to
+										a 352% lift.</p>
+									<p>Coframe recently raised a $9.3 million seed round co-led by Khosla Ventures and
+										NFDG, an AI-focused fund managed by Nat Friedman (former GitHub CEO) and Daniel
+										Gross (former Apple executive).</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide style-content">
+							<div class="card-cont">
+								<div class="card-bg">
+									<img src="assets/img/brands/key-investments/hypercard.svg" alt=""
+										class="scroll-animate">
+									<p>Hypercard is the first personal credit card designed as an employer-activated
+										membership experience, enabling employees to access perks, request business
+										reimbursements seamlessly, and retain loyalty rewards from personal and business
+										spending.</p>
+									<p>As one of only ten cards in the Amex network, Hypercard offers an exclusive
+										membership experience, including TSA PreCheck and discounted ClassPass access.
+										For employers, it supports employees in building credit while enhancing brand
+										value.</p>
+									<p>Sam Altman led Hypercard's fundraising round, and through our network, we secured
+										their official American Express partnership.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- END MOBILE -->
 
 			</div>
 		</section>
@@ -667,12 +804,11 @@
 
 			<div class="container swiper-container">
 
-				<!-- DESKTOP -->
 				<div class="swiper mySwiper">
 					<div class="selector-container">
 						<div class="selector">
 							<div class="highlight"></div>
-							<a href="#" class="go-to-slide" data-slide="1">Invest With Us</a>
+							<a href="#" class="go-to-slide active" data-slide="1">Invest With Us</a>
 							<a href="#" class="go-to-slide" data-slide="2">Apply for Funding</a>
 						</div>
 					</div>
@@ -765,7 +901,6 @@
 
 					</div>
 				</div>
-				<!-- END DESKTOP -->
 
 			</div>
 
@@ -786,6 +921,15 @@
 	<script src="assets/js/header.js"></script>
 	<script src="assets/js/smooth-scroll.js"></script>
 	<script src="assets/js/swiper.js"></script>
+
+	<script>
+		function openNav() {
+			document.querySelector("#navbarNav").classList.add("active");
+		}
+		function closeNav() {
+			document.querySelector("#navbarNav").classList.remove("active");
+		}
+	</script>
 
 	<script>
 		// Función para inicializar drag and drop
@@ -902,6 +1046,54 @@
 		});
 
 	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const sliderContainers = ['#swiperKeyMob', '#swiperContactMob'];
+
+			function debounce(func, wait) {
+				let timeout;
+				return function (...args) {
+					const context = this;
+					clearTimeout(timeout);
+					timeout = setTimeout(() => func.apply(context, args), wait);
+				};
+			}
+
+			function checkViewportAndHandleHeight() {
+				if (window.innerWidth < 999) {
+					sliderContainers.forEach(containerSelector => {
+						const swiperWrapper = document.querySelector(`${containerSelector} .swiper-wrapper`);
+						if (swiperWrapper) {
+							const altura = swiperWrapper.offsetHeight;
+							console.log(`Altura de ${containerSelector} .swiper-wrapper:`, altura);
+
+							const swiperSlides = swiperWrapper.querySelectorAll('.swiper-slide');
+							swiperSlides.forEach(slide => {
+								slide.style.height = `${altura}px`;
+							});
+						} else {
+							console.log(`El elemento ${containerSelector} .swiper-wrapper no se encontró.`);
+						}
+					});
+				} else {
+					console.log('Viewport mayor o igual a 999px. No se define la variable.');
+
+					sliderContainers.forEach(containerSelector => {
+						const swiperSlides = document.querySelectorAll(`${containerSelector} .swiper-wrapper .swiper-slide`);
+						swiperSlides.forEach(slide => {
+							slide.style.height = '';
+						});
+					});
+				}
+			}
+
+			checkViewportAndHandleHeight();
+
+			window.addEventListener('resize', debounce(checkViewportAndHandleHeight, 200));
+		});
+	</script>
+
 
 </body>
 
