@@ -10,29 +10,36 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// 1. Identificar cuál formulario es
+// 1. Identificamos cuál formulario es
 $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
-// 2. Definir variables según formulario
-if ($formId === 'form1') {
-    // "Invest With Us"
-    $recipient = "lucianozurlo@gmail.com";
-    $formName  = "Invest With Us";
-    $isForm2   = false; // para saber si requerimos "company-name"
-} elseif ($formId === 'form2') {
-    // "Apply for Funding"
-    $recipient = "em24.teco@gmail.com";
-    $formName  = "Apply for Funding";
-    $isForm2   = true;  // requiere "company-name"
-} else {
-    echo json_encode([
-        "status"  => "error",
-        "message" => "Unknown form identifier."
-    ]);
-    exit;
+// 2. Configuramos los datos según el formulario
+switch ($formId) {
+    case 'form1':
+        // "Invest With Us"
+        $recipient       = "lucianozurlo@gmail.com";
+        $formName        = "Invest With Us";
+        // Campos obligatorios para form1
+        $requiredFields  = ['fullname', 'email'];
+        break;
+
+    case 'form2':
+        // "Apply for Funding"
+        $recipient       = "em24.teco@gmail.com";
+        $formName        = "Apply for Funding";
+        // Campos obligatorios para form2
+        $requiredFields  = ['fullname', 'email', 'company-name'];
+        break;
+
+    default:
+        echo json_encode([
+            "status"  => "error",
+            "message" => "Unknown form identifier."
+        ]);
+        exit;
 }
 
-// 3. Recoger datos
+// 3. Recogemos los campos comunes
 $fullname      = isset($_POST['fullname'])        ? trim($_POST['fullname'])        : '';
 $email         = isset($_POST['email'])           ? trim($_POST['email'])           : '';
 $companyName   = isset($_POST['company-name'])    ? trim($_POST['company-name'])    : '';
@@ -42,58 +49,54 @@ $valuation     = isset($_POST['valuation'])       ? trim($_POST['valuation'])   
 $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
 $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
 
-/*
-  4. Validación en cadena
-     - Primero chequeamos "fullname"
-     - Luego chequeamos "email"
-     - Si es form2, chequeamos "company-name"
-     - Cualquier error => devolvemos JSON y detenemos ejecución.
-*/
+// 4. Validaciones campo a campo
+$errors = [];
 
-// 4.1 Validar fullname
-if (empty($fullname)) {
-    echo json_encode([
-        "status"  => "error",
-        "message" => "Full Name is required."
-    ]);
-    exit;
-}
-
-// 4.2 Validar email (que no esté vacío)
-if (empty($email)) {
-    echo json_encode([
-        "status"  => "error",
-        "message" => "Email is required."
-    ]);
-    exit;
-}
-// 4.3 Validar formato de email
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo json_encode([
-        "status"  => "error",
-        "message" => "Invalid email format."
-    ]);
-    exit;
-}
-
-// 4.4 Si es el formulario 2, validar "company-name"
-if ($isForm2) {
-    if (empty($companyName)) {
-        echo json_encode([
-            "status"  => "error",
-            "message" => "Company Name is required."
-        ]);
-        exit;
+// Validar campos obligatorios
+foreach ($requiredFields as $field) {
+    if (empty($_POST[$field])) {
+        // Si quieres, puedes personalizar el mensaje según el campo.
+        // Ejemplo: 'fullname' => 'Full Name is required.'
+        switch ($field) {
+            case 'fullname':
+                $errors[] = "Full Name is required.";
+                break;
+            case 'email':
+                $errors[] = "Email is required.";
+                break;
+            case 'company-name':
+                $errors[] = "Company Name is required.";
+                break;
+            // Agrega más si tienes más campos obligatorios
+            default:
+                $errors[] = "Field '$field' is required.";
+                break;
+        }
     }
 }
 
-// 5. Construir Asunto
+// Validar formato de e-mail si no está vacío (y si 'email' es un campo requerido)
+if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Invalid email format.";
+}
+
+// Si hay errores, paramos y enviamos mensaje
+if (!empty($errors)) {
+    $errorMsg = implode(" ", $errors); 
+    // Podrías concatenar con salto de línea, si prefieres:
+    // $errorMsg = implode("\n", $errors);
+    echo json_encode([
+        "status"  => "error",
+        "message" => $errorMsg
+    ]);
+    exit;
+}
+
+// 5. Construir asunto y cuerpo del mensaje con mejor formato/redacción
 $subject = "New message from netwrkventures.com - $formName";
 
-// 6. Construir el Cuerpo del Mensaje (nuevo formato)
-$message  = "Hello,\n\n";
-$message .= "You have received a new message from netwrkventures.com.\n\n";
-$message .= "=== $formName ===\n\n";  // Encabezado
+$message = "You have received a new message from netwrkventures.com.\n\n";
+$message .= "=== $formName ===\n\n";  
 
 // Sección: Contact Information
 $message .= "Contact Information:\n";
@@ -101,7 +104,7 @@ $message .= "--------------------\n";
 $message .= "Full Name: $fullname\n";
 $message .= "Email:     $email\n";
 
-// Sección: Company Information (solo si hay datos o si es form2 con datos)
+// Sección: Company Information (solo si hay datos o es un formulario que use esos campos)
 if (
     !empty($companyName) ||
     !empty($currentRound) ||
@@ -120,14 +123,14 @@ if (
     if ($elevatorPitch) $message .= "Elevator Pitch: $elevatorPitch\n";
 }
 
-// 7. Cabeceras
+// 6. Cabeceras
 $headers  = "From: no-reply@netwrkventures.com\r\n";
 $headers .= "Reply-To: $email\r\n";
 
-// 8. Enviar correo
+// 7. Enviar el correo con mail()
 $sent = mail($recipient, $subject, $message, $headers);
 
-// 9. Responder en JSON
+// 8. Responder en formato JSON
 if ($sent) {
     echo json_encode([
         "status"  => "success",
