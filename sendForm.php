@@ -36,19 +36,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
     $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
 
-    // 1) Validación de los campos obligatorios en servidor
+    // 1) Validación de los campos obligatorios en el servidor
     $errors = [];
     foreach ($requiredFields as $field) {
-        // Verificamos cada campo según su 'key' en $_POST
         if (empty($_POST[$field])) {
-            // Añadir un mensaje de error por cada campo vacío
             $errors[] = "Field '$field' is required.";
         }
     }
 
+    // Validación adicional: e-mail realmente sea válido
+    // Si 'email' está entre los campos obligatorios o si deseas validarlo de todas formas:
+    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format.";
+    }
+
     // Si hay errores, retornamos respuesta JSON con status=error
     if (!empty($errors)) {
-        // Podrías concatenar todos los errores en un solo string
         $errorMsg = implode(" ", $errors);
         echo json_encode([
             "status"  => "error",
