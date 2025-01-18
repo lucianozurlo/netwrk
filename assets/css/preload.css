@@ -61,8 +61,8 @@
     /* border: .15em solid #b4b7c9;
     border-right-color: transparent;
     border-radius: 50%; */
-    -webkit-animation: spinner .75s linear infinite;
-    animation: spinner .75s linear infinite;
+    /* -webkit-animation: spinner .75s linear infinite;
+    animation: spinner .75s linear infinite; */
 }
 
 [data-bs-theme="dark"] .page-spinner {
@@ -70,7 +70,7 @@
     border-right-color: transparent;
 }
 
-@-webkit-keyframes spinner {
+/* @-webkit-keyframes spinner {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -82,4 +82,4 @@
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
-}
+} */
