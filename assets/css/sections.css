@@ -1347,7 +1347,7 @@ h3 {
 
 /* Estilos para el nombre del archivo */
 #Contact .file-name {
-    margin-top: 5px;
+    margin: 5px 0;
     font-size: 14px;
     color: #333;
     word-break: break-all;
