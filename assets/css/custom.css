@@ -46,7 +46,7 @@ p {
     top: 0;
     left: 0;
     position: fixed;
-    background: linear-gradient(180deg, #222 0%, #000 200%), #fff;
+    background: linear-gradient(180deg, #222 0%, #000 300%), #fff;
     z-index: -1;
 }
 
@@ -159,6 +159,7 @@ header #navbarNav .offcanvas-body ul li a:hover:before {
     cursor: pointer;
 }
 
+
 /* STYLES */
 
 section {
@@ -217,7 +218,7 @@ h3 {
             #ffffff07 0%,
             #11111100 40%);
     opacity: 1 !important;
-    background-color: #111 !important;
+    background-color: #222 !important;
     width: 100%;
     height: 100%;
     z-index: 1;
