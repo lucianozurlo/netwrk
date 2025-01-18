@@ -20,6 +20,7 @@
             text-align: center;
             cursor: pointer;
             margin-top: 10px;
+            position: relative;
         }
 
         .drag-drop-area.dragover {
@@ -31,13 +32,21 @@
         #company-deck-input {
             display: none;
         }
+
+        /* Estilos para el nombre del archivo */
+        .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+            word-break: break-all;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- FORM 1: Invest With Us -->
-    <form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
+    <form id="form1" method="POST" action="sendForm.php" novalidate>
         <input type="hidden" name="form_id" value="form1">
 
         <div class="form-inputs">
@@ -62,7 +71,7 @@
     <hr>
 
     <!-- FORM 2: Apply for Funding -->
-    <form id="form2" method="POST" action="assets/php/sendForm.php" enctype="multipart/form-data" novalidate>
+    <form id="form2" method="POST" action="sendForm.php" enctype="multipart/form-data" novalidate>
         <input type="hidden" name="form_id" value="form2">
 
         <div class="form-inputs">
@@ -117,9 +126,12 @@
                     <!-- Área de drag & drop personalizada -->
                     <div class="drag-drop-area" id="company-deck">
                         <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt="Clip"></p>
-                        <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="Clip"></p>
+                        <p class="mob-ok" style="display: none;">File Uploaded <img src="assets/img/clip.svg"
+                                alt="Clip"></p>
                         <input type="file" id="company-deck-input" name="company-deck"
                             accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                        <!-- Elemento para mostrar el nombre del archivo -->
+                        <div class="file-name" id="file-name"></div>
                     </div>
                 </div>
             </div>
@@ -133,7 +145,7 @@
     <!-- JavaScript para manejar el envío de formularios y la interacción con drag & drop -->
     <script>
         // Función para manejar el drag & drop
-        function setupDragDropArea(dragDropElement, fileInput) {
+        function setupDragDropArea(dragDropElement, fileInput, fileNameElement) {
             dragDropElement.addEventListener('dragover', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -154,6 +166,8 @@
                     fileInput.files = e.dataTransfer.files;
                     dragDropElement.querySelector('.mob-no').style.display = 'none';
                     dragDropElement.querySelector('.mob-ok').style.display = 'block';
+                    // Mostrar el nombre del archivo
+                    fileNameElement.textContent = e.dataTransfer.files[0].name;
                 }
             });
 
@@ -167,9 +181,13 @@
                 if (fileInput.files && fileInput.files.length > 0) {
                     dragDropElement.querySelector('.mob-no').style.display = 'none';
                     dragDropElement.querySelector('.mob-ok').style.display = 'block';
+                    // Mostrar el nombre del archivo
+                    fileNameElement.textContent = fileInput.files[0].name;
                 } else {
                     dragDropElement.querySelector('.mob-no').style.display = 'block';
                     dragDropElement.querySelector('.mob-ok').style.display = 'none';
+                    // Limpiar el nombre del archivo
+                    fileNameElement.textContent = '';
                 }
             });
         }
@@ -177,7 +195,8 @@
         // Configurar el área de drag & drop para Formulario 2
         const dragDropArea = document.getElementById('company-deck');
         const fileInput = document.getElementById('company-deck-input');
-        setupDragDropArea(dragDropArea, fileInput);
+        const fileNameElement = document.getElementById('file-name');
+        setupDragDropArea(dragDropArea, fileInput, fileNameElement);
 
         // Función para enviar formularios vía AJAX
         function sendFormAjax(form, statusDivId) {
@@ -197,10 +216,11 @@
                         statusDiv.innerHTML = `<span style="color:green">${data.message}</span>`;
                         form.reset();
 
-                        // Resetear el área de drag & drop
+                        // Resetear el área de drag & drop si es Formulario 2
                         if (form.id === 'form2') {
                             dragDropArea.querySelector('.mob-no').style.display = 'block';
                             dragDropArea.querySelector('.mob-ok').style.display = 'none';
+                            fileNameElement.textContent = '';
                         }
 
                         // Ocultar el mensaje después de 5 segundos
