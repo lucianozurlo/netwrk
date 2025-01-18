@@ -814,7 +814,8 @@
 					<div class="swiper-wrapper">
 
 						<div class="swiper-slide slide1">
-							<form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
+							<!-- FORM 1: Invest With Us -->
+							<form id="form1" method="POST" action="sendForm.php" novalidate>
 								<input type="hidden" name="form_id" value="form1">
 
 								<div class="form-inputs">
@@ -835,12 +836,13 @@
 							</form>
 
 							<!-- This div will show status messages for Form 1 -->
-							<div id="status-message1"></div>
+							<div id="status-message1" class="status-message"></div>
 
 						</div>
 
 						<div class="swiper-slide slide2">
-							<form id="form2" method="POST" action="assets/php/sendForm.php" novalidate>
+							<!-- FORM 2: Apply for Funding -->
+							<form id="form2" method="POST" action="sendForm.php" novalidate>
 								<input type="hidden" name="form_id" value="form2">
 
 								<div class="form-inputs">
@@ -893,11 +895,12 @@
 										</div>
 										<div class="column-input">
 											<label for="company-deck">Company Deck</label>
-											<!-- This code does not handle file uploads, just a placeholder drag & drop area -->
+											<!-- Placeholder for drag & drop area (no file upload handling in this code) -->
 											<div class="drag-drop-area" id="company-deck">
 												<p class="mob-no">Drag & drop or browse a file <img
-														src="assets/img/clip.svg" alt=""></p>
-												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
+														src="assets/img/clip.svg" alt="Clip"></p>
+												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="Clip">
+												</p>
 											</div>
 										</div>
 									</div>
@@ -906,7 +909,7 @@
 							</form>
 
 							<!-- This div will show status messages for Form 2 -->
-							<div id="status-message2"></div>
+							<div id="status-message2" class="status-message"></div>
 
 						</div>
 

@@ -1335,8 +1335,7 @@ h3 {
     margin: 0;
 }
 
-#status-message1,
-#status-message2 {
+#Contact .status-message {
     position: absolute;
     bottom: 20px;
 }

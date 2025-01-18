@@ -2,6 +2,7 @@
 // sendForm.php
 header('Content-Type: application/json; charset=utf-8');
 
+// Allow only POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode([
         "status"  => "error",
@@ -13,16 +14,19 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // 1. Identify which form is being submitted
 $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
-// 2. Configure recipients and form names
+// 2. Configure recipients and form names based on form ID
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "repoarchivos@gmail.com";
+    $recipient = "lucianozurlo@gmail.com";
     $formName  = "Invest With Us";
+    $isForm2   = false; // Indicates whether additional fields are required
 } elseif ($formId === 'form2') {
     // "Apply for Funding"
     $recipient = "em24.teco@gmail.com";
     $formName  = "Apply for Funding";
+    $isForm2   = true;
 } else {
+    // Unknown form identifier
     echo json_encode([
         "status"  => "error",
         "message" => "Unknown form identifier."
@@ -40,9 +44,7 @@ $valuation     = isset($_POST['valuation'])       ? trim($_POST['valuation'])   
 $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
 $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
 
-// 4. Field-by-field validation in sequence
-//    (first Full Name, then Email, etc.)
-//    Adjust if you need different required fields for each form.
+// 4. Sequential Field Validation
 
 // 4.1 Validate Full Name
 if (empty($fullname)) {
@@ -61,6 +63,7 @@ if (empty($email)) {
     ]);
     exit;
 }
+
 // 4.3 Validate Email format
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode([
@@ -70,8 +73,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-// If it's form2, we might also require a Company Name:
-if ($formId === 'form2') {
+// 4.4 If Form 2, validate Company Name
+if ($isForm2) {
     if (empty($companyName)) {
         echo json_encode([
             "status"  => "error",
@@ -81,21 +84,19 @@ if ($formId === 'form2') {
     }
 }
 
-// 5. Build the Subject
+// 5. Construct Email Subject
 $subject = "New message from netwrkventures.com - $formName";
 
-// 6. Construct the Email Body
-// (removed "Hello," as requested)
+// 6. Construct Email Body
 $message  = "You have received a new message from netwrkventures.com.\n\n";
-$message .= "=== $formName ===\n\n";  
+$message .= "=== $formName ===\n\n";
 
-// Contact Information
 $message .= "Contact Information:\n";
 $message .= "--------------------\n";
 $message .= "Full Name: $fullname\n";
 $message .= "Email:     $email\n";
 
-// Company Information (only if data is present)
+// Include Company Information if applicable
 if (
     !empty($companyName) ||
     !empty($currentRound) ||
@@ -114,21 +115,21 @@ if (
     if ($elevatorPitch) $message .= "Elevator Pitch: $elevatorPitch\n";
 }
 
-// 7. Headers
+// 7. Set Email Headers
 $headers  = "From: no-reply@netwrkventures.com\r\n";
 $headers .= "Reply-To: $email\r\n";
 
-// 8. Send the email
+// 8. Send the Email
 $sent = mail($recipient, $subject, $message, $headers);
 
-// 9. Custom success messages for each form
+// 9. Respond with JSON based on Email Sending Result
 if ($sent) {
-    if ($formId === 'form1') {
-        // Custom success for "Invest With Us"
-        $successMessage = "Thank you for your interest in investing with us. Your message has been sent.";
-    } else {
-        // Custom success for "Apply for Funding"
+    if ($isForm2) {
+        // Success message for "Apply for Funding"
         $successMessage = "Thank you for applying for funding. Your message has been sent.";
+    } else {
+        // Success message for "Invest With Us"
+        $successMessage = "Thank you for your interest in investing with us. Your message has been sent.";
     }
 
     echo json_encode([
@@ -141,3 +142,4 @@ if ($sent) {
         "message" => "An error occurred while sending the message. Please try again later."
     ]);
 }
+?>
