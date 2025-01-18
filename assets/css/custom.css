@@ -46,7 +46,7 @@ p {
     top: 0;
     left: 0;
     position: fixed;
-    background: linear-gradient(180deg, #222 0%, #000 70.88%), #fff;
+    background: linear-gradient(180deg, #222 0%, #000 200%), #fff;
     z-index: -1;
 }
 
