@@ -4,12 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Netwrk Ventures - Forms</title>
-    <!-- Include your CSS files here -->
+    <!-- Incluye tus archivos CSS aquí -->
     <style>
-        /* Simple styling for status messages */
+        /* Estilos simples para mensajes de estado */
         .status-message {
             margin-top: 10px;
             font-weight: bold;
+        }
+
+        /* Estilos para el área de drag & drop */
+        .drag-drop-area {
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .drag-drop-area.dragover {
+            border-color: #000;
+            background-color: #f0f0f0;
+        }
+
+        /* Ocultar el input de archivo */
+        #company-deck-input {
+            display: none;
         }
     </style>
 </head>
@@ -17,7 +37,7 @@
 <body>
 
     <!-- FORM 1: Invest With Us -->
-    <form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
+    <form id="form1" method="POST" action="sendForm.php" novalidate>
         <input type="hidden" name="form_id" value="form1">
 
         <div class="form-inputs">
@@ -36,13 +56,13 @@
         <input type="submit" value="Submit">
     </form>
 
-    <!-- Status message for Form 1 -->
+    <!-- Mensaje de estado para Formulario 1 -->
     <div id="status-message1" class="status-message"></div>
 
     <hr>
 
     <!-- FORM 2: Apply for Funding -->
-    <form id="form2" method="POST" action="assets/php/sendForm.php" enctype="multipart/form-data" novalidate>
+    <form id="form2" method="POST" action="sendForm.php" enctype="multipart/form-data" novalidate>
         <input type="hidden" name="form_id" value="form2">
 
         <div class="form-inputs">
@@ -92,38 +112,74 @@
                     <label for="elevator-pitch">Elevator Pitch</label>
                     <textarea id="elevator-pitch" name="elevator-pitch"></textarea>
                 </div>
-            </div>
-            <div class="row-input">
                 <div class="column-input">
-                    <label for="company-deck">Company Deck (PDF only, max 5MB)</label>
-                    <input type="file" id="company-deck" name="company-deck" accept=".pdf" required>
+                    <label for="company-deck">Company Deck</label>
+                    <!-- Área de drag & drop personalizada -->
+                    <div class="drag-drop-area" id="company-deck">
+                        <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt="Clip"></p>
+                        <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="Clip"></p>
+                        <input type="file" id="company-deck-input" name="company-deck"
+                            accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                    </div>
                 </div>
             </div>
             <input type="submit" value="Submit">
         </div>
     </form>
 
-    <!-- Status message for Form 2 -->
+    <!-- Mensaje de estado para Formulario 2 -->
     <div id="status-message2" class="status-message"></div>
 
-    <!-- JavaScript to handle AJAX submission, form reset, and message hide -->
+    <!-- JavaScript para manejar el envío de formularios y la interacción con drag & drop -->
     <script>
-        // Attach event listeners to both forms
-        document.getElementById('form1').addEventListener('submit', function (event) {
-            event.preventDefault();
-            sendFormAjax(this, 'status-message1');
-        });
+        // Función para manejar el drag & drop
+        function setupDragDropArea(dragDropElement, fileInput) {
+            dragDropElement.addEventListener('dragover', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragDropElement.classList.add('dragover');
+            });
 
-        document.getElementById('form2').addEventListener('submit', function (event) {
-            event.preventDefault();
-            sendFormAjax(this, 'status-message2');
-        });
+            dragDropElement.addEventListener('dragleave', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragDropElement.classList.remove('dragover');
+            });
 
-        /**
-         * Sends form data via AJAX and handles the response.
-         * @param {HTMLFormElement} form - The form element being submitted.
-         * @param {string} statusDivId - The ID of the div where the status message will be displayed.
-         */
+            dragDropElement.addEventListener('drop', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dragDropElement.classList.remove('dragover');
+                if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                    fileInput.files = e.dataTransfer.files;
+                    dragDropElement.querySelector('.mob-no').style.display = 'none';
+                    dragDropElement.querySelector('.mob-ok').style.display = 'block';
+                }
+            });
+
+            // Click para abrir el selector de archivos
+            dragDropElement.addEventListener('click', function () {
+                fileInput.click();
+            });
+
+            // Cambio en el input de archivo
+            fileInput.addEventListener('change', function () {
+                if (fileInput.files && fileInput.files.length > 0) {
+                    dragDropElement.querySelector('.mob-no').style.display = 'none';
+                    dragDropElement.querySelector('.mob-ok').style.display = 'block';
+                } else {
+                    dragDropElement.querySelector('.mob-no').style.display = 'block';
+                    dragDropElement.querySelector('.mob-ok').style.display = 'none';
+                }
+            });
+        }
+
+        // Configurar el área de drag & drop para Formulario 2
+        const dragDropArea = document.getElementById('company-deck');
+        const fileInput = document.getElementById('company-deck-input');
+        setupDragDropArea(dragDropArea, fileInput);
+
+        // Función para enviar formularios vía AJAX
         function sendFormAjax(form, statusDivId) {
             const statusDiv = document.getElementById(statusDivId);
             statusDiv.textContent = "Sending...";
@@ -141,7 +197,13 @@
                         statusDiv.innerHTML = `<span style="color:green">${data.message}</span>`;
                         form.reset();
 
-                        // Hide the message after 5 seconds (5000 milliseconds)
+                        // Resetear el área de drag & drop
+                        if (form.id === 'form2') {
+                            dragDropArea.querySelector('.mob-no').style.display = 'block';
+                            dragDropArea.querySelector('.mob-ok').style.display = 'none';
+                        }
+
+                        // Ocultar el mensaje después de 5 segundos
                         setTimeout(() => {
                             statusDiv.style.display = "none";
                             statusDiv.textContent = "";
@@ -149,7 +211,7 @@
                     } else {
                         statusDiv.innerHTML = `<span style="color:red">${data.message}</span>`;
 
-                        // Optionally, hide error messages after some time
+                        // Ocultar el mensaje después de 7 segundos
                         setTimeout(() => {
                             statusDiv.style.display = "none";
                             statusDiv.textContent = "";
@@ -159,13 +221,24 @@
                 .catch(error => {
                     statusDiv.innerHTML = `<span style="color:red">Error: ${error}</span>`;
 
-                    // Optionally, hide error messages after some time
+                    // Ocultar el mensaje después de 7 segundos
                     setTimeout(() => {
                         statusDiv.style.display = "none";
                         statusDiv.textContent = "";
                     }, 7000);
                 });
         }
+
+        // Asignar eventos de envío a los formularios
+        document.getElementById('form1').addEventListener('submit', function (event) {
+            event.preventDefault();
+            sendFormAjax(this, 'status-message1');
+        });
+
+        document.getElementById('form2').addEventListener('submit', function (event) {
+            event.preventDefault();
+            sendFormAjax(this, 'status-message2');
+        });
     </script>
 
 </body>
