@@ -17,7 +17,7 @@ $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 // 2. Configurar destinatarios y nombres de formulario según el ID
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "lucianozurlo@gmail.com";
+    $recipient = "repoarchivos@gmail.com";
     $formName  = "Invest With Us";
     $isForm2   = false;
 } elseif ($formId === 'form2') {
