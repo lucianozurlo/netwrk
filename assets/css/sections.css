@@ -41,6 +41,12 @@
     margin-bottom: 0 !important;
 }
 
+
+
+#home .text-content h1 span {
+    display: block !important;
+}
+
 #home .text-content p {
     font-family: 'Montserrat';
     font-weight: normal;

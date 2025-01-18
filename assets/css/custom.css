@@ -50,6 +50,9 @@ p {
     z-index: -1;
 }
 
+
+/** HEADER **/
+
 header {
     height: 61px;
     background: linear-gradient(284.59deg, #ffffff1a 0%, #11111100 100%);
