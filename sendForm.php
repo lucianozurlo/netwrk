@@ -6,19 +6,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Identificar cuál formulario es
     $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
-    // Definir a quién enviamos y qué campos son obligatorios, según el formulario
+    // Para distinguir los formularios:
     if ($formId === 'form1') {
-        // Enviar a lucianozurlo@gmail.com, y requerir fullname + email
-        $recipient = "lucianozurlo@gmail.com";
-        $requiredFields = ['fullname','email'];
-
+        // Formulario 1: "Invest With Us"
+        $recipient   = "lucianozurlo@gmail.com";
+        $formName    = "Invest With Us";
     } elseif ($formId === 'form2') {
-        // Enviar a em24.teco@gmail.com, y requerir fullname + email + company-name
-        $recipient = "em24.teco@gmail.com";
-        $requiredFields = ['fullname','email','company-name'];
-
+        // Formulario 2: "Apply for Funding"
+        $recipient   = "em24.teco@gmail.com";
+        $formName    = "Apply for Funding";
     } else {
-        // Por si llega un form_id inesperado
         echo json_encode([
             "status"  => "error",
             "message" => "Unknown form identifier."
@@ -26,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Recoger datos (comunes a ambos forms)
+    // Recoger datos de ambos forms
     $fullname      = isset($_POST['fullname'])        ? trim($_POST['fullname'])        : '';
     $email         = isset($_POST['email'])           ? trim($_POST['email'])           : '';
     $companyName   = isset($_POST['company-name'])    ? trim($_POST['company-name'])    : '';
@@ -36,49 +33,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
     $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
 
-    // 1) Validación de los campos obligatorios en el servidor
-    $errors = [];
-    foreach ($requiredFields as $field) {
-        if (empty($_POST[$field])) {
-            $errors[] = "Field '$field' is required.";
-        }
-    }
+    // --------------------------------------
+    // Construir asunto y cuerpo del mensaje
+    // --------------------------------------
+    $subject = "New message from netwrkventures.com - $formName";
 
-    // Validación adicional: e-mail realmente sea válido
-    // Si 'email' está entre los campos obligatorios o si deseas validarlo de todas formas:
-    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "Invalid email format.";
-    }
+    // Cuerpo del correo
+    $message .= "You have received a new message from netwrkventures.com.\n\n";
+    $message .= "=== $formName ===\n\n";  // Encabezado sin “FORM:”
 
-    // Si hay errores, retornamos respuesta JSON con status=error
-    if (!empty($errors)) {
-        $errorMsg = implode(" ", $errors);
-        echo json_encode([
-            "status"  => "error",
-            "message" => $errorMsg
-        ]);
-        exit;
-    }
-
-    // 2) Construir el mensaje
-    $message = "You have received a new form submission.\n\n";
+    // Sección: Contact Information
+    $message .= "Contact Information:\n";
+    $message .= "--------------------\n";
     $message .= "Full Name: $fullname\n";
-    $message .= "Email: $email\n";
-    if ($companyName)   $message .= "Company Name: $companyName\n";
-    if ($currentRound)  $message .= "Current Round: $currentRound\n";
-    if ($raiseAmount)   $message .= "Raise Amount: $raiseAmount\n";
-    if ($valuation)     $message .= "Valuation: $valuation\n";
-    if ($revenue)       $message .= "Revenue: $revenue\n";
-    if ($elevatorPitch) $message .= "Elevator Pitch: $elevatorPitch\n";
+    $message .= "Email:     $email\n";
 
-    // 3) Asunto del correo
-    $subject = "New Submission from $fullname";
+    // Sección: Company Information (si aplica o si hay datos)
+    if (!empty($companyName) ||
+        !empty($currentRound) ||
+        !empty($raiseAmount) ||
+        !empty($valuation)   ||
+        !empty($revenue)     ||
+        !empty($elevatorPitch)) {
 
-    // 4) Cabeceras
-    $headers = "From: no-reply@yourdomain.com\r\n";
+        $message .= "\nCompany Information:\n";
+        $message .= "--------------------\n";
+        if ($companyName)   $message .= "Company Name:   $companyName\n";
+        if ($currentRound)  $message .= "Current Round:  $currentRound\n";
+        if ($raiseAmount)   $message .= "Raise Amount:   $raiseAmount\n";
+        if ($valuation)     $message .= "Valuation:      $valuation\n";
+        if ($revenue)       $message .= "Revenue:        $revenue\n";
+        if ($elevatorPitch) $message .= "Elevator Pitch: $elevatorPitch\n";
+    }
+
+    // Cabeceras
+    $headers  = "From: no-reply@netwrkventures.com\r\n"; 
     $headers .= "Reply-To: $email\r\n";
 
-    // 5) Enviar correo
+    // Enviar correo
     $sent = mail($recipient, $subject, $message, $headers);
 
     if ($sent) {
