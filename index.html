@@ -814,12 +814,13 @@
 					<div class="swiper-wrapper">
 
 						<div class="swiper-slide slide1">
+
 							<!-- FORM 1: Invest With Us -->
 							<form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
 								<input type="hidden" name="form_id" value="form1">
 
 								<div class="form-inputs">
-									<h4>2 --- Invest With Us - Contact Information</h4>
+									<h4>Invest With Us - Contact Information</h4>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="fullname1">Full Name <span>(Founder/Primary
@@ -835,14 +836,16 @@
 								<input type="submit" value="Submit">
 							</form>
 
-							<!-- This div will show status messages for Form 1 -->
+							<!-- Mensaje de estado para Formulario 1 -->
 							<div id="status-message1" class="status-message"></div>
 
 						</div>
 
 						<div class="swiper-slide slide2">
+
 							<!-- FORM 2: Apply for Funding -->
-							<form id="form2" method="POST" action="assets/php/sendForm.php" novalidate>
+							<form id="form2" method="POST" action="assets/php/sendForm.php"
+								enctype="multipart/form-data" novalidate>
 								<input type="hidden" name="form_id" value="form2">
 
 								<div class="form-inputs">
@@ -895,12 +898,16 @@
 										</div>
 										<div class="column-input">
 											<label for="company-deck">Company Deck</label>
-											<!-- Placeholder for drag & drop area (no file upload handling in this code) -->
+											<!-- Área de drag & drop personalizada -->
 											<div class="drag-drop-area" id="company-deck">
 												<p class="mob-no">Drag & drop or browse a file <img
 														src="assets/img/clip.svg" alt="Clip"></p>
-												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="Clip">
-												</p>
+												<p class="mob-ok" style="display: none;">File Uploaded <img
+														src="assets/img/clip.svg" alt="Clip"></p>
+												<input type="file" id="company-deck-input" name="company-deck"
+													accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+												<!-- Elemento para mostrar el nombre del archivo -->
+												<div class="file-name" id="file-name"></div>
 											</div>
 										</div>
 									</div>
@@ -908,7 +915,7 @@
 								</div>
 							</form>
 
-							<!-- This div will show status messages for Form 2 -->
+							<!-- Mensaje de estado para Formulario 2 -->
 							<div id="status-message2" class="status-message"></div>
 
 						</div>
