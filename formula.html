@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Two Forms Example</title>
+    <title>Two Forms Required Example</title>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <input type="hidden" name="form_id" value="form1">
 
         <div class="form-inputs">
-            <h4>Contact Information</h4>
+            <h4>Contact Information (Form 1)</h4>
             <div class="row-input">
                 <div class="column-input">
                     <label for="fullname1">Full Name <span>(Founder/Primary Contact)</span></label>
@@ -25,16 +25,17 @@
                 </div>
             </div>
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit Form 1">
     </form>
 
+    <hr>
 
     <!-- FORM 2 -->
     <form id="form2" method="POST" action="sendForm.php" novalidate>
         <input type="hidden" name="form_id" value="form2">
 
         <div class="form-inputs">
-            <h4>Contact Information</h4>
+            <h4>Contact Information (Form 2)</h4>
             <div class="row-input">
                 <div class="column-input">
                     <label for="fullname2">Full Name <span>(Founder/Primary Contact)</span></label>
@@ -47,11 +48,11 @@
             </div>
         </div>
         <div class="form-inputs">
-            <h4>Company Information</h4>
+            <h4>Company Information (Form 2)</h4>
             <div class="row-input">
                 <div class="column-input">
                     <label for="company-name">Company Name</label>
-                    <input type="text" id="company-name" name="company-name">
+                    <input type="text" id="company-name" name="company-name" required>
                 </div>
             </div>
             <div class="row-input">
@@ -81,23 +82,24 @@
                 </div>
                 <div class="column-input">
                     <label for="company-deck">Company Deck</label>
-                    <!-- Example "drag & drop" area (no actual upload with this code) -->
+                    <!-- Example drag & drop area (not uploading files in this code) -->
                     <div class="drag-drop-area" id="company-deck">
                         <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt=""></p>
                         <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit Form 2">
         </div>
     </form>
 
-    <!-- Place to display messages -->
+    <hr>
+
+    <!-- Place for status messages -->
     <div id="msg-estado"></div>
 
-    <!-- JavaScript to handle the AJAX submission -->
+    <!-- JavaScript to handle AJAX submission -->
     <script>
-        // Attach 'submit' listeners to both forms
         document.getElementById('form1').addEventListener('submit', function (e) {
             e.preventDefault();
             sendFormAjax(this);

@@ -3,41 +3,64 @@
 header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Identificar cuál formulario es
     $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
-    // Campos comunes (pueden o no existir en el POST)
-    $fullname       = isset($_POST['fullname'])        ? trim($_POST['fullname'])        : '';
-    $email          = isset($_POST['email'])           ? trim($_POST['email'])           : '';
-    $companyName    = isset($_POST['company-name'])    ? trim($_POST['company-name'])    : '';
-    $currentRound   = isset($_POST['current-round'])   ? trim($_POST['current-round'])   : '';
-    $raiseAmount    = isset($_POST['raise-amount'])    ? trim($_POST['raise-amount'])    : '';
-    $valuation      = isset($_POST['valuation'])       ? trim($_POST['valuation'])       : '';
-    $revenue        = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
-    $elevatorPitch  = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
-
-    // Definir destinatario según sea form1 o form2
+    // Definir a quién enviamos y qué campos son obligatorios, según el formulario
     if ($formId === 'form1') {
+        // Enviar a lucianozurlo@gmail.com, y requerir fullname + email
         $recipient = "lucianozurlo@gmail.com";
-        // Validación obligatoria del primer formulario
-        if (empty($fullname) || empty($email)) {
-            echo json_encode([
-                "status"  => "error",
-                "message" => "Full Name and Email are required fields."
-            ]);
-            exit; // detenemos ejecución
-        }
-    } else {
-        // Asumimos que es form2, si solo hay esos dos formularios
+        $requiredFields = ['fullname','email'];
+
+    } elseif ($formId === 'form2') {
+        // Enviar a em24.teco@gmail.com, y requerir fullname + email + company-name
         $recipient = "em24.teco@gmail.com";
-        // Aquí podrías validar también si quieres campos obligatorios en form2
+        $requiredFields = ['fullname','email','company-name'];
+
+    } else {
+        // Por si llega un form_id inesperado
+        echo json_encode([
+            "status"  => "error",
+            "message" => "Unknown form identifier."
+        ]);
+        exit;
     }
 
-    // Construir el mensaje
-    $message  = "You have received a new form submission.\n\n";
+    // Recoger datos (comunes a ambos forms)
+    $fullname      = isset($_POST['fullname'])        ? trim($_POST['fullname'])        : '';
+    $email         = isset($_POST['email'])           ? trim($_POST['email'])           : '';
+    $companyName   = isset($_POST['company-name'])    ? trim($_POST['company-name'])    : '';
+    $currentRound  = isset($_POST['current-round'])   ? trim($_POST['current-round'])   : '';
+    $raiseAmount   = isset($_POST['raise-amount'])    ? trim($_POST['raise-amount'])    : '';
+    $valuation     = isset($_POST['valuation'])       ? trim($_POST['valuation'])       : '';
+    $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
+    $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
+
+    // 1) Validación de los campos obligatorios en servidor
+    $errors = [];
+    foreach ($requiredFields as $field) {
+        // Verificamos cada campo según su 'key' en $_POST
+        if (empty($_POST[$field])) {
+            // Añadir un mensaje de error por cada campo vacío
+            $errors[] = "Field '$field' is required.";
+        }
+    }
+
+    // Si hay errores, retornamos respuesta JSON con status=error
+    if (!empty($errors)) {
+        // Podrías concatenar todos los errores en un solo string
+        $errorMsg = implode(" ", $errors);
+        echo json_encode([
+            "status"  => "error",
+            "message" => $errorMsg
+        ]);
+        exit;
+    }
+
+    // 2) Construir el mensaje
+    $message = "You have received a new form submission.\n\n";
     $message .= "Full Name: $fullname\n";
     $message .= "Email: $email\n";
-
-    // Solo agregamos más campos si existen
     if ($companyName)   $message .= "Company Name: $companyName\n";
     if ($currentRound)  $message .= "Current Round: $currentRound\n";
     if ($raiseAmount)   $message .= "Raise Amount: $raiseAmount\n";
@@ -45,14 +68,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($revenue)       $message .= "Revenue: $revenue\n";
     if ($elevatorPitch) $message .= "Elevator Pitch: $elevatorPitch\n";
 
-    // Asunto
+    // 3) Asunto del correo
     $subject = "New Submission from $fullname";
 
-    // Cabeceras
+    // 4) Cabeceras
     $headers = "From: no-reply@yourdomain.com\r\n";
     $headers .= "Reply-To: $email\r\n";
 
-    // Intentar enviar
+    // 5) Enviar correo
     $sent = mail($recipient, $subject, $message, $headers);
 
     if ($sent) {
