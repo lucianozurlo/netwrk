@@ -811,86 +811,90 @@
 					<div class="swiper-wrapper">
 
 						<div class="swiper-slide slide1">
-							<form class="needs-validation" novalidate>
+							<form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
+								<input type="hidden" name="form_id" value="form1">
+
 								<div class="form-inputs">
-									<h4>Contact Information</h4>
+									<h4>Contact Information (Form 1)</h4>
 									<div class="row-input">
 										<div class="column-input">
-											<label for="fullname">Full Name
-												<span>(Founder/Primary Contact)</span></label>
-											<input type="text" id="fullname">
+											<label for="fullname1">Full Name <span>(Founder/Primary
+													Contact)</span></label>
+											<input type="text" id="fullname1" name="fullname" required>
 										</div>
 										<div class="column-input">
-											<label for="email">Email Address</label>
-											<input type="text" id="email">
+											<label for="email1">Email Address</label>
+											<input type="email" id="email1" name="email" required>
 										</div>
 									</div>
 								</div>
 								<input type="submit" value="Submit">
 							</form>
+
 						</div>
 
 						<div class="swiper-slide slide2">
-							<form class="needs-validation" novalidate>
+							<form id="form2" method="POST" action="assets/php/sendForm.php" novalidate>
+								<input type="hidden" name="form_id" value="form2">
+
 								<div class="form-inputs">
-									<h4>Contact Information</h4>
+									<h4>Contact Information (Form 2)</h4>
 									<div class="row-input">
 										<div class="column-input">
-											<label for="fullname">Full Name
-												<span>(Founder/Primary Contact)</span></label>
-											<input type="text" id="fullname">
+											<label for="fullname2">Full Name <span>(Founder/Primary
+													Contact)</span></label>
+											<input type="text" id="fullname2" name="fullname" required>
 										</div>
 										<div class="column-input">
-											<label for="email">Email Address</label>
-											<input type="text" id="email">
+											<label for="email2">Email Address</label>
+											<input type="email" id="email2" name="email" required>
 										</div>
 									</div>
 								</div>
 								<div class="form-inputs">
-									<h4>Company Information</h4>
+									<h4>Company Information (Form 2)</h4>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="company-name">Company Name</label>
-											<input type="text" id="company-name">
+											<input type="text" id="company-name" name="company-name" required>
 										</div>
 									</div>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="current-round">Current Round</label>
-											<input type="text" id="current-round">
+											<input type="text" id="current-round" name="current-round">
 										</div>
 										<div class="column-input">
 											<label for="raise-amount">Raise Amount</label>
-											<input type="text" id="raise-amount">
+											<input type="text" id="raise-amount" name="raise-amount">
 										</div>
 									</div>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="valuation">Valuation</label>
-											<input type="text" id="valuation">
+											<input type="text" id="valuation" name="valuation">
 										</div>
 										<div class="column-input">
 											<label for="revenue">Revenue</label>
-											<input type="text" id="revenue">
+											<input type="text" id="revenue" name="revenue">
 										</div>
 									</div>
 									<div class="row-input">
 										<div class="column-input">
 											<label for="elevator-pitch">Elevator pitch</label>
-											<textarea name="elevator-pitch" id="elevator-pitch"></textarea>
+											<textarea id="elevator-pitch" name="elevator-pitch"></textarea>
 										</div>
 										<div class="column-input">
 											<label for="company-deck">Company Deck</label>
 											<div class="drag-drop-area" id="company-deck">
 												<p class="mob-no">Drag & drop or browse a file <img
-														src="assets/img/clip.svg" alt="">
-												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt="">
+														src="assets/img/clip.svg" alt=""></p>
+												<p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
 											</div>
 										</div>
 									</div>
 									<input type="submit" value="Submit">
 								</div>
-
 							</form>
 						</div>
 
