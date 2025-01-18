@@ -169,7 +169,7 @@
 
 #AboutUs .aboutus-content p {
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 130%;
     text-align: center;
@@ -209,7 +209,7 @@
 
 #AboutUs .allcards-content p {
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #DADADA;
@@ -1075,7 +1075,7 @@
     user-select: none;
     pointer-events: unset;
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     transition: all 0.2s ease-in-out;
 }
