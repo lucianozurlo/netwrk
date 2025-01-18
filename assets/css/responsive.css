@@ -429,6 +429,10 @@
         margin: 30px 0 80px;
     }
 
+    .parallax-layer .iso .startup p {
+        font-size: 12px;
+    }
+
     #TheTeam {
         gap: 32px;
         margin-bottom: 100px;
