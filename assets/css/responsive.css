@@ -73,8 +73,8 @@
 
     header .navbar-brand img {
         position: fixed;
-        top: 34px;
-        left: 34px;
+        /* top: 34px;
+        left: 34px; */
         z-index: 999999;
         width: 35px;
         opacity: .5;
