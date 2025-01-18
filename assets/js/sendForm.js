@@ -1,16 +1,18 @@
+// Attach event listeners
 document.getElementById ('form1').addEventListener ('submit', function (e) {
   e.preventDefault ();
-  sendFormAjax (this);
+  sendFormAjax (this, 'status-message1');
 });
 
 document.getElementById ('form2').addEventListener ('submit', function (e) {
   e.preventDefault ();
-  sendFormAjax (this);
+  sendFormAjax (this, 'status-message2');
 });
 
-function sendFormAjax (form) {
-  const msgEstado = document.getElementById ('msg-estado');
-  msgEstado.textContent = 'Sending...';
+// We pass the ID of the status message container
+function sendFormAjax (form, statusDivId) {
+  const statusDiv = document.getElementById (statusDivId);
+  statusDiv.textContent = 'Sending...';
 
   const formData = new FormData (form);
 
@@ -21,13 +23,13 @@ function sendFormAjax (form) {
     .then (response => response.json ())
     .then (data => {
       if (data.status === 'success') {
-        msgEstado.innerHTML = `<span style="color:green">${data.message}</span>`;
+        statusDiv.innerHTML = `<span style="color:green">${data.message}</span>`;
         form.reset ();
       } else {
-        msgEstado.innerHTML = `<span style="color:red">${data.message}</span>`;
+        statusDiv.innerHTML = `<span style="color:red">${data.message}</span>`;
       }
     })
-    .catch (err => {
-      msgEstado.innerHTML = `<span style="color:red">Error: ${err}</span>`;
+    .catch (error => {
+      statusDiv.innerHTML = `<span style="color:red">Error: ${error}</span>`;
     });
 }
