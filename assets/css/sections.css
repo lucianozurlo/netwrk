@@ -41,8 +41,6 @@
     margin-bottom: 0 !important;
 }
 
-
-
 #home .text-content h1 span {
     display: block !important;
 }
@@ -66,14 +64,14 @@
     width: 186px;
     height: 40px;
     margin-top: 45px;
-    background: #FFFFFF;
+    background: #fff;
     color: #000;
     border-radius: 50px;
     transition: all .2s ease-in-out;
 }
 
 #home .text-content a:hover {
-    background: #000;
+    background-color: #1a1a1a;
     color: #fff;
 }
 
