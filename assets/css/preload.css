@@ -9,7 +9,7 @@
     -webkit-transition: all .4s .2s ease-in-out;
     transition: all .4s .2s ease-in-out;
     background-color: #000;
-    opacity: 1 !important;
+    opacity: 0;
     visibility: hidden;
     z-index: 9999;
 }
