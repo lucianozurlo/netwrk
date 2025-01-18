@@ -16,7 +16,7 @@ $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 // 2. Definir variables según formulario
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "lucianozurlo@gmail.com";
+    $recipient = "repoarchivos@gmail.com";
     $formName  = "Invest With Us";
     $isForm2   = false; // para saber si requerimos "company-name"
 } elseif ($formId === 'form2') {
