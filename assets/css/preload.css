@@ -42,6 +42,7 @@
 
 .page-loading-inner>span {
     display: block;
+    font-family: 'Montserrat';
     font-size: 1rem;
     font-weight: normal;
     color: #fff;
@@ -54,8 +55,7 @@
 
 .page-spinner {
     display: inline-block;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 110px;
     margin-bottom: .75rem;
     vertical-align: text-bottom;
     /* border: .15em solid #b4b7c9;
