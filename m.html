@@ -4,12 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Netwrk Ventures - Forms</title>
+    <!-- Include your CSS files here -->
+    <style>
+        /* Simple styling for status messages */
+        .status-message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- FORM 1: Invest With Us -->
-    <form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
+    <form id="form1" method="POST" action="sendForm.php" novalidate>
         <input type="hidden" name="form_id" value="form1">
 
         <div class="form-inputs">
@@ -28,13 +36,13 @@
         <input type="submit" value="Submit">
     </form>
 
-    <!-- This div will show status messages for Form 1 -->
-    <div id="status-message1"></div>
+    <!-- Status message for Form 1 -->
+    <div id="status-message1" class="status-message"></div>
 
     <hr>
 
     <!-- FORM 2: Apply for Funding -->
-    <form id="form2" method="POST" action="assets/php/sendForm.php" novalidate>
+    <form id="form2" method="POST" action="sendForm.php" enctype="multipart/form-data" novalidate>
         <input type="hidden" name="form_id" value="form2">
 
         <div class="form-inputs">
@@ -84,39 +92,42 @@
                     <label for="elevator-pitch">Elevator Pitch</label>
                     <textarea id="elevator-pitch" name="elevator-pitch"></textarea>
                 </div>
+            </div>
+            <div class="row-input">
                 <div class="column-input">
-                    <label for="company-deck">Company Deck</label>
-                    <!-- This code does not handle file uploads, just a placeholder drag & drop area -->
-                    <div class="drag-drop-area" id="company-deck">
-                        <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt=""></p>
-                        <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
-                    </div>
+                    <label for="company-deck">Company Deck (PDF only, max 5MB)</label>
+                    <input type="file" id="company-deck" name="company-deck" accept=".pdf" required>
                 </div>
             </div>
             <input type="submit" value="Submit">
         </div>
     </form>
 
-    <!-- This div will show status messages for Form 2 -->
-    <div id="status-message2"></div>
+    <!-- Status message for Form 2 -->
+    <div id="status-message2" class="status-message"></div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript to handle AJAX submission, form reset, and message hide -->
     <script>
-        // Attach event listeners
-        document.getElementById('form1').addEventListener('submit', function (e) {
-            e.preventDefault();
+        // Attach event listeners to both forms
+        document.getElementById('form1').addEventListener('submit', function (event) {
+            event.preventDefault();
             sendFormAjax(this, 'status-message1');
         });
 
-        document.getElementById('form2').addEventListener('submit', function (e) {
-            e.preventDefault();
+        document.getElementById('form2').addEventListener('submit', function (event) {
+            event.preventDefault();
             sendFormAjax(this, 'status-message2');
         });
 
-        // We pass the ID of the status message container
+        /**
+         * Sends form data via AJAX and handles the response.
+         * @param {HTMLFormElement} form - The form element being submitted.
+         * @param {string} statusDivId - The ID of the div where the status message will be displayed.
+         */
         function sendFormAjax(form, statusDivId) {
             const statusDiv = document.getElementById(statusDivId);
             statusDiv.textContent = "Sending...";
+            statusDiv.style.display = "block";
 
             const formData = new FormData(form);
 
@@ -129,15 +140,34 @@
                     if (data.status === "success") {
                         statusDiv.innerHTML = `<span style="color:green">${data.message}</span>`;
                         form.reset();
+
+                        // Hide the message after 5 seconds (5000 milliseconds)
+                        setTimeout(() => {
+                            statusDiv.style.display = "none";
+                            statusDiv.textContent = "";
+                        }, 5000);
                     } else {
                         statusDiv.innerHTML = `<span style="color:red">${data.message}</span>`;
+
+                        // Optionally, hide error messages after some time
+                        setTimeout(() => {
+                            statusDiv.style.display = "none";
+                            statusDiv.textContent = "";
+                        }, 7000);
                     }
                 })
                 .catch(error => {
                     statusDiv.innerHTML = `<span style="color:red">Error: ${error}</span>`;
+
+                    // Optionally, hide error messages after some time
+                    setTimeout(() => {
+                        statusDiv.style.display = "none";
+                        statusDiv.textContent = "";
+                    }, 7000);
                 });
         }
     </script>
+
 </body>
 
 </html>
