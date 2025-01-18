@@ -17,7 +17,7 @@ $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 // 2. Configurar destinatarios y nombres de formulario según el ID
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "repoarchivos@gmail.com";
+    $recipient = "lucianozurlo@gmail.com";
     $formName  = "Invest With Us";
     $isForm2   = false;
 } elseif ($formId === 'form2') {
@@ -130,7 +130,7 @@ if ($attachment) {
     // Construir un email con adjunto (MIME multipart)
     $boundary = md5(time());
 
-    // Headers para email multipart
+    // Cabeceras para email multipart
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "From: no-reply@netwrkventures.com\r\n";
     $headers .= "Reply-To: $email\r\n";
@@ -176,6 +176,7 @@ if ($attachment) {
     // Construir un email sin adjunto
     $headers  = "From: no-reply@netwrkventures.com\r\n";
     $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"\r\n";
 
     // Cuerpo del email
     $message  = "You have received a new message from netwrkventures.com.\n\n";
