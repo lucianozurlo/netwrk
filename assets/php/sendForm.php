@@ -6,7 +6,7 @@ header('Content-Type: application/json; charset=utf-8');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode([
         "status"  => "error",
-        "message" => "Method not allowed."
+        "message" => "Método no permitido."
     ]);
     exit;
 }
@@ -17,7 +17,7 @@ $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 // 2. Configurar destinatarios y nombres de formulario según el ID
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "repoarchivos@gmail.com";
+    $recipient = "lucianozurlo@gmail.com";
     $formName  = "Invest With Us";
     $isForm2   = false;
 } elseif ($formId === 'form2') {
@@ -29,7 +29,7 @@ if ($formId === 'form1') {
     // Identificador de formulario desconocido
     echo json_encode([
         "status"  => "error",
-        "message" => "Unknown form identifier."
+        "message" => "Identificador de formulario desconocido."
     ]);
     exit;
 }
@@ -50,7 +50,7 @@ $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'
 if (empty($fullname)) {
     echo json_encode([
         "status"  => "error",
-        "message" => "Full Name is required."
+        "message" => "El nombre completo es obligatorio."
     ]);
     exit;
 }
@@ -59,7 +59,7 @@ if (empty($fullname)) {
 if (empty($email)) {
     echo json_encode([
         "status"  => "error",
-        "message" => "Email is required."
+        "message" => "El correo electrónico es obligatorio."
     ]);
     exit;
 }
@@ -68,7 +68,7 @@ if (empty($email)) {
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode([
         "status"  => "error",
-        "message" => "Invalid email format."
+        "message" => "Formato de correo electrónico inválido."
     ]);
     exit;
 }
@@ -78,7 +78,7 @@ if ($isForm2) {
     if (empty($companyName)) {
         echo json_encode([
             "status"  => "error",
-            "message" => "Company Name is required."
+            "message" => "El nombre de la empresa es obligatorio."
         ]);
         exit;
     }
@@ -90,40 +90,60 @@ $fileName = '';
 $fileType = '';
 $attachment = false;
 
-if ($isForm2 && isset($_FILES['company-deck']) && $_FILES['company-deck']['error'] === UPLOAD_ERR_OK) {
-    $fileTmpPath = $_FILES['company-deck']['tmp_name'];
-    $fileName    = $_FILES['company-deck']['name'];
-    $fileSize    = $_FILES['company-deck']['size'];
-    $fileType    = $_FILES['company-deck']['type'];
-    $fileNameCmps = explode(".", $fileName);
-    $fileExtension = strtolower(end($fileNameCmps));
+if ($isForm2 && isset($_FILES['company-deck']) && $_FILES['company-deck']['error'] !== UPLOAD_ERR_NO_FILE) {
+    if ($_FILES['company-deck']['error'] === UPLOAD_ERR_OK) {
+        $fileTmpPath = $_FILES['company-deck']['tmp_name'];
+        $fileName    = $_FILES['company-deck']['name'];
+        $fileSize    = $_FILES['company-deck']['size'];
+        $fileType    = $_FILES['company-deck']['type'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
 
-    // Validar extensión de archivo
-    $allowedfileExtensions = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
-    if (!in_array($fileExtension, $allowedfileExtensions)) {
+        // Validar extensión de archivo
+        $allowedfileExtensions = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
+        if (!in_array($fileExtension, $allowedfileExtensions)) {
+            echo json_encode([
+                "status"  => "error",
+                "message" => "Tipo de archivo inválido. Solo se permiten PDF, DOC, DOCX, JPG y PNG."
+            ]);
+            exit;
+        }
+
+        // Opcional: Validar tamaño de archivo (ejemplo: máximo 5MB)
+        if ($fileSize > 5 * 1024 * 1024) { // 5MB
+            echo json_encode([
+                "status"  => "error",
+                "message" => "El archivo adjunto es demasiado grande. El tamaño máximo es de 5MB."
+            ]);
+            exit;
+        }
+
+        // Leer el contenido del archivo
+        $fileContent = chunk_split(base64_encode(file_get_contents($fileTmpPath)));
+        $attachment = true;
+    } else {
+        // Manejar otros errores de subida
+        $error_messages = [
+            UPLOAD_ERR_INI_SIZE   => "El archivo excede la directiva upload_max_filesize en php.ini.",
+            UPLOAD_ERR_FORM_SIZE  => "El archivo excede la directiva MAX_FILE_SIZE especificada en el formulario HTML.",
+            UPLOAD_ERR_PARTIAL    => "El archivo solo se subió parcialmente.",
+            UPLOAD_ERR_NO_TMP_DIR => "Falta una carpeta temporal.",
+            UPLOAD_ERR_CANT_WRITE => "No se pudo escribir el archivo en el disco.",
+            UPLOAD_ERR_EXTENSION  => "Una extensión de PHP detuvo la subida del archivo."
+        ];
+
+        $error = isset($error_messages[$_FILES['company-deck']['error']]) ? $error_messages[$_FILES['company-deck']['error']] : "Error desconocido al subir el archivo.";
+
         echo json_encode([
             "status"  => "error",
-            "message" => "Invalid file type. Only PDF, DOC, DOCX, JPG, and PNG files are allowed."
+            "message" => $error
         ]);
         exit;
     }
-
-    // Opcional: Validar tamaño de archivo (ejemplo: máximo 5MB)
-    if ($fileSize > 5 * 1024 * 1024) { // 5MB
-        echo json_encode([
-            "status"  => "error",
-            "message" => "Uploaded file is too large. Maximum size is 5MB."
-        ]);
-        exit;
-    }
-
-    // Leer el contenido del archivo
-    $fileContent = chunk_split(base64_encode(file_get_contents($fileTmpPath)));
-    $attachment = true;
 }
 
 // 6. Construir el Asunto del Email
-$subject = "New message from netwrkventures.com - $formName";
+$subject = "Nuevo mensaje de netwrkventures.com - $formName";
 
 // 7. Construir el Cuerpo del Mensaje
 if ($attachment) {
@@ -134,18 +154,18 @@ if ($attachment) {
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "From: no-reply@netwrkventures.com\r\n";
     $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: multipart/mixed; boundary=\"{$boundary}\"\r\n";
+    $headers .= "Content-Type: multipart/mixed; boundary=\"{$boundary}\"\r\n\r\n";
 
     // Cuerpo del email
     $message = "--{$boundary}\r\n";
     $message .= "Content-Type: text/plain; charset=\"UTF-8\"\r\n";
     $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-    $message .= "You have received a new message from netwrkventures.com.\n\n";
+    $message .= "Has recibido un nuevo mensaje desde netwrkventures.com.\n\n";
     $message .= "=== {$formName} ===\n\n";
-    $message .= "Contact Information:\n";
-    $message .= "--------------------\n";
-    $message .= "Full Name: {$fullname}\n";
-    $message .= "Email:     {$email}\n";
+    $message .= "Información de Contacto:\n";
+    $message .= "------------------------\n";
+    $message .= "Nombre Completo: {$fullname}\n";
+    $message .= "Correo Electrónico: {$email}\n";
 
     if (
         !empty($companyName) ||
@@ -155,14 +175,14 @@ if ($attachment) {
         !empty($revenue)     ||
         !empty($elevatorPitch)
     ) {
-        $message .= "\nCompany Information:\n";
-        $message .= "--------------------\n";
-        if ($companyName)   $message .= "Company Name:   {$companyName}\n";
-        if ($currentRound)  $message .= "Current Round:  {$currentRound}\n";
-        if ($raiseAmount)   $message .= "Raise Amount:   {$raiseAmount}\n";
-        if ($valuation)     $message .= "Valuation:      {$valuation}\n";
-        if ($revenue)       $message .= "Revenue:        {$revenue}\n";
-        if ($elevatorPitch) $message .= "Elevator Pitch: {$elevatorPitch}\n";
+        $message .= "\nInformación de la Empresa:\n";
+        $message .= "--------------------------\n";
+        if ($companyName)   $message .= "Nombre de la Empresa:   {$companyName}\n";
+        if ($currentRound)  $message .= "Ronda Actual:          {$currentRound}\n";
+        if ($raiseAmount)   $message .= "Monto a Levantar:      {$raiseAmount}\n";
+        if ($valuation)     $message .= "Valoración:            {$valuation}\n";
+        if ($revenue)       $message .= "Ingresos:              {$revenue}\n";
+        if ($elevatorPitch) $message .= "Elevator Pitch:        {$elevatorPitch}\n";
     }
 
     // Adjuntar el archivo
@@ -176,15 +196,15 @@ if ($attachment) {
     // Construir un email sin adjunto
     $headers  = "From: no-reply@netwrkventures.com\r\n";
     $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"\r\n";
+    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"\r\n\r\n";
 
     // Cuerpo del email
-    $message  = "You have received a new message from netwrkventures.com.\n\n";
+    $message  = "Has recibido un nuevo mensaje desde netwrkventures.com.\n\n";
     $message .= "=== {$formName} ===\n\n";
-    $message .= "Contact Information:\n";
-    $message .= "--------------------\n";
-    $message .= "Full Name: {$fullname}\n";
-    $message .= "Email:     {$email}\n";
+    $message .= "Información de Contacto:\n";
+    $message .= "------------------------\n";
+    $message .= "Nombre Completo: {$fullname}\n";
+    $message .= "Correo Electrónico: {$email}\n";
 
     if (
         !empty($companyName) ||
@@ -194,14 +214,14 @@ if ($attachment) {
         !empty($revenue)     ||
         !empty($elevatorPitch)
     ) {
-        $message .= "\nCompany Information:\n";
-        $message .= "--------------------\n";
-        if ($companyName)   $message .= "Company Name:   {$companyName}\n";
-        if ($currentRound)  $message .= "Current Round:  {$currentRound}\n";
-        if ($raiseAmount)   $message .= "Raise Amount:   {$raiseAmount}\n";
-        if ($valuation)     $message .= "Valuation:      {$valuation}\n";
-        if ($revenue)       $message .= "Revenue:        {$revenue}\n";
-        if ($elevatorPitch) $message .= "Elevator Pitch: {$elevatorPitch}\n";
+        $message .= "\nInformación de la Empresa:\n";
+        $message .= "--------------------------\n";
+        if ($companyName)   $message .= "Nombre de la Empresa:   {$companyName}\n";
+        if ($currentRound)  $message .= "Ronda Actual:          {$currentRound}\n";
+        if ($raiseAmount)   $message .= "Monto a Levantar:      {$raiseAmount}\n";
+        if ($valuation)     $message .= "Valoración:            {$valuation}\n";
+        if ($revenue)       $message .= "Ingresos:              {$revenue}\n";
+        if ($elevatorPitch) $message .= "Elevator Pitch:        {$elevatorPitch}\n";
     }
 }
 
@@ -212,10 +232,10 @@ $sent = mail($recipient, $subject, $message, $headers);
 if ($sent) {
     if ($isForm2) {
         // Mensaje de éxito para "Apply for Funding"
-        $successMessage = "Thank you for applying for funding. Your message has been sent.";
+        $successMessage = "Gracias por aplicar para financiamiento. Tu mensaje ha sido enviado.";
     } else {
         // Mensaje de éxito para "Invest With Us"
-        $successMessage = "Thank you for your interest in investing with us. Your message has been sent.";
+        $successMessage = "Gracias por tu interés en invertir con nosotros. Tu mensaje ha sido enviado.";
     }
 
     echo json_encode([
@@ -225,7 +245,7 @@ if ($sent) {
 } else {
     echo json_encode([
         "status"  => "error",
-        "message" => "An error occurred while sending the message. Please try again later."
+        "message" => "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
     ]);
 }
 ?>

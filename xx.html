@@ -201,7 +201,7 @@
         // Función para enviar formularios vía AJAX
         function sendFormAjax(form, statusDivId) {
             const statusDiv = document.getElementById(statusDivId);
-            statusDiv.textContent = "Sending...";
+            statusDiv.textContent = "Enviando...";
             statusDiv.style.display = "block";
 
             const formData = new FormData(form);
@@ -212,6 +212,7 @@
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data); // Depuración: Ver la respuesta del servidor
                     if (data.status === "success") {
                         statusDiv.innerHTML = `<span style="color:green">${data.message}</span>`;
                         form.reset();
@@ -239,6 +240,7 @@
                     }
                 })
                 .catch(error => {
+                    console.log(error); // Depuración: Ver el error en la consola
                     statusDiv.innerHTML = `<span style="color:red">Error: ${error}</span>`;
 
                     // Ocultar el mensaje después de 7 segundos
