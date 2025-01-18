@@ -38,7 +38,7 @@ document.addEventListener ('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         entry.target.style.setProperty ('--delay', `${delay}s`);
         entry.target.classList.add ('visible');
-        delay += 0.025;
+        delay += 0.01;
         observer.unobserve (entry.target);
       }
     });
