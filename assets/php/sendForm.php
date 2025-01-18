@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // 1. Identificar qué formulario se está enviando
 $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
-// 2. Configurar destinatarios y nombres de formulario según el ID
 if ($formId === 'form1') {
     // "Invest With Us"
     $recipient = "fvaccarezza@gmail.com"; // ir@netwrkventures.com
@@ -26,7 +25,6 @@ if ($formId === 'form1') {
     $formName  = "Apply for Funding";
     $isForm2   = true;
 } else {
-    // Identificador de formulario desconocido
     echo json_encode([
         "status"  => "error",
         "message" => "Unknown form identifier."
