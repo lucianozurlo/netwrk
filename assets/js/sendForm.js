@@ -9,8 +9,8 @@ document.getElementById ('form2').addEventListener ('submit', function (e) {
 });
 
 function sendFormAjax (form) {
-  const msgEstado = document.getElementById ('msg-estado');
-  msgEstado.textContent = 'Sending...';
+  const msgStatus = document.getElementById ('msg-status');
+  msgStatus.textContent = 'Sending...';
 
   const formData = new FormData (form);
 
@@ -21,13 +21,13 @@ function sendFormAjax (form) {
     .then (response => response.json ())
     .then (data => {
       if (data.status === 'success') {
-        msgEstado.innerHTML = `<span style="color:green">${data.message}</span>`;
+        msgStatus.innerHTML = `<span style="color:green">${data.message}</span>`;
         form.reset ();
       } else {
-        msgEstado.innerHTML = `<span style="color:red">${data.message}</span>`;
+        msgStatus.innerHTML = `<span style="color:red">${data.message}</span>`;
       }
     })
     .catch (err => {
-      msgEstado.innerHTML = `<span style="color:red">Error: ${err}</span>`;
+      msgStatus.innerHTML = `<span style="color:red">Error: ${err}</span>`;
     });
 }

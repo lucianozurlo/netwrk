@@ -1334,3 +1334,8 @@ h3 {
     color: #222;
     margin: 0;
 }
+
+#Contact #msg-status {
+    position: absolute;
+    bottom: 20px;
+}
