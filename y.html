@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Two Forms Required Example</title>
+    <meta charset="UTF-8">
+    <title>Netwrk Ventures - Forms</title>
 </head>
 
 <body>
 
-    <!-- FORM 1 -->
+    <!-- FORM 1: Invest With Us -->
     <form id="form1" method="POST" action="assets/php/sendForm.php" novalidate>
         <input type="hidden" name="form_id" value="form1">
 
         <div class="form-inputs">
-            <h4>Contact Information (Form 1)</h4>
+            <h4>Invest With Us - Contact Information</h4>
             <div class="row-input">
                 <div class="column-input">
                     <label for="fullname1">Full Name <span>(Founder/Primary Contact)</span></label>
@@ -25,17 +25,20 @@
                 </div>
             </div>
         </div>
-        <input type="submit" value="Submit Form 1">
+        <input type="submit" value="Submit">
     </form>
+
+    <!-- This div will show status messages for Form 1 -->
+    <div id="status-message1"></div>
 
     <hr>
 
-    <!-- FORM 2 -->
+    <!-- FORM 2: Apply for Funding -->
     <form id="form2" method="POST" action="assets/php/sendForm.php" novalidate>
         <input type="hidden" name="form_id" value="form2">
 
         <div class="form-inputs">
-            <h4>Contact Information (Form 2)</h4>
+            <h4>Apply for Funding - Contact Information</h4>
             <div class="row-input">
                 <div class="column-input">
                     <label for="fullname2">Full Name <span>(Founder/Primary Contact)</span></label>
@@ -47,8 +50,9 @@
                 </div>
             </div>
         </div>
+
         <div class="form-inputs">
-            <h4>Company Information (Form 2)</h4>
+            <h4>Company Information</h4>
             <div class="row-input">
                 <div class="column-input">
                     <label for="company-name">Company Name</label>
@@ -77,29 +81,63 @@
             </div>
             <div class="row-input">
                 <div class="column-input">
-                    <label for="elevator-pitch">Elevator pitch</label>
+                    <label for="elevator-pitch">Elevator Pitch</label>
                     <textarea id="elevator-pitch" name="elevator-pitch"></textarea>
                 </div>
                 <div class="column-input">
                     <label for="company-deck">Company Deck</label>
+                    <!-- This code does not handle file uploads, just a placeholder drag & drop area -->
                     <div class="drag-drop-area" id="company-deck">
                         <p class="mob-no">Drag & drop or browse a file <img src="assets/img/clip.svg" alt=""></p>
                         <p class="mob-ok">Upload file <img src="assets/img/clip.svg" alt=""></p>
                     </div>
                 </div>
             </div>
-            <input type="submit" value="Submit Form 2">
+            <input type="submit" value="Submit">
         </div>
     </form>
 
-    <hr>
+    <!-- This div will show status messages for Form 2 -->
+    <div id="status-message2"></div>
 
-    <!-- Place for status messages -->
-    <div id="msg-estado"></div>
+    <!-- JavaScript -->
+    <script>
+        // Attach event listeners
+        document.getElementById('form1').addEventListener('submit', function (e) {
+            e.preventDefault();
+            sendFormAjax(this, 'status-message1');
+        });
 
-    <script src="assets/js/sendForm.js"></script>
-    <script src="assets/js/scripts.js"></script>
+        document.getElementById('form2').addEventListener('submit', function (e) {
+            e.preventDefault();
+            sendFormAjax(this, 'status-message2');
+        });
 
+        // We pass the ID of the status message container
+        function sendFormAjax(form, statusDivId) {
+            const statusDiv = document.getElementById(statusDivId);
+            statusDiv.textContent = "Sending...";
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        statusDiv.innerHTML = `<span style="color:green">${data.message}</span>`;
+                        form.reset();
+                    } else {
+                        statusDiv.innerHTML = `<span style="color:red">${data.message}</span>`;
+                    }
+                })
+                .catch(error => {
+                    statusDiv.innerHTML = `<span style="color:red">Error: ${error}</span>`;
+                });
+        }
+    </script>
 </body>
 
 </html>

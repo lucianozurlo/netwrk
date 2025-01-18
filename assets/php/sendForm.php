@@ -10,20 +10,18 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// 1. Identificar cuál formulario es
+// 1. Identify which form is being submitted
 $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
-// 2. Definir variables según formulario
+// 2. Configure recipients and form names
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "repoarchivos@gmail.com";
+    $recipient = "lucianozurlo@gmail.com";
     $formName  = "Invest With Us";
-    $isForm2   = false; // para saber si requerimos "company-name"
 } elseif ($formId === 'form2') {
     // "Apply for Funding"
     $recipient = "em24.teco@gmail.com";
     $formName  = "Apply for Funding";
-    $isForm2   = true;  // requiere "company-name"
 } else {
     echo json_encode([
         "status"  => "error",
@@ -32,7 +30,7 @@ if ($formId === 'form1') {
     exit;
 }
 
-// 3. Recoger datos
+// 3. Collect form data
 $fullname      = isset($_POST['fullname'])        ? trim($_POST['fullname'])        : '';
 $email         = isset($_POST['email'])           ? trim($_POST['email'])           : '';
 $companyName   = isset($_POST['company-name'])    ? trim($_POST['company-name'])    : '';
@@ -42,15 +40,11 @@ $valuation     = isset($_POST['valuation'])       ? trim($_POST['valuation'])   
 $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
 $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
 
-/*
-  4. Validación en cadena
-     - Primero chequeamos "fullname"
-     - Luego chequeamos "email"
-     - Si es form2, chequeamos "company-name"
-     - Cualquier error => devolvemos JSON y detenemos ejecución.
-*/
+// 4. Field-by-field validation in sequence
+//    (first Full Name, then Email, etc.)
+//    Adjust if you need different required fields for each form.
 
-// 4.1 Validar fullname
+// 4.1 Validate Full Name
 if (empty($fullname)) {
     echo json_encode([
         "status"  => "error",
@@ -59,7 +53,7 @@ if (empty($fullname)) {
     exit;
 }
 
-// 4.2 Validar email (que no esté vacío)
+// 4.2 Validate Email (not empty)
 if (empty($email)) {
     echo json_encode([
         "status"  => "error",
@@ -67,7 +61,7 @@ if (empty($email)) {
     ]);
     exit;
 }
-// 4.3 Validar formato de email
+// 4.3 Validate Email format
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode([
         "status"  => "error",
@@ -76,8 +70,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-// 4.4 Si es el formulario 2, validar "company-name"
-if ($isForm2) {
+// If it's form2, we might also require a Company Name:
+if ($formId === 'form2') {
     if (empty($companyName)) {
         echo json_encode([
             "status"  => "error",
@@ -87,20 +81,21 @@ if ($isForm2) {
     }
 }
 
-// 5. Construir Asunto
+// 5. Build the Subject
 $subject = "New message from netwrkventures.com - $formName";
 
-// 6. Construir el Cuerpo del Mensaje (nuevo formato)
-$message = "You have received a new message from netwrkventures.com.\n\n";
-$message .= "=== $formName ===\n\n";  // Encabezado
+// 6. Construct the Email Body
+// (removed "Hello," as requested)
+$message  = "You have received a new message from netwrkventures.com.\n\n";
+$message .= "=== $formName ===\n\n";  
 
-// Sección: Contact Information
+// Contact Information
 $message .= "Contact Information:\n";
 $message .= "--------------------\n";
 $message .= "Full Name: $fullname\n";
 $message .= "Email:     $email\n";
 
-// Sección: Company Information (solo si hay datos o si es form2 con datos)
+// Company Information (only if data is present)
 if (
     !empty($companyName) ||
     !empty($currentRound) ||
@@ -119,18 +114,26 @@ if (
     if ($elevatorPitch) $message .= "Elevator Pitch: $elevatorPitch\n";
 }
 
-// 7. Cabeceras
+// 7. Headers
 $headers  = "From: no-reply@netwrkventures.com\r\n";
 $headers .= "Reply-To: $email\r\n";
 
-// 8. Enviar correo
+// 8. Send the email
 $sent = mail($recipient, $subject, $message, $headers);
 
-// 9. Responder en JSON
+// 9. Custom success messages for each form
 if ($sent) {
+    if ($formId === 'form1') {
+        // Custom success for "Invest With Us"
+        $successMessage = "Thank you for your interest in investing with us. Your message has been sent.";
+    } else {
+        // Custom success for "Apply for Funding"
+        $successMessage = "Thank you for applying for funding. Your message has been sent.";
+    }
+
     echo json_encode([
         "status"  => "success",
-        "message" => "Your message was successfully sent."
+        "message" => $successMessage
     ]);
 } else {
     echo json_encode([
