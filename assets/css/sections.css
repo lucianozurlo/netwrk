@@ -1339,3 +1339,32 @@ h3 {
     position: absolute;
     bottom: 20px;
 }
+
+/* Estilos para el área de drag & drop */
+/* .drag-drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+  } */
+/* 
+.drag-drop-area.dragover {
+    border-color: #000;
+    background-color: #f0f0f0;
+  } */
+
+/* Ocultar el input de archivo */
+#company-deck-input {
+    display: none;
+}
+
+/* Estilos para el nombre del archivo */
+.file-name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    word-break: break-all;
+}
