@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Recoger datos de ambos forms
+    // Recoger datos (comunes a ambos forms)
     $fullname      = isset($_POST['fullname'])        ? trim($_POST['fullname'])        : '';
     $email         = isset($_POST['email'])           ? trim($_POST['email'])           : '';
     $companyName   = isset($_POST['company-name'])    ? trim($_POST['company-name'])    : '';
@@ -33,13 +33,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $revenue       = isset($_POST['revenue'])         ? trim($_POST['revenue'])         : '';
     $elevatorPitch = isset($_POST['elevator-pitch'])  ? trim($_POST['elevator-pitch'])  : '';
 
+    // -----------------------------------------------------------------
+    // Validaciones (ejemplo mínimo):
+    //   1) Asegurarnos que el email no esté vacío si es requerido. 
+    //   2) Validar que el email tenga formato correcto.
+    //   3) (Opcional) Verificar cualquier otro campo requerido.
+    // -----------------------------------------------------------------
+    $errors = [];
+
+    // Ejemplo: si email está vacío, generamos error
+    if (empty($email)) {
+        $errors[] = "Email is required.";
+    } 
+    // Si email no está vacío, validamos el formato
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format.";
+    }
+
+    // Puedes agregar otras validaciones, por ejemplo:
+    if (empty($fullname)) {
+        $errors[] = "Full Name is required.";
+    }
+
+    // Si hay errores, enviamos respuesta JSON con status=error
+    if (!empty($errors)) {
+        $errorMsg = implode(" ", $errors);
+        echo json_encode([
+            "status"  => "error",
+            "message" => $errorMsg
+        ]);
+        exit;
+    }
+
     // --------------------------------------
     // Construir asunto y cuerpo del mensaje
     // --------------------------------------
     $subject = "New message from netwrkventures.com - $formName";
 
     // Cuerpo del correo
-    $message .= "You have received a new message from netwrkventures.com.\n\n";
+    $message = "You have received a new message from netwrkventures.com.\n\n";
     $message .= "=== $formName ===\n\n";  // Encabezado sin “FORM:”
 
     // Sección: Contact Information
