@@ -16,12 +16,12 @@ $formId = isset($_POST['form_id']) ? $_POST['form_id'] : '';
 
 if ($formId === 'form1') {
     // "Invest With Us"
-    $recipient = "fvaccarezza@gmail.com"; // ir@netwrkventures.com
+    $recipient = "ir@netwrkventures.com"; 
     $formName  = "Invest With Us";
     $isForm2   = false;
 } elseif ($formId === 'form2') {
     // "Apply for Funding"
-    $recipient = "fvaccarezza@gmail.com"; // funding@netwrkventures.com
+    $recipient = "funding@netwrkventures.com"; 
     $formName  = "Apply for Funding";
     $isForm2   = true;
 } else {

@@ -355,6 +355,11 @@
         display: block;
     }
 
+    #home .text-content a {
+        font-size: 14px;
+        width: 160px;
+    }
+
     #home .bg {
         background-size: 55%;
     }
@@ -829,7 +834,7 @@
 
     #Contact .swiper-container .selector-container {
         width: 314px;
-        height: 48px;
+        height: 50px;
     }
 
     #Contact .swiper-container .selector-container .selector .go-to-slide {
@@ -845,7 +850,7 @@
 
     #Contact .swiper-container .selector-container:before {
         width: 314px;
-        height: 48px;
+        height: 50px;
     }
 
     #Contact .swiper-slide form .form-inputs h4 {

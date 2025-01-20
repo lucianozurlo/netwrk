@@ -60,9 +60,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 14px 48px;
     width: 186px;
     height: 40px;
+    font-size: 16px;
     margin-top: 45px;
     background: #fff;
     color: #000;
@@ -106,14 +106,14 @@
 }
 
 #home .bg1 {
-    background-image: url('../img/intro-bg2.gif');
+    background-image: url('../img/intro-bg.gif');
     /* background-position: right top; */
     background-position: left bottom;
     transform: rotate(180deg);
 }
 
 #home .bg2 {
-    background-image: url('../img/intro-bg2.gif');
+    background-image: url('../img/intro-bg.gif');
     background-position: left bottom;
 }
 
@@ -1062,7 +1062,7 @@
     position: absolute;
     display: inline-block;
     border-radius: 500px;
-    margin: 10px;
+    margin: 0;
 }
 
 #Contact .swiper-container .selector-container .selector .go-to-slide {
