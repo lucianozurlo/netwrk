@@ -25,7 +25,7 @@
     gap: 16px;
 }
 
-#home .text-content p.lead {
+#home .text-content h4 {
     font-family: 'PP Telegraf';
     font-weight: 400;
     font-size: 30px;
@@ -56,6 +56,7 @@
     line-height: 130%;
     color: #fff;
     margin-bottom: 0 !important;
+    display: none !important;
 }
 
 #home .text-content a {
@@ -104,20 +105,17 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-size: 33.33333%;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 #home .bg1 {
-    background-image: url('../img/intro-bg.gif');
-    /* background-position: right top; */
-    background-position: left bottom;
-    transform: rotate(180deg);
+    transform: translate(-6%, 12%);
 }
 
 #home .bg2 {
-    background-image: url('../img/intro-bg.gif');
-    background-position: left bottom;
+    transform: translate(4%, -15%) scale(-1);
 }
 
 
