@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animación de Reloj</title>
     <style>
+        /* Estilos básicos del cuerpo */
         body {
             display: flex;
             justify-content: center;
@@ -15,48 +15,68 @@
             background-color: #f4f4f4;
         }
 
+        /* Contenedor del reloj */
         .clock {
             position: relative;
             width: 200px;
             height: 200px;
         }
 
+        /* Estilo del círculo */
         .circle {
             width: 100%;
             height: 100%;
             border: 5px solid #00bef3;
             /* Color del borde */
             border-radius: 50%;
-            animation: rotate-circle 5s linear infinite;
+            box-sizing: border-box;
+            animation: rotate-clock 5s linear infinite;
         }
 
+        /* Contenedor para el número */
         .number-container {
             position: absolute;
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
-            animation: rotate-circle 5s linear infinite;
+            animation: rotate-clock 5s linear infinite;
+            /* Aseguramos que la animación esté sincronizada con el círculo */
         }
 
+        /* Estilo del número */
         .number {
             position: absolute;
-            top: -30px;
-            /* Ajusta según la distancia del número al borde */
+            top: 10px;
+            /* Ajusta la posición vertical */
             left: 50%;
             transform: translateX(-50%);
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
+            color: #333;
+            /* Contrarrestamos la rotación del contenedor */
+            animation: counter-rotate 5s linear infinite;
         }
 
-        /* Animación para el círculo */
-        @keyframes rotate-circle {
-            0% {
+        /* Animación para rotar el círculo y el contenedor del número */
+        @keyframes rotate-clock {
+            from {
                 transform: rotate(0deg);
             }
 
-            100% {
+            to {
                 transform: rotate(360deg);
+            }
+        }
+
+        /* Animación para mantener el número en orientación fija */
+        @keyframes counter-rotate {
+            from {
+                transform: translateX(-50%) rotate(0deg);
+            }
+
+            to {
+                transform: translateX(-50%) rotate(-360deg);
             }
         }
     </style>
