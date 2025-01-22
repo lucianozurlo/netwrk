@@ -104,35 +104,16 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-}
-
-
-#home .bg1 {
     align-items: flex-end;
     justify-content: flex-start;
 }
 
-
-#home .bg2 {
-    align-items: flex-start;
-    justify-content: flex-end;
-}
-
-
 #home .bg img {
     max-height: 40vw;
-}
-
-
-
-#home .bg1 img {
     transform: translate(-6%, 25%);
 }
 
 
-#home .bg2 img {
-    transform: translate(12%, -15%) scale(-1);
-}
 
 /** About **/
 #About {
