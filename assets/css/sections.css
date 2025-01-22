@@ -311,12 +311,6 @@
     flex-direction: column;
 }
 
-#OurNetwork .bg img {
-    max-height: 60vw;
-    left: -24vw;
-    top: -30vw;
-}
-
 #OurNetwork h1 {
     margin-bottom: 100px;
 }
@@ -845,20 +839,9 @@
     background-image: url(../img/contact-bg.png);
     background-repeat: no-repeat;
     background-size: 62vw;
-    background-position: -30vw -5vw;
+    background-position: right 25%;
     background-color: #f9f9f9;
 }
-
-/* 
-#Contact .bg {
-    transform: rotate(-115.62deg)
-}
-
-#Contact .bg img {
-    max-height: 50vw;
-    right: 76vw;
-    top: 5vw;
-} */
 
 #Contact .text-content {
     display: flex;
