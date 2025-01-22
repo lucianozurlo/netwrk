@@ -537,24 +537,41 @@
     }
 
 
-
-
-    #OurNetwork>*,
-    #OurNetwork .container,
-    #OurNetwork .circles,
-    .parallax-layer {
-        width: 191.07854283479vw !important;
-        height: 191.07854283479vw !important;
+    #OurNetwork {
+        overflow-x: hidden;
+        max-width: 100vw;
     }
+
+
+    #OurNetwork>* {
+        overflow-x: hidden;
+    }
+
+    #OurNetwork .container {
+        overflow-x: hidden;
+    }
+
+    #OurNetwork .circles {
+        overflow-x: hidden;
+    }
+
+    .parallax-layer {
+        overflow-x: hidden;
+    }
+
+
+
 
     #OurNetwork>* {
         padding: 0 !important;
+        overflow-x: hidden;
     }
 
 
 
 
     .parallax-layer.circle1 .circle-div {
+
         width: 133.7549799844vw;
         height: 133.7549799844vw;
     }
