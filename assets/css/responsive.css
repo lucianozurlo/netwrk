@@ -945,36 +945,28 @@
         align-items: flex-start !important;
     }
 
-
-
-
-
-
-
-
-
-    #OurNetwork {
+    #CoInvestors {
         margin-bottom: 100px;
     }
 
-    #OurNetwork h1 {
+    #CoInvestors h1 {
         font-size: 38px;
         line-height: 52px;
     }
 
-    #OurNetwork .investors-container {
+    #CoInvestors .investors-container {
         flex-direction: column;
         padding: 0px;
         gap: 16px;
         max-width: 286px;
     }
 
-    #OurNetwork .style-content {
+    #CoInvestors .style-content {
         width: 286px;
         height: 108.54px;
     }
 
-    #OurNetwork .investors-container a {
+    #CoInvestors .investors-container a {
         max-width: 265px;
         max-height: 100px;
     }
