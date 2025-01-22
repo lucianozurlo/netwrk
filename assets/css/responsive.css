@@ -532,11 +532,83 @@
     }
 
 
-
     .parallax-layer .iso .startup p {
         font-size: 12px;
     }
 
+
+
+
+    #OurNetwork>*,
+    #OurNetwork .container,
+    #OurNetwork .circles,
+    .parallax-layer {
+        width: 191.07854283479vw !important;
+        height: 191.07854283479vw !important;
+    }
+
+    #OurNetwork>* {
+        padding: 0 !important;
+    }
+
+
+
+
+    .parallax-layer.circle1 .circle-div {
+        width: 133.7549799844vw;
+        height: 133.7549799844vw;
+    }
+
+    .parallax-layer.circle2 .circle-div {
+        width: 113.09938950391vw;
+        height: 113.09938950391vw;
+    }
+
+    .parallax-layer.circle3 .circle-div {
+        width: 92.4629068778vw;
+        height: 92.4629068778vw;
+    }
+
+    .parallax-layer.circle4 .circle-div {
+        width: 71.8264242516vw;
+        height: 71.8264242516vw;
+    }
+
+    .parallax-layer.circle5 .circle-div {
+        width: 51.1708337712vw;
+        height: 51.1708337712vw;
+    }
+
+    .parallax-layer.circle6 .circle-div {
+        width: 30.534351145vw;
+        height: 30.534351145vw;
+    }
+
+    .parallax-layer.button .iso {
+        width: 21.01863971183vw;
+        height: 21.01863971183vw;
+    }
+
+    .parallax-layer.brand .base {
+        width: 13.08888018418vw;
+        height: 13.08888018418vw;
+        border-radius: 1.4521969255vw;
+    }
+
+    .parallax-layer.brand .square {
+        border-radius: 1.4521969255vw;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* 
     #TheTeam {
         gap: 32px;
         margin-bottom: 100px;
@@ -584,7 +656,7 @@
     #KeyInvestments h1 {
         font-size: 38px;
         line-height: 52px;
-    }
+    } */
 
 
     #KeyInvestments .mySwiperMob {
