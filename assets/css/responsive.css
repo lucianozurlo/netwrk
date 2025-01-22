@@ -145,7 +145,7 @@
         display: flex;
         padding: 0 22px !important;
         height: 100px;
-        width: 100%;
+        width: 100vw;
         margin: 0;
     }
 
@@ -177,8 +177,8 @@
         background-color: #111111cc !important;
         height: 100vh;
         max-height: 100vh;
-        width: 100%;
-        max-width: 100%;
+        width: 100vw;
+        max-width: 100vw;
         overflow: hidden;
         position: fixed;
         z-index: 1111111;
@@ -204,8 +204,8 @@
         height: 100vh;
         max-height: 100vh;
         padding: 180px 0 0;
-        width: 100%;
-        min-width: 100%;
+        width: 100vw;
+        min-width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -270,7 +270,7 @@
         align-items: center;
         padding: 0px 35px !important;
         border: none !important;
-        max-width: 100%;
+        max-width: 100vw;
         z-index: 11111111;
     }
 
@@ -320,7 +320,7 @@
         padding: 0;
         margin: 0;
         max-height: 100vh;
-        max-width: 100%;
+        max-width: 100vw;
         overflow: hidden;
     }
 
@@ -342,7 +342,7 @@
     }
 
     #home .bg img {
-        max-height: 47%;
+        max-height: 100vw;
     }
 
     #home .bg1 img {
@@ -394,7 +394,7 @@
     #About .team-content {
         padding: 16px !important;
         gap: 32px;
-        width: calc(100% - 44px);
+        width: calc(100vw - 44px);
         border-radius: 10px;
     }
 
@@ -543,7 +543,7 @@
 
     #OurNetwork {
         overflow-x: hidden;
-        max-width: 100%;
+        max-width: 100vw;
     }
 
     #OurNetwork>* {
@@ -674,7 +674,7 @@
 
 
     #KeyInvestments .mySwiperMob {
-        width: 100%;
+        width: 100vw;
         left: 0;
         display: flex;
         flex-direction: row;
@@ -698,7 +698,7 @@
     }
 
     #KeyInvestments .mySwiperMob {
-        width: 100%;
+        width: 100vw;
         left: 0;
         display: flex;
         flex-direction: row;
@@ -747,7 +747,7 @@
     }
 
     #KeyInvestments .key-content {
-        width: 100%;
+        width: 100vw;
         padding: 0 !important;
     }
 
@@ -756,9 +756,9 @@
     }
 
     #KeyInvestments .swiper {
-        width: 100%;
+        width: 100vw;
         height: auto;
-        max-width: 100%;
+        max-width: 100vw;
     }
 
     #KeyInvestments .swiper-container {
@@ -768,7 +768,7 @@
     }
 
     #KeyInvestments .mySwiperMob {
-        width: 100%;
+        width: 100vw;
         left: 0;
         display: flex;
         flex-direction: row;
@@ -797,7 +797,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: calc(100% - 80px);
+        max-width: calc(100vw - 80px);
         box-shadow: 0px 81px 33px rgba(0, 0, 0, 0.01), 0px 46px 27px rgba(0, 0, 0, 0.03), 0px 20px 20px rgba(0, 0, 0, 0.04), 0px 5px 11px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(5px);
         border-radius: 10px;
@@ -984,7 +984,7 @@
     #Contact {
         padding: 64px 0px;
         gap: 48px;
-        width: 100%;
+        width: 100vw;
     }
 
     #Contact .text-content {
@@ -1007,7 +1007,7 @@
     }
 
     #Contact .swiper-container {
-        width: 100%;
+        width: 100vw;
     }
 
     #Contact .swiper-slide form {
