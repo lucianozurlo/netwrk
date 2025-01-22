@@ -303,10 +303,8 @@ h3 {
 
 .style-bg .style-bg {
     background: linear-gradient(160deg,
-            #f9f9f924 0%,
-            #22222200 30%,
             #22222200 60%,
-            #f9f9f900 100%);
+            #f9f9f908 100%);
 }
 
 
