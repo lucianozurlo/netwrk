@@ -1033,6 +1033,7 @@
 
     #Contact .swiper-slide form .form-inputs h4 {
         font-size: 16px;
+        padding-left: 12px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input label {
@@ -1042,6 +1043,10 @@
     #Contact .swiper-slide form .form-inputs .column-input {
         width: 100%;
         gap: 5px;
+    }
+
+    #Contact .swiper-slide form .form-inputs .column-input.full {
+        width: 100%;
     }
 
     #Contact .swiper-slide form .form-inputs .row-input {
