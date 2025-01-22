@@ -93,8 +93,8 @@
 				</div>
 			</div>
 
-			<div class="bg bg1"><img src="assets/img/home-bg.gif" alt=""></div>
-			<div class="bg bg2"><img src="assets/img/home-bg.gif" alt=""></div>
+			<div class="bg bg1" style="display: none;"><img src="assets/img/home-bg.gif" alt=""></div>
+			<div class="bg bg2" style="display: none;"><img src="assets/img/home-bg.gif" alt=""></div>
 
 
 
@@ -103,9 +103,50 @@
 
 		<!-- <div style="height: 200vh;"></div> -->
 
+		<section id="About">
+			<h1 class="scroll-animate">About</h1>
+			<div class="team-content style-bg scroll-animate">
+				<h3>The Team</h3>
+				<div class="team-staff">
+					<div class="team-frame scroll-animate">
+						<div class="team-img style-content scroll-animate fade-in">
+							<img data-src="assets/img/team-nick.png" alt="" class="lazy">
+							<div class="style-fill"></div>
+							<div class="style-fill style-hover bs"></div>
+						</div>
+						<div class="team-txt">
+							<h3 class="scroll-animate">Nick Godin</h3>
+							<p class="scroll-animate">General Partner</p>
+						</div>
+					</div>
+					<div class="team-frame scroll-animate">
+						<div class="team-img style-content scroll-animate fade-in">
+							<img data-src="assets/img/team-ryan.png" alt="" class="lazy">
+							<div class="style-fill"></div>
+							<div class="style-fill style-hover bs"></div>
+						</div>
+						<div class="team-txt">
+							<h3 class="scroll-animate">Ryan Roberts</h3>
+							<p class="scroll-animate">General Partner</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-philosophy style-bg">
+					<h3 class="scroll-animate">Our Philosophy</h3>
+					<p class="scroll-animate">
+						We believe true innovation thrives on meaningful connections. In a world increasingly driven
+						by AI and automation, Netwrk Ventures prioritizes authentic relationships with founders,
+						equipping them with unparalleled access and strategic insights to unlock rapid growth and
+						impactful results.</p>
+				</div>
+			</div>
+
+			<!-- <div class="bg"><img src="assets/img/about-bg.png" alt=""></div> -->
+
+		</section>
 
 
-		<section id="OurNetwork">
+		<section id="OurNetwork" style="display: none;">
 			<h1 class="scroll-animate">Our Network</h1>
 
 			<div class="d-flex flex-column">
@@ -367,50 +408,7 @@
 		</section>
 
 
-		<section id="About">
-			<h1 class="scroll-animate">About</h1>
-			<div class="team-content style-bg scroll-animate">
-				<h3>The Team</h3>
-				<div class="team-staff">
-					<div class="team-frame scroll-animate">
-						<div class="team-img style-content scroll-animate fade-in">
-							<img data-src="assets/img/team-nick.png" alt="" class="lazy">
-							<div class="style-fill"></div>
-							<div class="style-fill style-hover bs"></div>
-						</div>
-						<div class="team-txt">
-							<h3 class="scroll-animate">Nick Godin</h3>
-							<p class="scroll-animate">General Partner</p>
-						</div>
-					</div>
-					<div class="team-frame scroll-animate">
-						<div class="team-img style-content scroll-animate fade-in">
-							<img data-src="assets/img/team-ryan.png" alt="" class="lazy">
-							<div class="style-fill"></div>
-							<div class="style-fill style-hover bs"></div>
-						</div>
-						<div class="team-txt">
-							<h3 class="scroll-animate">Ryan Roberts</h3>
-							<p class="scroll-animate">General Partner</p>
-						</div>
-					</div>
-				</div>
-				<div class="team-philosophy style-bg">
-					<h3 class="scroll-animate">Our Philosophy</h3>
-					<p class="scroll-animate">
-						We believe true innovation thrives on meaningful connections. In a world increasingly driven
-						by AI and automation, Netwrk Ventures prioritizes authentic relationships with founders,
-						equipping them with unparalleled access and strategic insights to unlock rapid growth and
-						impactful results.</p>
-				</div>
-			</div>
-
-			<div class="bg"><img src="assets/img/about-bg.png" alt=""></div>
-
-		</section>
-
-
-		<section id="KeyInvestments">
+		<section id="KeyInvestments" style="display: none;">
 			<h1 class="scroll-animate">Key Investments</h1>
 			<div class="key-content">
 
@@ -750,7 +748,7 @@
 		</section>
 
 
-		<section id="CoInvestors">
+		<section id="CoInvestors" style="display: none;">
 			<h1 class="scroll-animate">Co-Investors</h1>
 
 			<div class="investors-container">
@@ -792,7 +790,7 @@
 		</section>
 
 
-		<section id="Contact">
+		<section id="Contact" style="display: none;">
 			<div class="text-content">
 				<h2 class="scroll-animate">Let’s Build the <span>Future Together</span></h2>
 				<p class="scroll-animate">We make early-stage investments <span>across all industries and around</span>
@@ -929,7 +927,12 @@
 			</div>
 
 			<div id="footer">
-				<img data-src="assets/img/logo.svg" class="lazy">
+				<div class="mob-no">
+					<img data-src="assets/img/logo.svg" class="lazy">
+				</div>
+				<div class="mob-ok">
+					<img data-src="assets/img/iso_b.svg" class="lazy">
+				</div>
 			</div>
 
 		</section>
