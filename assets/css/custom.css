@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    max-width: 100vw;
+html {
+    overflow-x: hidden !important;
 }
 
 .mob-ok {
@@ -64,19 +64,15 @@ section h1 {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     z-index: -1;
-    overflow-x: hidden !important;
-    overflow-y: visible !important;
 }
 
 .bg img {
-    overflow-x: hidden;
     position: absolute;
 }
 
 /** HEADER **/
-
 header {
     height: 61px;
     background: linear-gradient(284.59deg, #f9f9f91a 0%, #11111100 100%);
@@ -191,7 +187,6 @@ section {
     max-width: 100vw;
     display: flex;
     justify-content: center;
-    overflow-x: hidden;
 }
 
 h3 {

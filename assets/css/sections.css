@@ -106,24 +106,29 @@
     display: flex;
 }
 
+
 #home .bg1 {
     align-items: flex-end;
     justify-content: flex-start;
-    overflow: visible !important;
 }
+
 
 #home .bg2 {
     align-items: flex-start;
     justify-content: flex-end;
 }
 
+
 #home .bg img {
     max-height: 40vw;
 }
 
+
+
 #home .bg1 img {
     transform: translate(-6%, 25%);
 }
+
 
 #home .bg2 img {
     transform: translate(12%, -15%) scale(-1);
@@ -140,8 +145,13 @@
 }
 
 #About .bg {
-    align-items: flex-start;
-    justify-content: flex-end;
+    transform: rotate(17.47deg);
+}
+
+#About .bg img {
+    max-height: 60vw;
+    right: -31vw;
+    top: -13vw;
 }
 
 #About .team-content {
@@ -291,25 +301,19 @@
     color: #f9f9f9;
 }
 
-#About .bg img {
-    max-height: 60vw;
-    right: -30%;
-}
-
 
 /*** OUR NETWORK ***/
 
 #OurNetwork {
     margin-bottom: 200px;
-    overflow: visible;
     align-items: center;
     flex-direction: column;
 }
 
 #OurNetwork .bg img {
     max-height: 60vw;
-    left: -30%;
-    top: -30%;
+    left: -24vw;
+    top: -30vw;
 }
 
 #OurNetwork h1 {
@@ -495,11 +499,6 @@
 }
 
 
-
-
-
-/** KEY **/
-
 /* Key Investments */
 #KeyInvestments {
     display: flex;
@@ -509,6 +508,16 @@
     gap: 64px;
     margin-bottom: 200px;
     transition: all .2s ease-in-out;
+}
+
+#KeyInvestments .bg {
+    transform: rotate(-162.53deg)
+}
+
+#KeyInvestments .bg img {
+    max-height: 50vw;
+    right: 76vw;
+    top: 5vw;
 }
 
 #KeyInvestments .key-content {
@@ -569,8 +578,8 @@
 
 #KeyInvestments .nav-tabs .nav-link {
     padding: 0;
-    backdrop-filter: blur(0);
     background-color: unset !important;
+    backdrop-filter: blur(15.6961px);
     border-radius: 10px;
     height: 100%;
     width: 100%;
@@ -663,6 +672,7 @@
     z-index: 111;
     pointer-events: none;
     border-radius: 10px;
+    backdrop-filter: blur(15.6961px);
     transition: all .2s ease-in-out;
 }
 
@@ -835,8 +845,23 @@
     padding: 0px;
     gap: 64px;
     padding: 64px 0;
+    background-image: url(../img/contact-bg.png);
+    background-repeat: no-repeat;
+    background-size: 62vw;
+    background-position: -30vw -5vw;
     background-color: #f9f9f9;
 }
+
+/* 
+#Contact .bg {
+    transform: rotate(-115.62deg)
+}
+
+#Contact .bg img {
+    max-height: 50vw;
+    right: 76vw;
+    top: 5vw;
+} */
 
 #Contact .text-content {
     display: flex;
@@ -874,7 +899,7 @@
     align-items: center;
     padding: 0px;
     gap: 64px;
-    width: 857px;
+    width: 760px;
     transition: max-width 0.5s ease-in-out;
 }
 
@@ -1013,7 +1038,7 @@
 }
 
 #Contact .swiper-slide form .form-inputs h4 {
-    padding-left: 12px;
+    padding-left: 24px;
     font-family: 'PP Telegraf';
     font-weight: 800;
     font-size: 18px;
@@ -1028,6 +1053,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
+    justify-content: center;
     padding: 0 12px;
     gap: 24px;
     width: 100%;
@@ -1041,6 +1067,10 @@
     padding: 0px;
     gap: 8px;
     width: calc(50% - 24px);
+}
+
+#Contact .swiper-slide form .form-inputs .column-input.full {
+    width: calc(100% - 24px);
 }
 
 #Contact .swiper-slide form .form-inputs .column-input label {
@@ -1133,6 +1163,7 @@
 
 #Contact .drag-drop-area p {
     margin: 0 0 0 -24px;
+    color: #222;
 }
 
 #Contact .drag-drop-area img {
