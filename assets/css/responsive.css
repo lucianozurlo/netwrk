@@ -46,6 +46,8 @@
 }
 
 @media (max-width: 999px) {
+
+    html,
     body {
         overflow-x: hidden;
     }
@@ -73,11 +75,8 @@
 
     header .navbar-brand img {
         position: fixed;
-        /* top: 34px;
-        left: 34px; */
-        z-index: 999999;
-        width: 35px;
-        opacity: .5;
+        width: 116.74px;
+        height: 34.69px;
     }
 
     header.navbar.navbar-stuck.bg-white {
@@ -317,13 +316,6 @@
         overflow: hidden;
     }
 
-
-
-
-
-
-
-
     section>* {
         padding: 0 40px !important;
     }
@@ -336,6 +328,29 @@
     #home .container {
         padding: 0 34px !important;
     }
+
+    #home .bg {
+        overflow-x: hidden;
+    }
+
+    #home .bg img {
+        max-height: 100vw;
+    }
+
+    #home .bg1 img {
+        transform: translate(-45%, 33%);
+    }
+
+    #home .bg2 img {
+        transform: translate(42%, -40%) scale(-1);
+    }
+
+    #home .text-content {
+        min-height: 100vh;
+        justify-content: center;
+    }
+
+
 
     #home .text-content p.lead {
         font-size: 24px;
