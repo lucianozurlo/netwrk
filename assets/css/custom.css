@@ -333,12 +333,3 @@ h3 {
     opacity: 1;
     transform: scale(1);
 }
-
-
-
-
-
-
-.parallax-layer.brand .square {
-    display: none !important;
-}
