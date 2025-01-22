@@ -146,12 +146,12 @@
 }
 
 #About .bg {
-    transform: rotate(17.47deg);
+    /* transform: rotate(17.47deg); */
 }
 
 #About .bg img {
     max-height: 60vw;
-    right: -31vw;
+    right: 0;
     top: -13vw;
 }
 
@@ -515,7 +515,7 @@
 }
 
 #KeyInvestments .bg {
-    transform: rotate(-162.53deg)
+    /* transform: rotate(-162.53deg) */
 }
 
 #KeyInvestments .bg img {
