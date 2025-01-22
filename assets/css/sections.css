@@ -145,14 +145,11 @@
     margin-bottom: 200px;
 }
 
-#About .bg {
-    /* transform: rotate(17.47deg); */
-}
 
 #About .bg img {
     max-height: 60vw;
     right: 0;
-    top: -13vw;
+    top: 0;
 }
 
 #About .team-content {
