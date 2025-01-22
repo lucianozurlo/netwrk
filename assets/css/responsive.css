@@ -382,10 +382,9 @@
         background-size: 55%;
     }
 
-
     #About {
         gap: 48px;
-        margin-bottom: 55px;
+        margin-bottom: 100px;
     }
 
     #About .team-content {
@@ -516,6 +515,10 @@
         margin-bottom: 8px;
     } */
 
+
+    #OurNetwork h1 {
+        margin-bottom: 32px;
+    }
 
     #brands {
         margin-bottom: 50px;
