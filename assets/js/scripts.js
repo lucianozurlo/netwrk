@@ -90,6 +90,11 @@ document.addEventListener ('DOMContentLoaded', () => {
   function checkViewportAndHandleHeight () {
     if (window.innerWidth < 999) {
       sliderContainers.forEach (containerSelector => {
+        // Si es #swiperKeyMob, no forzamos altura, salimos de la iteración
+        if (containerSelector === '#swiperKeyMob') {
+          return;
+        }
+
         const swiperWrapper = document.querySelector (
           `${containerSelector} .swiper-wrapper`
         );
@@ -118,6 +123,7 @@ document.addEventListener ('DOMContentLoaded', () => {
           `${containerSelector} .swiper-wrapper .swiper-slide`
         );
         swiperSlides.forEach (slide => {
+          // Quitamos el height forzado
           slide.style.height = '';
         });
       });

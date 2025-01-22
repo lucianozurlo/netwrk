@@ -879,9 +879,6 @@
         margin: 0;
     }
 
-
-
-
     #KeyInvestments .swiper-slide .card-cont .text {
         display: flex;
         flex-direction: column;
@@ -944,7 +941,9 @@
         transform: translateX(7vw);
     }
 
-
+    .mySwiperMob .swiper-wrapper {
+        align-items: flex-start !important;
+    }
 
 
 
