@@ -305,6 +305,7 @@ h3 {
     background: linear-gradient(160deg,
             #22222200 60%,
             #f9f9f908 100%);
+    backdrop-filter: unset !important;
 }
 
 

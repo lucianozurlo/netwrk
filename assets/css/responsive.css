@@ -941,32 +941,38 @@
         transform: translateX(7vw);
     }
 
-    .mySwiperMob .swiper-wrapper {
-        align-items: flex-start !important;
-    }
 
-    #CoInvestors {
+
+
+
+
+
+
+
+
+
+    #OurNetwork {
         margin-bottom: 100px;
     }
 
-    #CoInvestors h1 {
+    #OurNetwork h1 {
         font-size: 38px;
         line-height: 52px;
     }
 
-    #CoInvestors .investors-container {
+    #OurNetwork .investors-container {
         flex-direction: column;
         padding: 0px;
         gap: 16px;
         max-width: 286px;
     }
 
-    #CoInvestors .style-content {
+    #OurNetwork .style-content {
         width: 286px;
         height: 108.54px;
     }
 
-    #CoInvestors .investors-container a {
+    #OurNetwork .investors-container a {
         max-width: 265px;
         max-height: 100px;
     }
