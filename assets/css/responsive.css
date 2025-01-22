@@ -49,7 +49,10 @@
 
     html,
     body {
-        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        /* ojo con overflow-x: hidden; aquí, puede generar comportamientos raros en mobile */
+        /* overflow-x: hidden;  <-- pruébalo comentado */
     }
 
     .mob-ok {
@@ -335,12 +338,19 @@
     }
 
     #home .bg {
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     #home .bg img {
         max-height: 100vw;
+    }
+
+    #home .bg1 img {
         transform: translate(-45%, 33%);
+    }
+
+    #home .bg2 img {
+        transform: translate(42%, -40%) scale(-1);
     }
 
     #home .text-content {
@@ -371,6 +381,10 @@
         width: 160px;
     }
 
+    /* 
+    #home .bg {
+        background-size: 55%;
+    } */
 
     #About {
         gap: 48px;

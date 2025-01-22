@@ -1,5 +1,9 @@
-html {
-    overflow-x: hidden !important;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* ojo con overflow-x: hidden; aquí, puede generar comportamientos raros en mobile */
+    /* overflow-x: hidden;  <-- pruébalo comentado */
 }
 
 .mob-ok {
@@ -338,4 +342,10 @@ h3 {
 .scroll-animate.fade-in.delayed.visible {
     opacity: 1;
     transform: scale(1);
+}
+
+
+
+* {
+    outline: 1px solid rgba(255, 0, 0, 0.2);
 }
