@@ -511,14 +511,10 @@
     transition: all .2s ease-in-out;
 }
 
-#KeyInvestments .bg {
-    /* transform: rotate(-162.53deg) */
-}
-
 #KeyInvestments .bg img {
     max-height: 50vw;
-    right: 76vw;
-    top: 5vw;
+    left: 0;
+    top: 14vw;
 }
 
 #KeyInvestments .key-content {
