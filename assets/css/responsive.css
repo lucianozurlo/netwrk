@@ -363,9 +363,16 @@
         line-height: 33px;
     }
 
+    #home .text-content h4 {
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 0;
+    }
+
     #home .text-content h1 {
         font-size: 40px;
-        line-height: 55px;
+        line-height: 48px;
+        margin-bottom: 8px !important;
     }
 
     #home .text-content p {
@@ -454,7 +461,7 @@
         font-weight: 800;
         font-size: 20px;
         line-height: 27px;
-        margin-bottom: 16px;
+        margin-bottom: 0;
     }
 
     #About .team-philosophy p {

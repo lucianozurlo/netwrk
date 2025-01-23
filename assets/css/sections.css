@@ -499,9 +499,9 @@
 }
 
 #KeyInvestments .bg img {
-    max-height: 50vw;
+    max-height: 60vw;
     left: 0;
-    top: 14vw;
+    top: 12vw;
 }
 
 #KeyInvestments .key-content {
@@ -831,7 +831,7 @@
     padding: 64px 0;
     background-image: url(../img/contact-bg.png);
     background-repeat: no-repeat;
-    background-size: 62vw;
+    background-size: 32vw;
     background-position: right 25%;
     background-color: #f9f9f9;
 }
