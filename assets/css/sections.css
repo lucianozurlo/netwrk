@@ -459,7 +459,7 @@
             #11111100 100%); */
     backdrop-filter: blur(20.3927px);
     border-radius: 8.1571px;
-    display: none !important;
+    /* display: none !important; */
 }
 
 .square {
