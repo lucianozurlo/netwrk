@@ -646,7 +646,7 @@
 
     #KeyInvestments {
         gap: 10px;
-        margin-bottom: 110px;
+        margin-bottom: 100px;
     }
 
     #KeyInvestments .key-content {
@@ -855,18 +855,9 @@
         transform: translateX(7vw);
     }
 
-
-
-
-
-
-
-
-
-
-
     #CoInvestors {
         margin-bottom: 100px;
+        gap: 34px;
     }
 
     #CoInvestors h1 {
