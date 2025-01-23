@@ -52,7 +52,7 @@
         margin: 0;
         padding: 0;
         /* ojo con overflow-x: hidden; aquí, puede generar comportamientos raros en mobile */
-        overflow: unset;
+        /* overflow-x: hidden;  <-- pruébalo comentado */
     }
 
     .mob-ok {
