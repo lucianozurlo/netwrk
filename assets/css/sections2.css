@@ -506,8 +506,6 @@
 /* Contenedor del reloj */
 .clock {
     position: relative;
-
-
 }
 
 /* Estilo del círculo */
@@ -566,9 +564,6 @@
         transform: rotate(-360deg);
     }
 }
-
-
-
 
 
 /* Key Investments */

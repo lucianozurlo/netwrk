@@ -248,9 +248,6 @@ h3 {
     transition: all .3s ease-in-out;
 }
 
-
-
-
 .style-hover {
     background: linear-gradient(284.59deg,
             #f9f9f933 0%,
@@ -271,8 +268,6 @@ h3 {
 .style-content:hover .style-fill.style-hover.bs {
     box-shadow: 0 0 22px #f9f9f955;
 }
-
-
 
 .style-bg {
     background: linear-gradient(284.59deg,
@@ -344,3 +339,7 @@ h3 {
     opacity: 1;
     transform: scale(1);
 }
+
+/* * {
+    outline: 1px solid yellow;
+} */
