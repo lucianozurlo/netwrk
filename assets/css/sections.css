@@ -106,12 +106,10 @@
     display: flex;
 }
 
-
 #home .bg1 {
     align-items: flex-end;
     justify-content: flex-start;
 }
-
 
 #home .bg2 {
     align-items: flex-start;
@@ -119,17 +117,13 @@
     overflow: hidden;
 }
 
-
 #home .bg img {
     max-height: 40vw;
 }
 
-
-
 #home .bg1 img {
     transform: translate(-6%, 25%);
 }
-
 
 #home .bg2 img {
     transform: translate(12%, -15%) scale(-1);
@@ -145,9 +139,8 @@
     margin-bottom: 200px;
 }
 
-
 #About .bg img {
-    max-height: 60vw;
+    max-height: 75vw;
     right: 0;
     top: 0;
 }
