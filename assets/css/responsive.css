@@ -462,62 +462,10 @@
         font-size: 14px;
     }
 
-
-
-
-
-
-    /* 
-
-    #AboutUs .aboutus-content {
-        gap: 100px;
+    #About .bg img {
+        max-height: 100vh;
     }
 
-    #AboutUs .aboutus-content>* {
-        padding: 0 34px;
-    }
-
-    #AboutUs .aboutus-content h3 {
-        font-size: 20px;
-        line-height: 27px;
-    }
-
-    #AboutUs .aboutus-content p {
-        font-size: 14px;
-    }
-
-    #AboutUs .allcards-content {
-        flex-direction: column;
-        margin-top: 70px;
-    }
-
-    #AboutUs .card-image {
-        transform: translateY(-35px) !important;
-        width: 75px;
-        height: 75px;
-    }
-
-    #AboutUs .card-image img {
-        width: 43px
-    }
-
-    #AboutUs .cardX {
-        max-height: 190px;
-        margin-bottom: 34px;
-        pointer-events: none !important;
-    }
-
-    #AboutUs .card-body {
-        height: 190px;
-        padding: 15px 45px 0;
-        justify-content: center;
-    }
-
-    #AboutUs .allcards-content h3 {
-        font-size: 20px;
-        line-height: 27px;
-        margin-bottom: 8px;
-    } */
 
 
     #OurNetwork h1 {
@@ -615,63 +563,12 @@
 
 
 
-
-
-
-
-
-
-
-    /* 
-    #TheTeam {
-        gap: 32px;
-        margin-bottom: 100px;
+    #KeyInvestments .bg img {
+        max-height: 80vh;
+        left: 0;
+        top: 67vh;
+        opacity: .5;
     }
-
-    #TheTeam h1 {
-        font-size: 38px;
-        line-height: 52px;
-    }
-
-    #TheTeam .team-content {
-        flex-direction: column;
-        gap: 34px;
-    }
-
-    #TheTeam .style-content:before,
-    #TheTeam .team-img,
-    #TheTeam .team-img:hover:before,
-    #TheTeam .team-img:active:before,
-    #TheTeam .style-fill {
-        width: 250px;
-        height: 250px;
-    }
-
-    #TheTeam .team-img img {
-        position: absolute;
-        width: 188px;
-        height: 188px;
-    }
-
-    #TheTeam .team-frame {
-        gap: 20px;
-    }
-
-    #TheTeam .team-txt h3 {
-        font-size: 17.703px;
-        line-height: 24px;
-    }
-
-    #TheTeam .team-txt p {
-        font-size: 14.1624px;
-        line-height: 19px;
-    }
-
-    #KeyInvestments h1 {
-        font-size: 38px;
-        line-height: 52px;
-    } */
-
 
     #KeyInvestments .mySwiperMob {
         width: 100vw;
@@ -680,7 +577,6 @@
         flex-direction: row;
         align-items: center;
         padding: 25px 40px 70px;
-        /* transform: translateX(-10px); */
     }
 
     #KeyInvestments .mySwiperMob .swiper-wrapper {
@@ -985,6 +881,7 @@
         padding: 64px 0px;
         gap: 48px;
         width: 100vw;
+        background-image: unset;
     }
 
     #Contact .text-content {
