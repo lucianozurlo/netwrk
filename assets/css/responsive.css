@@ -75,6 +75,7 @@
         box-shadow: unset;
         filter: unset;
         backdrop-filter: unset;
+        position: absolute !important
     }
 
     header .navbar-brand {
@@ -82,7 +83,7 @@
     }
 
     header .navbar-brand img {
-        position: fixed;
+        /* position: fixed; */
         width: 116.74px;
         height: 34.69px;
     }
@@ -130,6 +131,9 @@
         z-index: 1111111;
         background: rgba(17, 17, 17, 0.6);
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        top: 27px;
+        right: 22px;
         /* backdrop-filter: blur(10px);
         border: 1px solid #ffffffaa; */
     }
