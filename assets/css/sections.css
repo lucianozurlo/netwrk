@@ -126,7 +126,7 @@
 }
 
 #home .bg2 img {
-    transform: translate(12%, -15%) scale(-1);
+    transform: translateY(-15%);
 }
 
 /** About **/
