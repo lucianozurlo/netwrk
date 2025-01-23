@@ -473,6 +473,7 @@
             #11111100 100%); */
     backdrop-filter: blur(20.3927px);
     border-radius: 8.1571px;
+    display: none !important;
 }
 
 .square {
@@ -544,7 +545,7 @@
 }
 
 /* Animación para rotar el círculo y el contenedor del número */
-@keyframes rotate-clock {
+@keyframes rotate-clock1 {
     from {
         transform: rotate(0deg);
     }
@@ -555,7 +556,7 @@
 }
 
 /* Animación para mantener el número en orientación fija */
-@keyframes counter-rotate {
+@keyframes counter-rotate1 {
     from {
         transform: rotate(0deg);
     }
