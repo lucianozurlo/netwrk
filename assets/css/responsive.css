@@ -403,6 +403,7 @@
         gap: 32px;
         width: calc(100vw - 44px);
         border-radius: 10px;
+        backdrop-filter: blur(10px);
     }
 
     #About .team-content h3 {
@@ -702,13 +703,12 @@
         align-items: center;
         max-width: calc(100vw - 80px);
         box-shadow: 0px 81px 33px rgba(0, 0, 0, 0.01), 0px 46px 27px rgba(0, 0, 0, 0.03), 0px 20px 20px rgba(0, 0, 0, 0.04), 0px 5px 11px rgba(0, 0, 0, 0.05);
-        backdrop-filter: blur(5px);
         border-radius: 10px;
         overflow: visible;
         padding: 0;
         background: linear-gradient(284.59deg, #ffffff07 0%, #11111100 40%);
         opacity: 1 !important;
-        background-color: #111 !important;
+        backdrop-filter: blur(10px);
     }
 
     #KeyInvestments .swiper-slide .card-top {
@@ -829,6 +829,7 @@
         line-height: 124%;
         bottom: 35px;
         width: 100%;
+        backdrop-filter: blur(5px);
     }
 
     #KeyInvestments .swiper-slide .card-cont .text .subtext ul {
