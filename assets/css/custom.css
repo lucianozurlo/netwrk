@@ -344,7 +344,3 @@ h3 {
     opacity: 1;
     transform: scale(1);
 }
-
-* {
-    outline: 1px solid yellow;
-}
