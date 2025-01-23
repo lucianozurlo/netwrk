@@ -1070,6 +1070,7 @@
     font-weight: 400;
     padding: 0 14px !important;
     font-size: 14px;
+    background-color: #f9f9f9;
 }
 
 #Contact .swiper-slide form .form-inputs .column-input textarea {
