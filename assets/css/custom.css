@@ -245,6 +245,7 @@ h3 {
     height: 100%;
     z-index: 1;
     border-radius: 10px;
+    backdrop-filter: blur(15.6961px);
     transition: all .3s ease-in-out;
 }
 

@@ -334,7 +334,7 @@
 
 
     #home {
-        margin-bottom: 160px;
+        margin-bottom: 260px;
     }
 
     #home .container {
@@ -504,6 +504,7 @@
     #OurNetwork {
         overflow-x: hidden;
         max-width: 100vw;
+        margin-bottom: 75px;
     }
 
     #OurNetwork>* {
@@ -882,8 +883,8 @@
     }
 
     #CoInvestors .investors-container a {
-        max-width: 265px;
-        max-height: 100px;
+        max-width: 286px;
+        max-height: 108.54px;
     }
 
     #Contact {
