@@ -502,16 +502,16 @@
 
 
     #OurNetwork {
-        overflow-x: hidden;
+        overflow: hidden;
         max-width: 100vw;
     }
 
     #OurNetwork>* {
-        /* overflow-x: hidden; */
+        /* overflow: hidden; */
     }
 
     #OurNetwork .container {
-        overflow: visible;
+        /* overflow: visible; */
     }
 
     #OurNetwork .circles {
@@ -524,7 +524,7 @@
 
     #OurNetwork>* {
         padding: 0 !important;
-        overflow-x: hidden;
+        overflow: visible;
     }
 
     .parallax-layer.circle1 .circle-div {
