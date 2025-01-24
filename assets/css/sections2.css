@@ -105,7 +105,6 @@
     height: 100vh;
     display: flex;
     will-change: transform;
-    /* <-- Añadir esta línea */
     /* overflow: hidden; */
 }
 
@@ -123,16 +122,15 @@
 #home .bg img {
     max-height: 40vw;
     will-change: transform;
-    /* <-- Añadir esta línea */
 }
 
-#home .bg1 img {
+/* #home .bg1 img {
     transform: translate(-6%, 25%);
-}
+} */
 
-#home .bg2 img {
+/* #home .bg2 img {
     transform: translateY(-15%);
-}
+} */
 
 /** About **/
 #About {
@@ -916,8 +914,9 @@
     background-image: url(../img/contact-bg.png);
     background-repeat: no-repeat;
     background-size: 32vw;
-    background-position: right 25%;
+    background-position: right 165%;
     background-color: #f9f9f9;
+    will-change: background-position;
 }
 
 #Contact .text-content {

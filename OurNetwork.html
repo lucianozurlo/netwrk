@@ -940,32 +940,49 @@
 			const aboutBg = document.querySelector('#About .bg img');
 			const keyInvBg = document.querySelector('#KeyInvestments .bg img');
 
+			// Selecciona la sección #Contact para mover su background
+			const contactSection = document.querySelector('#Contact');
+
+			// Ajusta estos factores para el desplazamiento de cada elemento
+			const factorBg1 = 0.2;
+			const factorBg2 = 0.3;
+			const factorAbout = 0.1;
+			const factorKeyInv = 0.1;
+			const factorContact = 0.1; // Velocidad con que se moverá el background de #Contact
+
 			// Escuchamos el evento scroll
 			window.addEventListener('scroll', () => {
 				// Tomamos el valor de scroll vertical
 				const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-				// Ajusta estos factores para darle más o menos desplazamiento
-				const factorBg1 = 0.2;
-				const factorBg2 = 0.3;
-				const factorAbout = 0.1;
-				const factorKeyInv = 0.1;
-
-				// Mueve cada imagen según un factor distinto
+				// Mueve cada imagen <img> según un factor distinto
 				if (bg1) {
+					// Combina un desplazamiento horizontal fijo (-6%) con
+					// un offset vertical base (25%) + scroll
 					bg1.style.transform = `translate(-6%, calc(25% + ${scrollY * factorBg1}px))`;
 				}
+
 				if (bg2) {
+					// Empieza en -15% y se desplaza según el scroll
 					bg2.style.transform = `translateY(calc(-15% + ${scrollY * factorBg2}px))`;
 				}
+
 				if (aboutBg) {
 					aboutBg.style.transform = `translateY(${scrollY * factorAbout}px)`;
 				}
+
 				if (keyInvBg) {
 					keyInvBg.style.transform = `translateY(${scrollY * factorKeyInv}px)`;
 				}
+
+				// Mueve el fondo de #Contact, partiendo de "right 25%"
+				// y sumando scroll en el eje Y con px
+				if (contactSection) {
+					contactSection.style.backgroundPosition = `right calc(165% + ${scrollY * factorContact}px)`;
+				}
 			});
 		});
+
 	</script>
 
 
