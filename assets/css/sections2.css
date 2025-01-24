@@ -124,13 +124,13 @@
     will-change: transform;
 }
 
-/* #home .bg1 img {
-    transform: translate(-6%, 25%);
-} */
+#home .bg1 img {
+    transform: translateY(25%);
+}
 
-/* #home .bg2 img {
+#home .bg2 img {
     transform: translateY(-15%);
-} */
+}
 
 /** About **/
 #About {

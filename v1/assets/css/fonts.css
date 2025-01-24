@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('../fonts/PPTelegraf-Regular.eot');
+    src: url('../fonts/PPTelegraf-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PPTelegraf-Regular.woff2') format('woff2'),
+        url('../fonts/PPTelegraf-Regular.woff') format('woff'),
+        url('../fonts/PPTelegraf-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('../fonts/PPTelegraf-RegularSlanted.eot');
+    src: url('../fonts/PPTelegraf-RegularSlanted.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PPTelegraf-RegularSlanted.woff2') format('woff2'),
+        url('../fonts/PPTelegraf-RegularSlanted.woff') format('woff'),
+        url('../fonts/PPTelegraf-RegularSlanted.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('../fonts/PPTelegraf-Ultralight.eot');
+    src: url('../fonts/PPTelegraf-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PPTelegraf-Ultralight.woff2') format('woff2'),
+        url('../fonts/PPTelegraf-Ultralight.woff') format('woff'),
+        url('../fonts/PPTelegraf-Ultralight.ttf') format('truetype');
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('../fonts/PPTelegraf-UltralightSlanted.eot');
+    src: url('../fonts/PPTelegraf-UltralightSlanted.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PPTelegraf-UltralightSlanted.woff2') format('woff2'),
+        url('../fonts/PPTelegraf-UltralightSlanted.woff') format('woff'),
+        url('../fonts/PPTelegraf-UltralightSlanted.ttf') format('truetype');
+    font-weight: light;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('../fonts/PPTelegraf-Ultrabold.eot');
+    src: url('../fonts/PPTelegraf-Ultrabold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PPTelegraf-Ultrabold.woff2') format('woff2'),
+        url('../fonts/PPTelegraf-Ultrabold.woff') format('woff'),
+        url('../fonts/PPTelegraf-Ultrabold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Telegraf';
+    src: url('../fonts/PPTelegraf-UltraboldSlanted.eot');
+    src: url('../fonts/PPTelegraf-UltraboldSlanted.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PPTelegraf-UltraboldSlanted.woff2') format('woff2'),
+        url('../fonts/PPTelegraf-UltraboldSlanted.woff') format('woff'),
+        url('../fonts/PPTelegraf-UltraboldSlanted.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
