@@ -349,13 +349,13 @@
         max-height: 100vw;
     }
 
-    #home .bg1 img {
-        transform: translate(-45%, 33%);
+    /* #home .bg1 img {
+        transform: translate(-39%, 33%);
     }
 
     #home .bg2 img {
         transform: translate(30%, -40%);
-    }
+    } */
 
     #home .text-content {
         min-height: 100vh;

@@ -117,7 +117,7 @@
 				<div class="team-staff">
 					<div class="team-frame scroll-animate">
 						<div class="team-img style-content scroll-animate fade-in">
-							<img data-src="assets/img/team-nick.png" alt="" class="lazy">
+							<img data-src="assets/img/team-nick.jpg" alt="" class="lazy">
 							<div class="style-fill"></div>
 							<div class="style-fill style-hover bs"></div>
 						</div>
@@ -128,7 +128,7 @@
 					</div>
 					<div class="team-frame scroll-animate">
 						<div class="team-img style-content scroll-animate fade-in">
-							<img data-src="assets/img/team-ryan.png" alt="" class="lazy">
+							<img data-src="assets/img/team-ryan.jpg" alt="" class="lazy">
 							<div class="style-fill"></div>
 							<div class="style-fill style-hover bs"></div>
 						</div>
@@ -933,6 +933,7 @@
 
 
 	<script>
+
 		document.addEventListener('DOMContentLoaded', function () {
 			// Selecciona las imágenes que quieres que se muevan
 			const bg1 = document.querySelector('#home .bg1 img');
@@ -940,45 +941,68 @@
 			const aboutBg = document.querySelector('#About .bg img');
 			const keyInvBg = document.querySelector('#KeyInvestments .bg img');
 
-			// Selecciona la sección #Contact para mover su background
-			const contactSection = document.querySelector('#Contact');
-
-			// Ajusta estos factores para el desplazamiento de cada elemento
-			const factorBg1 = 0.2;
-			const factorBg2 = 0.3;
+			// Factores de velocidad de desplazamiento
+			const factorBg1 = 0.2;  // Para #home .bg1
+			const factorBg2 = 0.3;  // Para #home .bg2
 			const factorAbout = 0.1;
 			const factorKeyInv = 0.1;
-			const factorContact = 0.1; // Velocidad con que se moverá el background de #Contact
+
+			// Variables para almacenar la posición inicial (x, y) según el tamaño de pantalla
+			let offsetXBg1, offsetYBg1, offsetXBg2, offsetYBg2;
+
+			/**
+			 * Determina qué offset usar en desktop vs. mobile.
+			 * Llamar esta función al cargar la página y al cambiar el tamaño (resize).
+			 */
+			function updateOffsets() {
+				// Ejemplo: breakpoint en 768px (ajústalo a tu necesidad)
+				if (window.innerWidth < 768) {
+					// VERSIÓN RESPONSIVE (MOBILE)
+					// #home .bg1 img => translate(-39%, 33%)
+					offsetXBg1 = '-39%';
+					offsetYBg1 = '33%';
+					// #home .bg2 img => translate(30%, -40%)
+					offsetXBg2 = '30%';
+					offsetYBg2 = '-40%';
+				} else {
+					// VERSIÓN DESKTOP
+					// #home .bg1 img => translate(0%, 25%)
+					offsetXBg1 = '0%';
+					offsetYBg1 = '25%';
+					// #home .bg2 img => translate(0%, -15%)
+					offsetXBg2 = '0%';
+					offsetYBg2 = '-15%';
+				}
+			}
+
+			// Llamamos una vez al cargar
+			updateOffsets();
+			// Volvemos a llamar si se redimensiona la ventana (para cambiar offsets en vivo)
+			window.addEventListener('resize', updateOffsets);
 
 			// Escuchamos el evento scroll
 			window.addEventListener('scroll', () => {
-				// Tomamos el valor de scroll vertical
+				// Cantidad de scroll vertical
 				const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-				// Mueve cada imagen <img> según un factor distinto
+				// bg1 => offsetXBg1, offsetYBg1 + desplazamiento
 				if (bg1) {
-					// Combina un desplazamiento horizontal fijo (-6%) con
-					// un offset vertical base (25%) + scroll
-					bg1.style.transform = `translate(-6%, calc(25% + ${scrollY * factorBg1}px))`;
+					bg1.style.transform =
+						`translate(${offsetXBg1}, calc(${offsetYBg1} + ${scrollY * factorBg1}px))`;
 				}
 
+				// bg2 => offsetXBg2, offsetYBg2 + desplazamiento
 				if (bg2) {
-					// Empieza en -15% y se desplaza según el scroll
-					bg2.style.transform = `translateY(calc(-15% + ${scrollY * factorBg2}px))`;
+					bg2.style.transform =
+						`translate(${offsetXBg2}, calc(${offsetYBg2} + ${scrollY * factorBg2}px))`;
 				}
 
+				// Las demás imágenes se mantienen igual, sin versiones responsive
 				if (aboutBg) {
 					aboutBg.style.transform = `translateY(${scrollY * factorAbout}px)`;
 				}
-
 				if (keyInvBg) {
 					keyInvBg.style.transform = `translateY(${scrollY * factorKeyInv}px)`;
-				}
-
-				// Mueve el fondo de #Contact, partiendo de "right 25%"
-				// y sumando scroll en el eje Y con px
-				if (contactSection) {
-					contactSection.style.backgroundPosition = `right calc(165% + ${scrollY * factorContact}px)`;
 				}
 			});
 		});
