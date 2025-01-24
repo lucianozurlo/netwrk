@@ -86,7 +86,7 @@
 
 
 
-		<section id="home" class="scene" data-hover-only="false">
+		<section id="home">
 
 			<div class="container position-relative text-center zindex-5">
 				<div class="row">
@@ -489,7 +489,7 @@
 								Starlink satellite
 								constellation for global internet coverage and becoming the first private company to
 								send astronauts to the International Space Station with its Crew Dragon spacecraft.
-								SpaceX’s reusable rockets have significantly reduced the cost of space exploration,
+								SpaceX's reusable rockets have significantly reduced the cost of space exploration,
 								making it a leader in commercial spaceflight.</p>
 							<p>We invested in SpaceX during its $137 billion valuation
 								round,
@@ -547,9 +547,9 @@
 								continuously
 								testing and improving
 								elements like text, visuals, and code, helping businesses personalize user experiences
-								and drive higher sales. In collaboration with OpenAI, they’ve developed AI models that
+								and drive higher sales. In collaboration with OpenAI, they've developed AI models that
 								automate the creation of website user interface code, ensuring brand consistency and
-								visual alignment. </p>
+								visual alignment.</p>
 							<p>Their platform has delivered impressive results, including
 								an
 								average 42% increase in
@@ -625,7 +625,7 @@
 										deploying the Starlink
 										satellite constellation for global internet coverage and becoming the first
 										private company to send astronauts to the International Space Station with its
-										Crew Dragon spacecraft. SpaceX’s reusable rockets have significantly reduced the
+										Crew Dragon spacecraft. SpaceX's reusable rockets have significantly reduced the
 										cost of space exploration, making it a leader in commercial spaceflight.</p>
 									<p class="scroll-animate">We invested in SpaceX during its $137 billion valuation
 										round, capitalizing on
@@ -692,7 +692,7 @@
 									<p class="scroll-animate">Coframe uses generative AI to optimize websites by
 										continuously testing and
 										improving elements like text, visuals, and code, helping businesses personalize
-										user experiences and drive higher sales. In collaboration with OpenAI, they’ve
+										user experiences and drive higher sales. In collaboration with OpenAI, they've
 										developed AI models that automate the creation of website user interface code,
 										ensuring brand consistency and visual alignment.</p>
 									<p class="scroll-animate">Their platform has delivered impressive results, including
@@ -784,7 +784,7 @@
 
 		<section id="Contact">
 			<div class="text-content">
-				<h2 class="scroll-animate">Let’s Build the <span>Future Together</span></h2>
+				<h2 class="scroll-animate">Let's Build the <span>Future Together</span></h2>
 				<p class="scroll-animate">We make early-stage investments across all industries and around the globe.
 				</p>
 			</div>
@@ -915,6 +915,8 @@
 				<img data-src="assets/img/logo.svg" class="lazy">
 			</div>
 
+			<div class="bg"><img src="assets/img/contact-bg.png" alt=""></div>
+
 		</section>
 
 	</main>
@@ -931,6 +933,40 @@
 	<script src="assets/js/scripts.js"></script>
 	<script src="assets/js/lazy.js"></script>
 	<script src="assets/js/parallax.js"></script>
+
+	<!-- <script>
+		(function () {
+			// Seleccionamos los elementos que usaremos
+			const contact = document.getElementById('Contact');
+			const target = document.querySelector('#Contact .go-to-slide[data-slide="2"]');
+
+			// Validamos que existan para evitar errores si no están en el DOM
+			if (!contact || !target) return;
+
+			// Creamos el MutationObserver que se activará cuando cambie un atributo (en este caso la clase)
+			const observer = new MutationObserver(function (mutations) {
+				mutations.forEach(function (mutation) {
+					// Verificamos que el atributo que cambió sea 'class'
+					if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+						// Si #Contact .go-to-slide[data-slide="1"] tiene la clase .active, agregamos .form2 a #Contact
+						if (target.classList.contains('active')) {
+							contact.classList.add('form2');
+						} else {
+							contact.classList.remove('form2');
+						}
+					}
+				});
+			});
+
+			// Iniciamos la observación de cambios en las clases de nuestro 'target'
+			observer.observe(target, {
+				attributes: true,       // Observa cambios en los atributos
+				attributeFilter: ['class'] // Se concentra solo en los cambios de la clase
+			});
+		})();
+
+	</script> -->
+
 
 </body>
 

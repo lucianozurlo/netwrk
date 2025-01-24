@@ -8,7 +8,9 @@
     margin-bottom: 130px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../img/home-bg.png');
+    background-position: left 25%;
+    background-image: url('../img/back.png');
+    will-change: background-position;
 }
 
 #home .container {
@@ -152,7 +154,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px !important;
+    padding: 18px 50px 50px !important;
     justify-content: center;
     width: 1122px;
     background: linear-gradient(284.59deg, #f9f9f90d 0%, #11111100 100%);
@@ -192,8 +194,8 @@
     align-items: center;
     max-width: 982px;
     width: 100%;
-    margin-top: 50px;
-    padding: 35px;
+    margin-top: 30px;
+    padding: 32px;
     text-align: center;
     backdrop-filter: blur(15.6961px);
     z-index: 12;
@@ -206,7 +208,7 @@
 }
 
 #About .team-philosophy h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 #About .team-philosophy p {
@@ -255,7 +257,7 @@
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 8px;
+    gap: 5px;
     color: #f9f9f9;
     text-align: center !important;
 }
@@ -309,7 +311,7 @@
 }
 
 #OurNetwork h1 {
-    margin-bottom: 100px;
+    margin-bottom: 95px;
 }
 
 #OurNetwork .container {
@@ -909,16 +911,43 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
-    gap: 64px;
-    padding: 64px 0;
-    background-image: url(../img/contact-bg.png);
+    padding: 120px 0 63px;
+    gap: 54px;
+    /* background-image: url(../img/contact-bg.png);
     background-repeat: no-repeat;
-    background-size: 32vw;
-    background-position: right 165%;
+    background-size: 32vw; */
+    /* El 'background-position' inicial puede ser right 25%; 
+       JS luego lo cambiará dinámicamente */
+    /* background-position: right 25%; */
     background-color: #f9f9f9;
     will-change: background-position;
+    transition: .2s ease-in-out;
+    /* Para un mejor rendimiento */
 }
+
+/* #Contact.form2 {
+    background-position: right 165%;
+
+}
+
+#Contact .go-to-slide.active[data-slide="2"] {
+    background: blueviolet;
+}
+ */
+
+
+#Contact .bg {
+    z-index: 0;
+    top: 0;
+}
+
+#Contact .bg img {
+    max-height: 75vw;
+    right: 0;
+    top: 455%;
+}
+
+
 
 #Contact .text-content {
     display: flex;
