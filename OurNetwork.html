@@ -86,7 +86,7 @@
 
 
 
-		<section id="home">
+		<section id="home" class="scene" data-hover-only="false">
 
 			<div class="container position-relative text-center zindex-5">
 				<div class="row">
@@ -100,8 +100,12 @@
 				</div>
 			</div>
 
-			<div class="bg bg1"><img src="assets/img/home-bg.gif" alt=""></div>
-			<div class="bg bg2"><img src="assets/img/home-bg2.gif" alt=""></div>
+			<div class="bg bg1">
+				<img src="assets/img/home-bg.gif" alt="">
+			</div>
+			<div class="bg bg2">
+				<img src="assets/img/home-bg2.gif" alt="">
+			</div>
 
 		</section>
 
@@ -281,7 +285,7 @@
 									</div>
 								</div>
 
-								<div class="parallax-layer circle3" data-depth="0.15">
+								<div class="parallax-layer circle3">
 									<div class="circle-div number-container scroll-animate fade-in"></div>
 
 									<div class="base number" style="left: 33%; top: 17%;">
@@ -322,7 +326,7 @@
 
 								</div>
 
-								<div class="parallax-layer circle4" data-depth="0.2">
+								<div class="parallax-layer circle4">
 									<div class="circle-div number-container scroll-animate fade-in"></div>
 
 									<div class="base number" style="left: 62%; top: 29%;">
@@ -339,7 +343,7 @@
 
 								</div>
 
-								<div class="parallax-layer circle5" data-depth="0.25">
+								<div class="parallax-layer circle5">
 									<div class="circle-div number-container scroll-animate fade-in"></div>
 
 									<div class="base number" style="left: 36%; top: 32%;">
@@ -362,7 +366,7 @@
 
 								</div>
 
-								<div class="parallax-layer circle6 button" data-depth="0.3">
+								<div class="parallax-layer circle6 button">
 									<div class="circle-div number-container scroll-animate fade-in"></div>
 
 									<div class="iso number">
@@ -926,6 +930,44 @@
 	<script src="assets/js/sendForm.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script src="assets/js/lazy.js"></script>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Selecciona las imágenes que quieres que se muevan
+			const bg1 = document.querySelector('#home .bg1 img');
+			const bg2 = document.querySelector('#home .bg2 img');
+			const aboutBg = document.querySelector('#About .bg img');
+			const keyInvBg = document.querySelector('#KeyInvestments .bg img');
+
+			// Escuchamos el evento scroll
+			window.addEventListener('scroll', () => {
+				// Tomamos el valor de scroll vertical
+				const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+				// Ajusta estos factores para darle más o menos desplazamiento
+				const factorBg1 = 0.2;
+				const factorBg2 = 0.3;
+				const factorAbout = 0.1;
+				const factorKeyInv = 0.1;
+
+				// Mueve cada imagen según un factor distinto
+				if (bg1) {
+					bg1.style.transform = `translate(-6%, calc(25% + ${scrollY * factorBg1}px))`;
+				}
+				if (bg2) {
+					bg2.style.transform = `translateY(calc(-15% + ${scrollY * factorBg2}px))`;
+				}
+				if (aboutBg) {
+					aboutBg.style.transform = `translateY(${scrollY * factorAbout}px)`;
+				}
+				if (keyInvBg) {
+					keyInvBg.style.transform = `translateY(${scrollY * factorKeyInv}px)`;
+				}
+			});
+		});
+	</script>
+
 
 </body>
 

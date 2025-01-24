@@ -104,6 +104,9 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    will-change: transform;
+    /* <-- Añadir esta línea */
+    /* overflow: hidden; */
 }
 
 #home .bg1 {
@@ -119,6 +122,8 @@
 
 #home .bg img {
     max-height: 40vw;
+    will-change: transform;
+    /* <-- Añadir esta línea */
 }
 
 #home .bg1 img {
