@@ -392,6 +392,11 @@
         width: 160px;
     }
 
+    /* 
+    #home .bg {
+        background-size: 55%;
+    } */
+
     #About {
         gap: 48px;
         margin-bottom: 100px;
@@ -497,31 +502,30 @@
 
 
     #OurNetwork {
-        overflow: hidden;
+        overflow-x: hidden;
         max-width: 100vw;
-        margin-bottom: 35px;
+        margin-bottom: 75px;
     }
 
     #OurNetwork>* {
-        /* overflow: hidden; */
+        overflow-x: hidden;
     }
 
     #OurNetwork .container {
-        /* overflow: visible; */
-        padding-bottom: 40px;
+        overflow-x: hidden;
     }
 
     #OurNetwork .circles {
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
 
     .parallax-layer {
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
 
     #OurNetwork>* {
         padding: 0 !important;
-        overflow: visible;
+        overflow-x: hidden;
     }
 
     .parallax-layer.circle1 .circle-div {
@@ -532,36 +536,26 @@
     .parallax-layer.circle2 .circle-div {
         width: 113.09938950391vw;
         height: 113.09938950391vw;
-        top: 10.328173668095vw;
-        left: 10.328173668095vw;
     }
 
     .parallax-layer.circle3 .circle-div {
         width: 92.4629068778vw;
         height: 92.4629068778vw;
-        top: 20.656347336190vw;
-        left: 20.656347336190vw;
     }
 
     .parallax-layer.circle4 .circle-div {
         width: 71.8264242516vw;
         height: 71.8264242516vw;
-        top: 30.9845210043vw;
-        left: 30.9845210043vw;
     }
 
     .parallax-layer.circle5 .circle-div {
         width: 51.1708337712vw;
         height: 51.1708337712vw;
-        top: 41.3126946724vw;
-        left: 41.3126946724vw;
     }
 
     .parallax-layer.circle6 .circle-div {
         width: 30.534351145vw;
         height: 30.534351145vw;
-        top: 51.6408683405vw;
-        left: 51.6408683405vw;
     }
 
     .parallax-layer.button .iso {
@@ -569,7 +563,7 @@
         height: 21.01863971183vw;
     }
 
-    .parallax-layer .base {
+    .parallax-layer.brand .base {
         width: 13.08888018418vw;
         height: 13.08888018418vw;
         border-radius: 1.4521969255vw;

@@ -104,8 +104,6 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    will-change: transform;
-    /* overflow: hidden; */
 }
 
 #home .bg1 {
@@ -121,7 +119,6 @@
 
 #home .bg img {
     max-height: 40vw;
-    will-change: transform;
 }
 
 #home .bg1 img {
@@ -131,6 +128,7 @@
 #home .bg2 img {
     transform: translateY(-15%);
 }
+
 
 /** About **/
 #About {
@@ -376,54 +374,39 @@
     pointer-events: none;
 }
 
-/* .parallax-layer.circle1 {
+.parallax-layer.circle1 {
     opacity: 0;
-} */
+}
 
 .parallax-layer.circle1 .circle-div {
     width: 920px;
     height: 920px;
-    backdrop-filter: unset;
-    background: transparent;
-}
-
-.parallax-layer.circle1 .circle-div::before {
-    background: transparent;
+    opacity: 0;
 }
 
 .parallax-layer.circle2 .circle-div {
     width: 778px;
     height: 778px;
-    left: 71px;
-    top: 71px;
 }
 
 .parallax-layer.circle3 .circle-div {
     width: 636px;
     height: 636px;
-    left: 142px;
-    top: 142px;
 }
 
 .parallax-layer.circle4 .circle-div {
     width: 494px;
     height: 494px;
-    left: 213px;
-    top: 213px;
 }
 
 .parallax-layer.circle5 .circle-div {
     width: 352px;
     height: 352px;
-    left: 284px;
-    top: 284px;
 }
 
 .parallax-layer.circle6 .circle-div {
     width: 210px;
     height: 210px;
-    left: 355px;
-    top: 355px;
 }
 
 .parallax-layer.button .iso {
@@ -504,70 +487,6 @@
 .square img {
     max-height: 95%;
     width: 100%;
-}
-
-/* */
-
-/* Contenedor del reloj */
-.clock {
-    position: relative;
-}
-
-/* Estilo del círculo */
-.parallax-layer {
-    width: 100%;
-    height: 100%;
-    /* background-color: #00bef3; */
-    /* border-radius: 50%; */
-    box-sizing: border-box;
-    animation: rotate-clock 111s linear infinite;
-}
-
-/* Contenedor para el número */
-.number-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    animation: rotate-clock 111s linear infinite;
-    /* Aseguramos que la animación esté sincronizada con el círculo */
-}
-
-/* Estilo del número */
-.number {
-    position: absolute;
-    /* transform: translate(-50%, -50%); */
-    font-size: 24px;
-    text-align: center;
-    font-weight: bold;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: counter-rotate 111s linear infinite;
-}
-
-/* Animación para rotar el círculo y el contenedor del número */
-@keyframes rotate-clock {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Animación para mantener el número en orientación fija */
-@keyframes counter-rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(-360deg);
-    }
 }
 
 
@@ -915,9 +834,8 @@
     background-image: url(../img/contact-bg.png);
     background-repeat: no-repeat;
     background-size: 32vw;
-    background-position: right 165%;
+    background-position: right 25%;
     background-color: #f9f9f9;
-    will-change: background-position;
 }
 
 #Contact .text-content {
