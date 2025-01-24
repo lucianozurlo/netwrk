@@ -73,11 +73,11 @@ document.addEventListener ('DOMContentLoaded', function () {
       baseYAbout = '0%';
       factorAbout = 0.1;
 
-      baseYKeyInv = '25%';
+      baseYKeyInv = '57%';
       factorKeyInv = 0.1;
 
-      baseYContact = '25%';
-      factorContact = 0.1;
+      baseYContact = '495%';
+      factorContact = 0.07;
 
       // Para #Home
       // Ejemplo: comienza en "25%" y se mueve un poco más rápido
@@ -116,13 +116,13 @@ document.addEventListener ('DOMContentLoaded', function () {
       bg2.style.top = `calc(${baseYBg2} - ${scrollY * factorBg2}px)`;
     }
     if (aboutBg) {
-      aboutBg.style.transform = `translateY(calc(${baseYAbout} - ${scrollY * factorAbout}px))`;
+      aboutBg.style.top = `calc(${baseYAbout} - ${scrollY * factorAbout}px)`;
     }
     if (keyInvBg) {
-      keyInvBg.style.transform = `translateY(calc(${baseYKeyInv} - ${scrollY * factorKeyInv}px))`;
+      keyInvBg.style.top = `calc(${baseYKeyInv} - ${scrollY * factorKeyInv}px)`;
     }
     if (contactBg) {
-      contactBg.style.transform = `translateY(calc(${baseYContact} - ${scrollY * factorContact}px))`;
+      contactBg.style.top = `calc(${baseYContact} - ${scrollY * factorContact}px)`;
     }
 
     // Fondo de la sección #Home (si existe)
