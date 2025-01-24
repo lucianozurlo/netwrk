@@ -507,19 +507,19 @@
     }
 
     #OurNetwork>* {
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     #OurNetwork .container {
-        overflow-x: hidden;
+        overflow: visible;
     }
 
     #OurNetwork .circles {
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     .parallax-layer {
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
     #OurNetwork>* {
@@ -572,7 +572,7 @@
         height: 21.01863971183vw;
     }
 
-    .parallax-layer.brand .base {
+    .parallax-layer .base {
         width: 13.08888018418vw;
         height: 13.08888018418vw;
         border-radius: 1.4521969255vw;

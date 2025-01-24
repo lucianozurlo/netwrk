@@ -514,7 +514,7 @@
     width: 100%;
     height: 100%;
     /* background-color: #00bef3; */
-    border-radius: 50%;
+    /* border-radius: 50%; */
     box-sizing: border-box;
     animation: rotate-clock 111s linear infinite;
 }
@@ -545,7 +545,7 @@
 }
 
 /* Animación para rotar el círculo y el contenedor del número */
-@keyframes rotate-clock1 {
+@keyframes rotate-clock {
     from {
         transform: rotate(0deg);
     }
@@ -556,7 +556,7 @@
 }
 
 /* Animación para mantener el número en orientación fija */
-@keyframes counter-rotate1 {
+@keyframes counter-rotate {
     from {
         transform: rotate(0deg);
     }
