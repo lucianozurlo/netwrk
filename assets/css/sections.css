@@ -105,12 +105,12 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     will-change: transform;
     /* overflow: hidden; */
 }
 
-#home .bg1 {
+/* #home .bg1 {
     align-items: flex-end;
     justify-content: flex-start;
 }
@@ -119,7 +119,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     overflow: hidden;
-}
+} */
 
 #home .bg img {
     max-height: 40vw;
@@ -127,11 +127,15 @@
 }
 
 #home .bg1 img {
-    transform: translateY(25%);
+    /* transform: translateY(25%); */
+    left: 0;
+    top: 53%;
 }
 
 #home .bg2 img {
-    transform: translateY(-15%);
+    /* transform: translateY(-15%); */
+    right: 0;
+    top: -9.5%;
 }
 
 /** About **/

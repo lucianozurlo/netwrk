@@ -59,13 +59,13 @@ document.addEventListener ('DOMContentLoaded', function () {
       // Offsets y factores para #home .bg1
       // offsetXBg1 = '0%';
       // offsetYBg1 = '25%';
-      baseYBg1 = '25%';
+      baseYBg1 = '53%';
       factorBg1 = 0.2;
 
       // Offsets y factores para #home .bg2
       // offsetXBg2 = '0%';
       // offsetYBg2 = '-15%';
-      baseYBg2 = '-15%';
+      baseYBg2 = '-9.5%';
       factorBg2 = 0.3;
 
       // Factores para aboutBg y keyInvBg
@@ -110,10 +110,10 @@ document.addEventListener ('DOMContentLoaded', function () {
     // Imágenes de About / KeyInvestments / Contact (solo factor en Y)
 
     if (bg1) {
-      bg1.style.transform = `translateY(calc(${baseYBg1} - ${scrollY * factorBg1}px))`;
+      bg1.style.top = `calc(${baseYBg1} - ${scrollY * factorBg1}px)`;
     }
     if (bg2) {
-      bg2.style.transform = `translateY(calc(${baseYBg2} - ${scrollY * factorBg2}px))`;
+      bg2.style.top = `calc(${baseYBg2} - ${scrollY * factorBg2}px)`;
     }
     if (aboutBg) {
       aboutBg.style.transform = `translateY(calc(${baseYAbout} - ${scrollY * factorAbout}px))`;
