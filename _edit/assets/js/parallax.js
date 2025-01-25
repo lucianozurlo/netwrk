@@ -55,11 +55,11 @@ document.addEventListener ('DOMContentLoaded', function () {
 
       // VERSIÓN DESKTOP
       // Offsets y factores para #home .bg1
-      baseYBg1 = '53%';
+      baseYBg1 = '45%';
       factorBg1 = 0.2;
 
       // Offsets y factores para #home .bg2
-      baseYBg2 = '-9.5%';
+      baseYBg2 = '-30%';
       factorBg2 = 0.3;
 
       // Factores para aboutBg y keyInvBg

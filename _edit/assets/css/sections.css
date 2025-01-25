@@ -122,20 +122,20 @@
 } */
 
 #home .bg img {
-    max-height: 32.00vw;
+    max-width: 30vw;
     will-change: transform;
 }
 
 #home .bg1 img {
     /* transform: translateY(25%); */
     left: 0;
-    top: 53%;
+    top: 45%;
 }
 
 #home .bg2 img {
     /* transform: translateY(-15%); */
     right: 0;
-    top: -9.5%;
+    top: -30%;
 }
 
 /** About **/
@@ -1317,8 +1317,6 @@
 }
 
 
-
-
 /** HOME **/
 #home {
     margin-bottom: 130px;
@@ -1335,7 +1333,7 @@
 
 #home .text-content h1 {
     font-size: 70px;
-    line-height: 96px;
+    line-height: 130%;
 }
 
 #home .text-content p {
@@ -1360,5 +1358,5 @@
 }
 
 #home .bg img {
-    max-height: 40vw;
+    max-width: 30vw;
 }
