@@ -517,6 +517,7 @@
 /* Contenedor del reloj */
 .clock {
     position: relative;
+    overflow: hidden;
 }
 
 /* Estilo del círculo */
