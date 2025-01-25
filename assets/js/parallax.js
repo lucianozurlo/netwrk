@@ -29,7 +29,7 @@ document.addEventListener ('DOMContentLoaded', function () {
       console.log ('MOBILE');
 
       // VERSIÓN MOBILE
-      baseYBg1 = '66%';
+      baseYBg1 = '70%';
       factorBg1 = 0.1;
 
       // Offsets y factores para #home .bg2
