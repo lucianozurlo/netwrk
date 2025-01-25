@@ -70,7 +70,7 @@ document.addEventListener ('DOMContentLoaded', function () {
       baseYKeyInv = '57%';
       factorKeyInv = 0.1;
 
-      baseYContact = '495%';
+      baseYContact = '515%';
       factorContact = 0.07;
 
       // Para #Home
