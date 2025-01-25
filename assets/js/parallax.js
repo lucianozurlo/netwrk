@@ -24,23 +24,19 @@ document.addEventListener ('DOMContentLoaded', function () {
   function updateOffsets () {
     // Ajusta tu breakpoint a conveniencia. Ej: <=999 es "mobile"
     if (window.innerWidth <= 999) {
-      // VERSIÓN MOBILE
-      // Offsets y factores para #home .bg1
-      // offsetXBg1 = '-39%';
-      // offsetYBg1 = '33%';
+      console.log (`El window.innerWidth es: ${window.innerWidth}`);
+      console.log (window.innerWidth <= 999);
+      console.log ('MOBILE');
 
-      baseYBg1 = '25%';
+      // VERSIÓN MOBILE
+      baseYBg1 = '66%';
       factorBg1 = 0.1;
 
       // Offsets y factores para #home .bg2
-      // offsetXBg2 = '30%';
-      // offsetYBg2 = '-40%';
-
-      baseYBg2 = '25%';
+      baseYBg2 = '-20%';
       factorBg2 = 0.15;
 
       // Factores para aboutBg y keyInvBg
-
       baseYAbout = '0%';
       factorAbout = 0.05;
 
@@ -55,16 +51,14 @@ document.addEventListener ('DOMContentLoaded', function () {
       baseYHome = '25%';
       factorHome = 0.07;
     } else {
+      console.log ('DESKTOP');
+
       // VERSIÓN DESKTOP
       // Offsets y factores para #home .bg1
-      // offsetXBg1 = '0%';
-      // offsetYBg1 = '25%';
       baseYBg1 = '53%';
       factorBg1 = 0.2;
 
       // Offsets y factores para #home .bg2
-      // offsetXBg2 = '0%';
-      // offsetYBg2 = '-15%';
       baseYBg2 = '-9.5%';
       factorBg2 = 0.3;
 

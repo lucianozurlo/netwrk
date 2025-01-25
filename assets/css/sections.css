@@ -162,7 +162,7 @@
     justify-content: center;
     width: 1122px;
     background: linear-gradient(284.59deg, #f9f9f90d 0%, #11111100 100%);
-    backdrop-filter: blur(15.6961px);
+    backdrop-filter: blur(15px);
     border-radius: 8.69681px;
 }
 
@@ -201,7 +201,7 @@
     margin-top: 30px;
     padding: 32px;
     text-align: center;
-    backdrop-filter: blur(15.6961px);
+    backdrop-filter: blur(15px);
     z-index: 12;
 }
 
@@ -481,7 +481,7 @@
     /* background: linear-gradient(284.59deg,
             #f9f9f90f 0%,
             #11111100 100%); */
-    backdrop-filter: blur(20.3927px);
+    backdrop-filter: blur(20px);
     border-radius: 8.1571px;
     /* display: none !important; */
 }
@@ -653,7 +653,7 @@
 #KeyInvestments .nav-tabs .nav-link {
     padding: 0;
     background-color: unset !important;
-    backdrop-filter: blur(15.6961px);
+    backdrop-filter: blur(15px);
     border-radius: 10px;
     height: 100%;
     width: 100%;
@@ -745,7 +745,7 @@
     z-index: 111;
     pointer-events: none;
     border-radius: 10px;
-    backdrop-filter: blur(15.6961px);
+    backdrop-filter: blur(15px);
     transition: all .2s ease-in-out;
 }
 
