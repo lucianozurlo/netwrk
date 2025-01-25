@@ -1,5 +1,4 @@
 <?php
-// sendForm.php
 header('Content-Type: application/json; charset=utf-8');
 
 // Permitir solo solicitudes POST
