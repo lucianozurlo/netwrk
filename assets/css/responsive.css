@@ -346,17 +346,17 @@
     }
 
     #home .bg img {
-        max-height: 110vw;
+        max-height: 90vw;
     }
 
     #home .bg1 img {
-        transform: translateX(-39%);
+        /* transform: translateX(-39%); */
         top: 66%;
     }
 
     #home .bg2 img {
-        transform: translateX(30%);
-        top: -40%;
+        /* transform: translateX(30%); */
+        top: -14%;
     }
 
     #home .text-content {

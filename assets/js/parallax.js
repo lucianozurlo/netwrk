@@ -33,7 +33,7 @@ document.addEventListener ('DOMContentLoaded', function () {
       factorBg1 = 0.1;
 
       // Offsets y factores para #home .bg2
-      baseYBg2 = '-20%';
+      baseYBg2 = '-14%';
       factorBg2 = 0.15;
 
       // Factores para aboutBg y keyInvBg
