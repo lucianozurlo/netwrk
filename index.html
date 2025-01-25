@@ -929,39 +929,27 @@
 	<script src="assets/js/lazy.js"></script>
 	<script src="assets/js/parallax.js"></script>
 
-	<!-- <script>
-		(function () {
-			// Seleccionamos los elementos que usaremos
-			const contact = document.getElementById('Contact');
-			const target = document.querySelector('#Contact .go-to-slide[data-slide="2"]');
-
-			// Validamos que existan para evitar errores si no están en el DOM
-			if (!contact || !target) return;
-
-			// Creamos el MutationObserver que se activará cuando cambie un atributo (en este caso la clase)
-			const observer = new MutationObserver(function (mutations) {
-				mutations.forEach(function (mutation) {
-					// Verificamos que el atributo que cambió sea 'class'
-					if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-						// Si #Contact .go-to-slide[data-slide="1"] tiene la clase .active, agregamos .form2 a #Contact
-						if (target.classList.contains('active')) {
-							contact.classList.add('form2');
-						} else {
-							contact.classList.remove('form2');
-						}
-					}
-				});
-			});
-
-			// Iniciamos la observación de cambios en las clases de nuestro 'target'
-			observer.observe(target, {
-				attributes: true,       // Observa cambios en los atributos
-				attributeFilter: ['class'] // Se concentra solo en los cambios de la clase
-			});
-		})();
-
-	</script> -->
-
+	<script>
+		// Cada vez que se produzca un scroll:
+		window.addEventListener('scroll', () => {
+			// Si detectamos scroll horizontal:
+			if (window.scrollX !== 0) {
+				// Fuerza la posición horizontal a 0
+				window.scrollTo(0, window.scrollY);
+			}
+		});
+	</script>
+	<script>
+		// Interceptamos la rueda para bloquear deltaX
+		window.addEventListener('wheel', function (e) {
+			if (e.deltaX !== 0) {
+				// Evitamos el comportamiento por defecto
+				e.preventDefault();
+				// Si quieres, conservas el scroll vertical manualmente
+				window.scrollBy(0, e.deltaY);
+			}
+		}, {passive: false});
+	</script>
 
 </body>
 
