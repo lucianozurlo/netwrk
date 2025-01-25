@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     /* ojo con overflow-x: hidden; aquí, puede generar comportamientos raros en mobile */
-    /* overflow-x: hidden;  <-- pruébalo comentado */
+    overflow-x: hidden;
 }
 
 .mob-ok {
