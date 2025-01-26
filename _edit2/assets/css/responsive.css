@@ -958,7 +958,7 @@
 
     #Contact .swiper-slide form .form-inputs h4 {
         font-size: 16px;
-        padding-left: 12px;
+        padding-left: 10px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input label {
@@ -968,6 +968,7 @@
     #Contact .swiper-slide form .form-inputs .column-input {
         width: 100%;
         gap: 5px;
+        max-width: 314px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input.full {
@@ -994,6 +995,10 @@
 
     #Contact #footer p {
         font-size: 14px;
+    }
+
+    #Contact .drag-drop-area {
+        max-width: 100%;
     }
 
     #Contact .drag-drop-area img {

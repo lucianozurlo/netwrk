@@ -1144,7 +1144,6 @@
 }
 
 #Contact .swiper-slide form .form-inputs h4 {
-    padding-left: 19.20px;
     font-family: 'PP Telegraf';
     font-weight: 800;
     font-size: 14.40px;
@@ -1237,9 +1236,9 @@
 
 #Contact .drag-drop-area {
     width: 100%;
-    max-width: 313.60px;
+    max-width: 100%;
     height: 64.00px;
-    border: none !important;
+    border: 1px dashed #222222aa;
     border-radius: 8.00px;
     padding: 0;
     text-align: center;
@@ -1254,7 +1253,7 @@
     box-sizing: border-box;
     height: 64.00px;
     border-radius: 4.00px;
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%23222' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='7' stroke-linecap='round'/%3e%3c/svg%3e");
+    /* background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='5' ry='5' stroke='%23222' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='7' stroke-linecap='round'/%3e%3c/svg%3e"); */
     transition: all .2s ease-in-out;
 }
 
