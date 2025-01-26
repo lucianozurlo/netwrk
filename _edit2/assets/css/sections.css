@@ -279,7 +279,7 @@
 }
 
 #About .team-txt h3 {
-    font-weight: 400;
+    font-weight: 300;
     font-size: 24.00px;
     line-height: 24.00px;
     margin-bottom: 0;
@@ -1401,4 +1401,54 @@ header #navbarNav .offcanvas-body ul li a:before {
 
 section h1 {
     font-weight: 300;
+}
+
+#About .style-content:hover:before {
+    background: linear-gradient(130deg,
+            #f9f9f900 0%, #22222200 30%,
+            #22222200 60%,
+            #f9f9f980 100%);
+}
+
+#About a .style-content:hover .style-fill {
+    opacity: 1;
+}
+
+#About a .style-content:hover .style-fill.style-hover {
+    opacity: 0 !important;
+}
+
+
+
+#About .style-content:hover .style-fill.style-hover.bs {
+    box-shadow: 0 0 0 #f9f9f955;
+}
+
+#About a {
+    text-decoration: none !important;
+    transform: all .2s ease-in-out;
+    -webkit-transform: all .2s eas;
+    -moz-transform: all .2s eas;
+    -ms-transform: all .2s eas;
+    -o-transform: all .2s eas;
+}
+
+#About a:hover .style-content:before {
+    background: linear-gradient(130deg,
+            #f9f9f9ed 0%,
+            #22222200 30%,
+            #22222200 60%,
+            #f9f9f980 100%);
+}
+
+#About a:hover .style-content .style-fill {
+    opacity: 0;
+}
+
+#About a:hover .style-content .style-fill.style-hover {
+    opacity: 1 !important;
+}
+
+#About a:hover .style-content .style-fill.style-hover.bs {
+    box-shadow: 0 0 17.60px #f9f9f955;
 }
