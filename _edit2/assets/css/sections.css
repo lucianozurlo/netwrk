@@ -1323,6 +1323,34 @@
     word-break: break-all;
 }
 
+/***** empatar ***/
+header {
+    height: 61px;
+    filter: drop-shadow(0px 4px 10px #00000040);
+    backdrop-filter: blur(18.0481px);
+}
+
+header .navbar-brand {
+    width: 116.74px;
+    left: 72.75px;
+}
+
+header #navbarNav .offcanvas-body ul {
+    gap: 24px;
+    height: 40px;
+}
+
+header #navbarNav .offcanvas-body ul li a {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 20px;
+}
+
+header #navbarNav .offcanvas-body ul li a:before {
+    padding: 1px;
+    border-radius: 50px;
+}
+
 
 /** HOME **/
 #home {
@@ -1335,6 +1363,7 @@
 
 #home .text-content h4 {
     font-size: 21px;
+    font-weight: 300;
     margin-bottom: 0;
 }
 
@@ -1367,4 +1396,9 @@
 
 #home .bg img {
     max-width: 30vw;
+}
+
+
+section h1 {
+    font-weight: 300;
 }
