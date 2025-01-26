@@ -175,6 +175,7 @@
     font-weight: 400;
     font-size: 20.80px;
     line-height: 28.00px;
+    margin-top: 11.2px;
     margin-bottom: 24.00px;
     color: #f9f9f9;
     text-align: center;
@@ -188,7 +189,7 @@
 }
 
 #About .team-frame {
-    gap: 38.40px;
+    gap: 17.6px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,7 +217,8 @@
 }
 
 #About .team-philosophy h3 {
-    margin-bottom: 9.60px;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 #About .team-philosophy p {
@@ -313,7 +315,7 @@
 /*** OUR NETWORK ***/
 
 #OurNetwork {
-    margin-bottom: 128.00px;
+    margin-bottom: 112px;
     align-items: center;
     flex-direction: column;
 }
@@ -1291,6 +1293,7 @@
 
 #Contact #footer img {
     width: 133.38px;
+    margin-top: 8px;
 }
 
 #Contact #footer p {
