@@ -1005,7 +1005,7 @@
     align-items: center;
     padding: 0.00px;
     gap: 51.20px;
-    width: 608.00px;
+    width: 672px;
     transition: max-width 0.5s ease-in-out;
 }
 
@@ -1160,7 +1160,7 @@
     align-items: flex-start;
     align-content: flex-start;
     justify-content: center;
-    padding: 0 9.60px;
+    padding: 0;
     gap: 19.20px;
     width: 100%;
     margin-bottom: 11.20px;
@@ -1172,11 +1172,11 @@
     align-items: flex-start;
     padding: 0.00px;
     gap: 6.40px;
-    width: calc(50% - 19.20px);
+    width: calc(50% - 9.60px);
 }
 
 #Contact .swiper-slide form .form-inputs .column-input.full {
-    width: calc(100% - 19.20px);
+    width: 100%;
 }
 
 #Contact .swiper-slide form .form-inputs .column-input label {

@@ -422,7 +422,7 @@
     #Contact .swiper-container {
         border-radius: 5px;
         gap: 64px;
-        width: 760px;
+        width: 840px;
     }
 
     #Contact .swiper-container .selector-container {
@@ -473,18 +473,18 @@
     }
 
     #Contact .swiper-slide form .form-inputs .row-input {
-        padding: 0 12px;
+        padding: 0;
         gap: 24px;
         margin-bottom: 14px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input {
         gap: 8px;
-        width: calc(50% - 24px);
+        width: calc(50% - 12px);
     }
 
     #Contact .swiper-slide form .form-inputs .column-input.full {
-        width: calc(100% - 24px);
+        width: 100%;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input label {
