@@ -1327,17 +1327,18 @@
 }
 
 #home .text-content {
-    gap: 16px;
+    gap: 12px;
 }
 
 #home .text-content h4 {
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 21px;
+    margin-bottom: 0;
 }
 
 #home .text-content h1 {
-    font-size: 67px;
+    font-size: 63px;
     line-height: 130%;
+    letter-spacing: .5px;
 }
 
 #home .text-content p {
@@ -1345,10 +1346,10 @@
 }
 
 #home .text-content a {
-    width: 160px;
+    width: 164px;
     height: 32px;
     font-size: 15px;
-    margin-top: 25px;
+    margin-top: 14px;
     border-radius: 50px;
 }
 
