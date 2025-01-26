@@ -930,12 +930,12 @@
     align-items: center;
     padding: 96.00px 0 50.40px;
     gap: 43.20px;
-    /* background-image: url(../img/contact-bg.png);
+    background-image: url(../img/contact-bg.png);
     background-repeat: no-repeat;
-    background-size: 32vw; */
+    background-size: 32vw;
     /* El 'background-position' inicial puede ser right 25%; 
        JS luego lo cambiará dinámicamente */
-    /* background-position: right 25%; */
+    background-position: right 1vw;
     background-color: #f9f9f9;
     will-change: background-position;
     transition: .2s ease-in-out;
@@ -1102,7 +1102,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 32.00px;
+    height: 100%;
     width: 50%;
     background-color: #222;
     border-radius: 40.00px;
