@@ -133,9 +133,13 @@
 }
 
 #home .bg2 img {
-    /* transform: translateY(-15%); */
+    transform: scale(-1);
     right: 0;
-    top: -30%;
+    top: -23%;
+    -webkit-transform: scale(-1);
+    -moz-transform: scale(-1);
+    -ms-transform: scale(-1);
+    -o-transform: scale(-1);
 }
 
 /** About **/
@@ -1078,7 +1082,7 @@
     pointer-events: unset;
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 12.80px;
+    font-size: 14px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -1218,7 +1222,7 @@
     background: #222;
     border-radius: 40.00px;
     font-family: 'Montserrat';
-    font-size: 12.80px;
+    font-size: 14px;
     color: #f9f9f9;
     border: unset !important;
     cursor: pointer !important;
@@ -1332,7 +1336,7 @@
 }
 
 #home .text-content h1 {
-    font-size: 70px;
+    font-size: 67px;
     line-height: 130%;
 }
 
@@ -1341,9 +1345,9 @@
 }
 
 #home .text-content a {
-    width: 186px;
-    height: 40px;
-    font-size: 16px;
+    width: 160px;
+    height: 32px;
+    font-size: 15px;
     margin-top: 25px;
     border-radius: 50px;
 }
