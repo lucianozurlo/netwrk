@@ -6,6 +6,12 @@ body {
     /* overflow-x: hidden;  <-- pruébalo comentado */
 }
 
+textarea {
+    resize: none;
+    overflow: auto;
+    /* Opcional: Maneja el desbordamiento del contenido */
+}
+
 .mob-ok {
     display: none !important;
 }
