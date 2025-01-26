@@ -4,9 +4,10 @@ document.addEventListener ('DOMContentLoaded', function () {
   const bg2 = document.querySelector ('#home .bg2 img');
   const aboutBg = document.querySelector ('#About .bg img');
   const keyInvBg = document.querySelector ('#KeyInvestments .bg img');
-  const contactBg = document.querySelector ('#Contact .bg img');
+  // const contactBg = document.querySelector ('#Contact .bg img');
   // Selecciona la sección #Home para el fondo parallax
   const homeSection = document.querySelector ('#home');
+  const contactSection = document.querySelector ('#Contact');
 
   // Variables para almacenar la posición inicial (x, y) y factores de cada elemento.
   // let offsetXBg1, offsetYBg1, factorBg1;
@@ -33,7 +34,7 @@ document.addEventListener ('DOMContentLoaded', function () {
       factorBg1 = 0.1;
 
       // Offsets y factores para #home .bg2
-      baseYBg2 = '-14%';
+      baseYBg2 = '-11%';
       factorBg2 = 0.15;
 
       // Factores para aboutBg y keyInvBg
@@ -43,23 +44,23 @@ document.addEventListener ('DOMContentLoaded', function () {
       baseYKeyInv = '25%';
       factorKeyInv = 0.05;
 
-      baseYContact = '25%';
-      factorContact = 0.05;
-
       // Para #Home
       // Ejemplo: comienza en "25%" y se mueve más suave
       baseYHome = '25%';
       factorHome = 0.07;
+
+      baseYContact = '1vw';
+      factorContact = 0.05;
     } else {
       console.log ('DESKTOP');
 
       // VERSIÓN DESKTOP
       // Offsets y factores para #home .bg1
-      baseYBg1 = '53%';
+      baseYBg1 = '45%';
       factorBg1 = 0.2;
 
       // Offsets y factores para #home .bg2
-      baseYBg2 = '-9.5%';
+      baseYBg2 = '-11%';
       factorBg2 = 0.3;
 
       // Factores para aboutBg y keyInvBg
@@ -70,13 +71,13 @@ document.addEventListener ('DOMContentLoaded', function () {
       baseYKeyInv = '57%';
       factorKeyInv = 0.1;
 
-      baseYContact = '495%';
-      factorContact = 0.07;
-
       // Para #Home
       // Ejemplo: comienza en "25%" y se mueve un poco más rápido
       baseYHome = '25%';
       factorHome = 0.07;
+
+      baseYContact = '1vw';
+      factorContact = 0.05;
     }
   }
 
@@ -115,14 +116,19 @@ document.addEventListener ('DOMContentLoaded', function () {
     if (keyInvBg) {
       keyInvBg.style.top = `calc(${baseYKeyInv} - ${scrollY * factorKeyInv}px)`;
     }
-    if (contactBg) {
-      contactBg.style.top = `calc(${baseYContact} - ${scrollY * factorContact}px)`;
-    }
+    // if (contactBg) {
+    //   contactBg.style.top = `calc(${baseYContact} - ${scrollY * factorContact}px)`;
+    // }
 
     // Fondo de la sección #Home (si existe)
     if (homeSection) {
       // Combina la posición "right <algún %>" con un desplazamiento en px
       homeSection.style.backgroundPosition = `left calc(${baseYHome} - ${scrollY * factorHome}px)`;
+    }
+    // Fondo de la sección #Home (si existe)
+    if (contactSection) {
+      // Combina la posición "right <algún %>" con un desplazamiento en px
+      contactSection.style.backgroundPosition = `right calc(${baseYContact} - ${scrollY * factorContact}px)`;
     }
   });
 });
