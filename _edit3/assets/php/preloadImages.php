@@ -33,12 +33,8 @@
                     } else {
                         $extension = pathinfo($file, PATHINFO_EXTENSION);
                         if (in_array(strtolower($extension), $extensions)) {
-                            // Get the relative path (ensure it starts with a slash if needed)
+                            // Get the relative path (ensure it uses forward slashes)
                             $relativePath = str_replace('\\', '/', $fullPath);
-                            // Opcional: Añadir una barra al inicio si es necesario
-                            // if (strpos($relativePath, '/') !== 0) {
-                            //     $relativePath = '/' . $relativePath;
-                            // }
                             $images[] = $relativePath;
                         }
                     }

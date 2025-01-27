@@ -1,5 +1,3 @@
-// script.js
-
 (function () {
   const preloader = document.querySelector ('.page-loading');
   const progressBar = document.querySelector ('.progress-bar');
@@ -82,8 +80,11 @@
         NProgress.done ();
 
         // Completar la barra de progreso personalizada
-        progressBar.style.width = `${maxProgress}px`;
-        progressContainer.setAttribute ('aria-valuenow', maxProgress);
+        progressBar.style.width = `120px`;
+        progressContainer.setAttribute ('aria-valuenow', 120);
+
+        // **Console Log cuando se han precargado todas las imágenes**
+        console.log ('Todas las imágenes han sido precargadas.');
 
         // Esperar un breve momento antes de iniciar la transición de desvanecimiento
         setTimeout (() => {
@@ -93,6 +94,8 @@
           // Remover el preloader del DOM después de la transición
           preloader.addEventListener ('transitionend', () => {
             preloader.remove ();
+            // **Console Log cuando ha terminado el preloader**
+            console.log ('El preloader ha terminado y ha sido removido.');
           });
         }, 500); // 500ms de espera antes de iniciar la transición
       }
