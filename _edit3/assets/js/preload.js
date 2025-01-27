@@ -64,8 +64,19 @@
   async function initializePreloader () {
     const imageList = await fetchImageList ();
 
+    // Agregar registro para depurar
+    console.log ('imageList:', imageList);
+
+    // Verificar si NProgress está definido
+    if (typeof NProgress === 'undefined') {
+      console.error (
+        'NProgress no está definido. Asegúrate de que NProgress JS se ha cargado correctamente.'
+      );
+      return;
+    }
+
     // Iniciar NProgress
-    NProgress.configure ({showSpinner: false}); // Opcional: Ocultar el spinner de NProgress
+    NProgress.configure ({showSpinner: false});
     NProgress.start ();
 
     preloadImages (
