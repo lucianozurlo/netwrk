@@ -40,6 +40,10 @@
                         if (in_array(strtolower($extension), $extensions)) {
                             // Obtener la ruta relativa (asegurarse de que usa barras normales)
                             $relativePath = str_replace('\\', '/', $fullPath);
+
+                            // Ajustar la ruta para que comience desde 'assets/img/'
+                            $relativePath = str_replace('../', 'assets/', $relativePath);
+
                             $images[] = $relativePath;
                         }
                     }
