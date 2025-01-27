@@ -13,9 +13,12 @@
    */
   async function fetchImageList () {
     try {
-      const response = await fetch ('../php/list_images.php');
+      const response = await fetch ('assets/php/list_images.php'); // Ruta corregida
       if (!response.ok) {
-        throw new Error ('Error fetching the image list');
+        const errorText = await response.text ();
+        throw new Error (
+          `Error fetching the image list: ${response.status} ${response.statusText} - ${errorText}`
+        );
       }
       const imageList = await response.json ();
       return imageList;
