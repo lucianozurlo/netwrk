@@ -194,6 +194,7 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
     #About .team-txt h3 {
         font-size: 30px;
         line-height: 30px;
+        margin-bottom: 0;
     }
 
     #About .team-txt p {
