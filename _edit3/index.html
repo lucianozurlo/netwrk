@@ -28,6 +28,52 @@
 	<link rel="stylesheet" media="screen" href="assets/css/sections.css">
 	<link rel="stylesheet" media="screen" href="assets/css/responsive2560.css">
 	<link rel="stylesheet" media="screen" href="assets/css/responsive.css">
+
+
+	<script>
+		/**
+		 * Function to fetch the list of images from the server.
+		 * @returns {Promise<Array>} List of image paths.
+		 */
+		async function fetchImageList() {
+			try {
+				const response = await fetch('list_images.php');
+				if (!response.ok) {
+					throw new Error('Error fetching the image list');
+				}
+				const imageList = await response.json();
+				return imageList;
+			} catch (error) {
+				console.error(error);
+				return [];
+			}
+		}
+
+		/**
+		 * Function to preload images.
+		 * @param {Array} imagePaths List of image paths.
+		 */
+		function preloadImages(imagePaths) {
+			imagePaths.forEach(relativePath => {
+				const img = new Image();
+				img.src = relativePath; // The path already includes the complete relative path
+				img.onload = () => {
+					console.log(`Image loaded: ${relativePath}`);
+				};
+				img.onerror = () => {
+					console.error(`Error loading image: ${relativePath}`);
+				};
+			});
+		}
+
+		// Execute the preload when the DOM is fully loaded
+		document.addEventListener('DOMContentLoaded', async () => {
+			const imageList = await fetchImageList();
+			preloadImages(imageList);
+		});
+	</script>
+	</script>
+
 </head>
 
 <body>
