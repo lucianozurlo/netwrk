@@ -1,8 +1,11 @@
 <?php
-    // list_images.php
+    // Habilitar la visualización de errores (solo para desarrollo)
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
     // Define the base folder relative to this script
-    $baseFolder = '../img/'; // Ajusta esto según la estructura de tu proyecto
+    $baseFolder = '../img/'; // Asegúrate de que esta ruta es correcta
     $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
 
     /**
