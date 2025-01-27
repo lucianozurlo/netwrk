@@ -55,7 +55,7 @@
 .progress-bar {
     width: 0;
     height: 100%;
-    background-color: #29d;
+    background-color: #f9f9f9;
     transition: width 0.3s ease;
 }
 
@@ -116,4 +116,27 @@
     font-weight: normal;
     color: #fff;
     margin-top: 10px;
+}
+
+
+/* Ocultar el header por defecto */
+header.hidden {
+    display: none;
+}
+
+/* Mostrar el header cuando se elimina la clase 'hidden' */
+header.visible {
+    display: block;
+    /* Puedes añadir animaciones de entrada si lo deseas */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
