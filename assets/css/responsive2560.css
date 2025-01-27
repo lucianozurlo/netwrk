@@ -182,6 +182,11 @@
         height: 225px;
     }
 
+    #About a:hover .team-img img {
+        width: 250px;
+        height: 250px;
+    }
+
     #About .team-txt h3 {
         font-size: 30px;
         line-height: 30px;
@@ -393,6 +398,12 @@
         width: 340.74px;
         height: 129.31px;
         border-radius: 19.4px;
+    }
+
+    #CoInvestors .investors-container a:hover {
+        width: 350.74px;
+        height: 139.31px;
+        margin: 0;
     }
 
     /** CONTACT **/

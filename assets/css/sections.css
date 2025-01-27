@@ -853,13 +853,15 @@
 }
 
 #CoInvestors .investors-container {
-    max-width: 894.57px;
+    /* max-width: 894.57px; */
+    max-width: 1024.57px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    gap: 51.20px 38.40px;
+    /* gap: 51.20px 38.40px; */
+    gap: 41.20px 28.40px;
     transition: all .2s ease-in-out;
 }
 
@@ -911,11 +913,18 @@
 #CoInvestors .investors-container a {
     width: 272.59px;
     height: 103.45px;
+    margin: 5px;
     border-radius: 15.52px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .2s ease-in-out;
+}
+
+#CoInvestors .investors-container a:hover {
+    width: 282.59px;
+    height: 113.45px;
+    margin: 0;
 }
 
 #CoInvestors .style-fill {
@@ -1129,7 +1138,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 0 20px;
     gap: 12.00px;
     width: 100%;
 }
@@ -1425,11 +1434,11 @@ section h1 {
 
 #About a {
     text-decoration: none !important;
-    transform: all .2s ease-in-out;
-    -webkit-transform: all .2s eas;
-    -moz-transform: all .2s eas;
-    -ms-transform: all .2s eas;
-    -o-transform: all .2s eas;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
 }
 
 #About a:hover .style-content:before {
@@ -1450,4 +1459,9 @@ section h1 {
 
 #About a:hover .style-content .style-fill.style-hover.bs {
     box-shadow: 0 0 17.60px #f9f9f955;
+}
+
+#About a:hover img {
+    width: 190px;
+    height: 190px;
 }
