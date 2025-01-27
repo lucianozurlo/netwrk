@@ -13,7 +13,7 @@
    */
   async function fetchImageList () {
     try {
-      const response = await fetch ('list_images.php');
+      const response = await fetch ('../php/list_images.php');
       if (!response.ok) {
         throw new Error ('Error fetching the image list');
       }
