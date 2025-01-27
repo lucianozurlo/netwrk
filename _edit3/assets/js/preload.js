@@ -22,6 +22,10 @@
         );
       }
       const imageList = await response.json ();
+
+      // Registro para depurar
+      console.log ('imageList:', imageList);
+
       return imageList;
     } catch (error) {
       console.error (error);
@@ -36,6 +40,13 @@
    * @param {Function} onComplete Callback when all images are loaded.
    */
   function preloadImages (imagePaths, onProgress, onComplete) {
+    // Verificar que imagePaths es un array
+    if (!Array.isArray (imagePaths)) {
+      console.error ('imagePaths no es un array:', imagePaths);
+      onComplete ();
+      return;
+    }
+
     const totalImages = imagePaths.length;
     let imagesLoaded = 0;
 
@@ -64,9 +75,6 @@
   async function initializePreloader () {
     const imageList = await fetchImageList ();
 
-    // Agregar registro para depurar
-    console.log ('imageList:', imageList);
-
     // Verificar si NProgress está definido
     if (typeof NProgress === 'undefined') {
       console.error (
@@ -76,7 +84,7 @@
     }
 
     // Iniciar NProgress
-    NProgress.configure ({showSpinner: false});
+    NProgress.configure ({showSpinner: false}); // Opcional: Ocultar el spinner de NProgress
     NProgress.start ();
 
     preloadImages (
