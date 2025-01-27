@@ -347,6 +347,7 @@
 
     #home .bg img {
         max-width: 56vw;
+        max-height: unset;
     }
 
     #home .bg1 img {
