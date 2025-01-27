@@ -1,10 +1,11 @@
+// preload.js
+
 (function () {
   const preloader = document.querySelector ('.page-loading');
   const progressBar = document.querySelector ('.progress-bar');
   const progressContainer = document.querySelector ('.progress-bar-container');
 
   // Variables para rastrear el progreso
-  let progress = 0;
   const maxProgress = 120; // Ancho máximo en píxeles para la barra personalizada
 
   /**
@@ -45,7 +46,7 @@
 
     imagePaths.forEach (relativePath => {
       const img = new Image ();
-      img.src = relativePath; // The path already includes the complete relative path
+      img.src = relativePath; // La ruta ya incluye la ruta relativa completa
 
       img.onload = img.onerror = () => {
         imagesLoaded++;
@@ -83,8 +84,8 @@
         NProgress.done ();
 
         // Completar la barra de progreso personalizada
-        progressBar.style.width = `120px`;
-        progressContainer.setAttribute ('aria-valuenow', 120);
+        progressBar.style.width = `${maxProgress}px`;
+        progressContainer.setAttribute ('aria-valuenow', maxProgress);
 
         // **Console Log cuando se han precargado todas las imágenes**
         console.log ('Todas las imágenes han sido precargadas.');

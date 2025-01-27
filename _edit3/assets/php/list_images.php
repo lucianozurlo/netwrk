@@ -1,11 +1,13 @@
 <?php
+    // list_images.php
+
     // Habilitar la visualización de errores (solo para desarrollo)
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
     // Define the base folder relative to this script
-    $baseFolder = '../img/'; // Asegúrate de que esta ruta es correcta
+    $baseFolder = '../img/'; // Desde assets/php/list_images.php, '../img/' apunta a assets/img/
     $allowedExtensions = array('svg', 'jpg', 'jpeg', 'png', 'gif', 'webp');
 
     /**
@@ -18,10 +20,10 @@
     function listImagesRecursively($directory, $extensions) {
         $images = array();
 
-        // Open the directory
+        // Abrir el directorio
         if (is_dir($directory)) {
             if ($dh = opendir($directory)) {
-                // Iterate through all files and subdirectories
+                // Iterar a través de todos los archivos y subdirectorios
                 while (($file = readdir($dh)) !== false) {
                     if ($file === '.' || $file === '..') {
                         continue;
@@ -30,13 +32,13 @@
                     $fullPath = $directory . DIRECTORY_SEPARATOR . $file;
 
                     if (is_dir($fullPath)) {
-                        // Recursive call for subdirectories
+                        // Llamada recursiva para subdirectorios
                         $subfolderImages = listImagesRecursively($fullPath, $extensions);
                         $images = array_merge($images, $subfolderImages);
                     } else {
                         $extension = pathinfo($file, PATHINFO_EXTENSION);
                         if (in_array(strtolower($extension), $extensions)) {
-                            // Get the relative path (ensure it uses forward slashes)
+                            // Obtener la ruta relativa (asegurarse de que usa barras normales)
                             $relativePath = str_replace('\\', '/', $fullPath);
                             $images[] = $relativePath;
                         }
@@ -49,10 +51,10 @@
         return $images;
     }
 
-    // Get the list of images
+    // Obtener la lista de imágenes
     $imageList = listImagesRecursively($baseFolder, $allowedExtensions);
 
-    // Return the list in JSON format
+    // Devolver la lista en formato JSON
     header('Content-Type: application/json');
     echo json_encode($imageList);
 ?>
