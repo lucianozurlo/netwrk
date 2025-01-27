@@ -352,6 +352,11 @@ only screen and (min-width: 2560px) {
         backdrop-filter: blur(15px);
     }
 
+    #KeyInvestments .tab-content>.tab-pane {
+        width: 839px;
+        height: 600px;
+    }
+
     #KeyInvestments .tab-content>.tab-pane.active {
         width: 839px;
         height: 600px;
