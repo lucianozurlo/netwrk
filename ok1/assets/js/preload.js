@@ -4,6 +4,7 @@
   const preloader = document.querySelector ('.page-loading');
   const progressBar = document.querySelector ('.progress-bar');
   const progressContainer = document.querySelector ('.progress-bar-container');
+  const header = document.querySelector ('header'); // Selecciona el header
 
   // Variables para rastrear el progreso
   const maxProgress = 120; // Ancho máximo en píxeles para la barra personalizada
@@ -117,6 +118,11 @@
           // Remover el preloader del DOM después de la transición
           preloader.addEventListener ('transitionend', () => {
             preloader.remove ();
+
+            // Mostrar el header
+            header.classList.remove ('hidden');
+            header.classList.add ('visible');
+
             // **Console Log cuando ha terminado el preloader**
             console.log ('El preloader ha terminado y ha sido removido.');
           });
