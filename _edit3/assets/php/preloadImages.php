@@ -2,7 +2,7 @@
     // list_images.php
 
     // Define the base folder relative to this script
-    $baseFolder = 'assets/img/'; // Ajusta esto según la estructura de tu proyecto
+    $baseFolder = '../img/'; // Ajusta esto según la estructura de tu proyecto
     $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
 
     /**
