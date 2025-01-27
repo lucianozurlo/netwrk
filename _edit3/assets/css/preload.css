@@ -36,7 +36,7 @@
 
 .page-spinner {
     display: inline-block;
-    width: 140px;
+    width: 80px;
     margin-bottom: 20px;
     vertical-align: middle;
 }
@@ -44,7 +44,7 @@
 .progress-bar-container {
     width: 120px;
     /* Ancho fijo de 120px */
-    height: 5px;
+    height: 10px;
     background-color: #555;
     border-radius: 5px;
     overflow: hidden;

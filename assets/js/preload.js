@@ -1,82 +1,104 @@
+// script.js
+
 (function () {
   const preloader = document.querySelector ('.page-loading');
   const progressBar = document.querySelector ('.progress-bar');
   const progressContainer = document.querySelector ('.progress-bar-container');
 
+  // Variables para rastrear el progreso
   let progress = 0;
-  const maxProgress = 120; // Ancho máximo en píxeles
+  const maxProgress = 120; // Ancho máximo en píxeles para la barra personalizada
 
-  // Iniciar NProgress
-  NProgress.configure ({showSpinner: false}); // Opcional: Ocultar el spinner de NProgress
-  NProgress.start ();
-
-  // Obtener todas las imágenes de la página
-  const images = document.images;
-  const totalImages = images.length;
-  let imagesLoaded = 0;
-
-  if (totalImages === 0) {
-    // Si no hay imágenes, completar la carga
-    completeLoad ();
-  } else {
-    // Añadir evento load a cada imagen
-    for (let img of images) {
-      img.addEventListener ('load', imageLoaded);
-      img.addEventListener ('error', imageLoaded); // Contar también las imágenes que fallan
+  /**
+   * Function to fetch the list of images from the server.
+   * @returns {Promise<Array>} List of image paths.
+   */
+  async function fetchImageList () {
+    try {
+      const response = await fetch ('list_images.php');
+      if (!response.ok) {
+        throw new Error ('Error fetching the image list');
+      }
+      const imageList = await response.json ();
+      return imageList;
+    } catch (error) {
+      console.error (error);
+      return [];
     }
   }
 
-  function imageLoaded () {
-    imagesLoaded++;
-    updateProgress (imagesLoaded / totalImages);
-    if (imagesLoaded === totalImages) {
-      completeLoad ();
+  /**
+   * Function to preload images.
+   * @param {Array} imagePaths List of image paths.
+   * @param {Function} onProgress Callback for progress updates.
+   * @param {Function} onComplete Callback when all images are loaded.
+   */
+  function preloadImages (imagePaths, onProgress, onComplete) {
+    const totalImages = imagePaths.length;
+    let imagesLoaded = 0;
+
+    if (totalImages === 0) {
+      onComplete ();
+      return;
     }
+
+    imagePaths.forEach (relativePath => {
+      const img = new Image ();
+      img.src = relativePath; // The path already includes the complete relative path
+
+      img.onload = img.onerror = () => {
+        imagesLoaded++;
+        onProgress (imagesLoaded, totalImages);
+        if (imagesLoaded === totalImages) {
+          onComplete ();
+        }
+      };
+    });
   }
 
-  function updateProgress (ratio) {
-    // Actualizar progreso simulado basado en la proporción de imágenes cargadas
-    progress = Math.min (Math.floor (ratio * maxProgress), maxProgress);
-    progressBar.style.width = progress + 'px';
-    progressContainer.setAttribute ('aria-valuenow', progress);
+  /**
+   * Función principal para manejar el preloader y la barra de progreso.
+   */
+  async function initializePreloader () {
+    const imageList = await fetchImageList ();
 
-    // Actualizar NProgress
-    NProgress.set (ratio);
+    // Iniciar NProgress
+    NProgress.configure ({showSpinner: false}); // Opcional: Ocultar el spinner de NProgress
+    NProgress.start ();
+
+    preloadImages (
+      imageList,
+      (loaded, total) => {
+        const progressPercentage = loaded / total * 100;
+        // Actualizar NProgress
+        NProgress.set (progressPercentage / 100);
+
+        // Actualizar barra de progreso personalizada
+        progressBar.style.width = `${loaded / total * maxProgress}px`; // Ancho fijo de 120px
+        progressContainer.setAttribute ('aria-valuenow', loaded);
+      },
+      () => {
+        // Completar NProgress
+        NProgress.done ();
+
+        // Completar la barra de progreso personalizada
+        progressBar.style.width = `${maxProgress}px`;
+        progressContainer.setAttribute ('aria-valuenow', maxProgress);
+
+        // Esperar un breve momento antes de iniciar la transición de desvanecimiento
+        setTimeout (() => {
+          preloader.classList.add ('hidden');
+          preloader.setAttribute ('aria-hidden', 'true');
+
+          // Remover el preloader del DOM después de la transición
+          preloader.addEventListener ('transitionend', () => {
+            preloader.remove ();
+          });
+        }, 500); // 500ms de espera antes de iniciar la transición
+      }
+    );
   }
 
-  function completeLoad () {
-    // Completar NProgress
-    NProgress.done ();
-
-    // Completar la barra de progreso simulada
-    progress = maxProgress;
-    progressBar.style.width = progress + 'px';
-    progressContainer.setAttribute ('aria-valuenow', progress);
-
-    // Esperar un breve momento antes de iniciar la transición de desvanecimiento
-    setTimeout (() => {
-      preloader.classList.add ('hidden');
-      preloader.setAttribute ('aria-hidden', 'true');
-
-      // Remover el preloader del DOM después de la transición
-      preloader.addEventListener ('transitionend', () => {
-        preloader.remove ();
-      });
-    }, 500); // 500ms de espera antes de iniciar la transición
-  }
-
-  // Opcional: Si tienes cargas adicionales después del load, puedes controlar NProgress aquí
-  /*
-  // Ejemplo de carga adicional
-  fetch('/api/data')
-      .then(response => response.json())
-      .then(data => {
-          // Procesar datos
-          NProgress.done();
-      })
-      .catch(error => {
-          console.error('Error:', error);
-          NProgress.done();
-      });
-  */
+  // Ejecutar el preload cuando el DOM esté completamente cargado
+  document.addEventListener ('DOMContentLoaded', initializePreloader);
 }) ();

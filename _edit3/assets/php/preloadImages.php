@@ -1,6 +1,8 @@
 <?php
-    // Define the base folder
-    $baseFolder = '../img/';
+    // list_images.php
+
+    // Define the base folder relative to this script
+    $baseFolder = 'assets/img/'; // Ajusta esto según la estructura de tu proyecto
     $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
 
     /**
@@ -31,8 +33,12 @@
                     } else {
                         $extension = pathinfo($file, PATHINFO_EXTENSION);
                         if (in_array(strtolower($extension), $extensions)) {
-                            // Get the relative path
+                            // Get the relative path (ensure it starts with a slash if needed)
                             $relativePath = str_replace('\\', '/', $fullPath);
+                            // Opcional: Añadir una barra al inicio si es necesario
+                            // if (strpos($relativePath, '/') !== 0) {
+                            //     $relativePath = '/' . $relativePath;
+                            // }
                             $images[] = $relativePath;
                         }
                     }

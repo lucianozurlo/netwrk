@@ -52,33 +52,83 @@
 		/**
 		 * Function to preload images.
 		 * @param {Array} imagePaths List of image paths.
+		 * @param {Function} onProgress Callback for progress updates.
+		 * @param {Function} onComplete Callback when all images are loaded.
 		 */
-		function preloadImages(imagePaths) {
+		function preloadImages(imagePaths, onProgress, onComplete) {
+			const totalImages = imagePaths.length;
+			let imagesLoaded = 0;
+
+			if (totalImages === 0) {
+				onComplete();
+				return;
+			}
+
 			imagePaths.forEach(relativePath => {
 				const img = new Image();
 				img.src = relativePath; // The path already includes the complete relative path
-				img.onload = () => {
-					console.log(`Image loaded: ${relativePath}`);
-				};
-				img.onerror = () => {
-					console.error(`Error loading image: ${relativePath}`);
+
+				img.onload = img.onerror = () => {
+					imagesLoaded++;
+					onProgress(imagesLoaded, totalImages);
+					if (imagesLoaded === totalImages) {
+						onComplete();
+					}
 				};
 			});
 		}
 
-		// Execute the preload when the DOM is fully loaded
-		document.addEventListener('DOMContentLoaded', async () => {
+		/**
+		 * Función principal para manejar el preloader y la barra de progreso.
+		 */
+		async function initializePreloader() {
 			const imageList = await fetchImageList();
-			preloadImages(imageList);
-		});
-	</script>
-	</script>
 
+			// Iniciar NProgress
+			NProgress.configure({showSpinner: false}); // Opcional: Ocultar el spinner de NProgress
+			NProgress.start();
+
+			preloadImages(
+				imageList,
+				(loaded, total) => {
+					const progressPercentage = (loaded / total) * 100;
+					// Actualizar NProgress
+					NProgress.set(progressPercentage / 100);
+
+					// Actualizar barra de progreso personalizada
+					progressBar.style.width = `${(loaded / total) * maxProgress}px`; // Ancho fijo de 120px
+					progressContainer.setAttribute('aria-valuenow', loaded);
+				},
+				() => {
+					// Completar NProgress
+					NProgress.done();
+
+					// Completar la barra de progreso personalizada
+					progressBar.style.width = `${maxProgress}px`;
+					progressContainer.setAttribute('aria-valuenow', maxProgress);
+
+					// Esperar un breve momento antes de iniciar la transición de desvanecimiento
+					setTimeout(() => {
+						preloader.classList.add('hidden');
+						preloader.setAttribute('aria-hidden', 'true');
+
+						// Remover el preloader del DOM después de la transición
+						preloader.addEventListener('transitionend', () => {
+							preloader.remove();
+						});
+					}, 500); // 500ms de espera antes de iniciar la transición
+				}
+			);
+		}
+
+		// Ejecutar el preload cuando el DOM esté completamente cargado
+		document.addEventListener('DOMContentLoaded', initializePreloader);
+	</script>
 </head>
 
 <body>
 	<main class="page-wrapper">
-
+		<!-- Preloader -->
 		<div class="page-loading active" aria-hidden="false">
 			<div class="page-loading-inner">
 				<div class="page-spinner">
