@@ -6,7 +6,7 @@
 
     // Define the base folder relative to this script
     $baseFolder = '../img/'; // Asegúrate de que esta ruta es correcta
-    $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
+    $allowedExtensions = array('svg', 'jpg', 'jpeg', 'png', 'gif', 'webp');
 
     /**
      * Recursive function to list images in a folder and its subfolders.
