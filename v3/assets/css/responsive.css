@@ -410,6 +410,24 @@
         width: 160px;
     }
 
+    #home .elipses .elipse-inside:nth-child(1) {
+        width: 120.1vw;
+        height: 120.1vw;
+    }
+
+    #home .elipses .elipse-inside:nth-child(2) {
+        width: 110.36vw;
+        height: 110.36vw;
+    }
+
+    #home .elipses .elipse-inside:nth-child(3) {
+        width: 100.61vw;
+        height: 100.61vw;
+    }
+
+
+
+
     #About {
         gap: 48px;
         margin-bottom: 100px;
