@@ -418,6 +418,10 @@
         margin-top: 10px;
     }
 
+    #home .elipses .elipse-inside {
+        backdrop-filter: blur(6px);
+    }
+
     #home .elipses .elipse-inside:nth-child(1) {
         width: 120.1vw;
         height: 120.1vw;
