@@ -561,6 +561,7 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
 
     #home .text-content h4 {
         font-size: 16.8px;
+        line-height: 32.8px;
     }
 
     #home .text-content h1 {
