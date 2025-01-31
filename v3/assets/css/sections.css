@@ -114,6 +114,7 @@
     will-change: transform;
     /* overflow: hidden; */
     z-index: 0;
+    opacity: .6;
 }
 
 #home .elipses {
