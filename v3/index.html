@@ -14,16 +14,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet">
 
-	<!-- <link rel='stylesheet' href='assets/css/preload.css' />
+	<link rel='stylesheet' href='assets/css/preload.css' />
 	<link rel="stylesheet" href="assets/vendor/nprogress/nprogress.css">
 
 	<script src="assets/vendor/nprogress/nprogress.js" defer></script>
 	<script src='assets/js/preload.js' defer></script>
- -->
+
 	<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
 	<link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" media="screen" href="assets/css/netwrk.css">
-	<link rel="stylesheet" media="screen" href="assets/css/preload-v0.css">
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<link rel="stylesheet" media="screen" href="assets/css/fonts.css">
 	<link rel="stylesheet" media="screen" href="assets/css/custom.css">
@@ -34,14 +33,18 @@
 
 <body>
 	<main class="page-wrapper">
-
 		<!-- Preloader -->
-		<div class="page-loading active">
+		<div class="page-loading active" aria-hidden="false">
 			<div class="page-loading-inner">
 				<div class="page-spinner">
-					<img src="assets/img/iso_w.svg" alt="">
+					<img src="assets/img/iso.svg" alt="Loading...">
 				</div>
-				<span>Loading...</span>
+				<!-- Barra de progreso fija -->
+				<div class="progress-bar-container" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+					aria-valuemax="120">
+					<div class="progress-bar"></div>
+				</div>
+				<span class="loading-text">Loading...</span>
 			</div>
 		</div>
 
