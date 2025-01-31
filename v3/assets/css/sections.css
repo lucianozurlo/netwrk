@@ -1436,6 +1436,14 @@ header #navbarNav .offcanvas-body ul li a:before {
     gap: 12px;
 }
 
+#home .text-content>* {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ea;
+    -moz-transition: all .2s ea;
+    -ms-transition: all .2s ea;
+    -o-transition: all .2s ea;
+}
+
 #home .text-content h4 {
     font-size: 21px;
     font-weight: 400;
