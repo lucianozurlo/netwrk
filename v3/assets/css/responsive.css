@@ -408,6 +408,7 @@
     #home .text-content a {
         font-size: 14px;
         width: 160px;
+        margin-top: 10px;
     }
 
     #home .elipses .elipse-inside:nth-child(1) {
