@@ -382,9 +382,9 @@
     }
 
     #home .text-content img {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 8px;
+        width: 20px;
+        height: 20px;
+        margin-bottom: 3px;
     }
 
     #home .text-content p.lead {
@@ -393,8 +393,8 @@
     }
 
     #home .text-content h4 {
-        font-size: 21px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 27px;
         margin-bottom: 0;
     }
 
