@@ -41,7 +41,7 @@ document.addEventListener ('DOMContentLoaded', function () {
       baseYAbout = '0%';
       factorAbout = 0.05;
 
-      baseYKeyInv = '25%';
+      baseYKeyInv = '0%';
       factorKeyInv = 0.05;
 
       // Para #Home
@@ -56,12 +56,12 @@ document.addEventListener ('DOMContentLoaded', function () {
 
       // VERSIÓN DESKTOP
       // Offsets y factores para #home .bg1
-      baseYBg1 = '45%';
+      baseYBg1 = '11.5%';
       factorBg1 = 0.2;
 
       // Offsets y factores para #home .bg2
-      baseYBg2 = '-11%';
-      factorBg2 = 0.3;
+      baseYBg2 = '12%';
+      factorBg2 = 0.1;
 
       // Factores para aboutBg y keyInvBg
 
@@ -73,8 +73,8 @@ document.addEventListener ('DOMContentLoaded', function () {
 
       // Para #Home
       // Ejemplo: comienza en "25%" y se mueve un poco más rápido
-      baseYHome = '25%';
-      factorHome = 0.07;
+      baseYHome = '0%';
+      factorHome = 0.02;
 
       baseYContact = '1vw';
       factorContact = 0.05;

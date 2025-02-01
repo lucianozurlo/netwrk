@@ -14,34 +14,44 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 		rel="stylesheet">
 
+	<link rel='stylesheet' href='assets/css/preload.css' />
+	<link rel="stylesheet" href="assets/vendor/nprogress/nprogress.css">
+
+	<script src="assets/vendor/nprogress/nprogress.js" defer></script>
+	<script src='assets/js/preload.js' defer></script>
+
 	<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
 	<link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" media="screen" href="assets/css/netwrk.css">
-	<link rel="stylesheet" media="screen" href="assets/css/preload.css">
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="assets/js/preload.js"></script>
 	<link rel="stylesheet" media="screen" href="assets/css/fonts.css">
 	<link rel="stylesheet" media="screen" href="assets/css/custom.css">
 	<link rel="stylesheet" media="screen" href="assets/css/sections.css">
+	<link rel="stylesheet" media="screen" href="assets/css/responsive2x.css">
 	<link rel="stylesheet" media="screen" href="assets/css/responsive2560.css">
 	<link rel="stylesheet" media="screen" href="assets/css/responsive.css">
 </head>
 
 <body>
 	<main class="page-wrapper">
-
-		<div class="page-loading active">
+		<!-- Preloader -->
+		<div class="page-loading active" aria-hidden="false">
 			<div class="page-loading-inner">
 				<div class="page-spinner">
-					<img src="assets/img/loader.gif" alt="">
+					<img src="assets/img/iso.svg" alt="Loading...">
 				</div>
-				<span>Loading...</span>
+				<!-- Barra de progreso fija -->
+				<div class="progress-bar-container" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+					aria-valuemax="120">
+					<div class="progress-bar"></div>
+				</div>
+				<!-- <span class="loading-text">Loading...</span> -->
 			</div>
 		</div>
 
-		<div class="main-bg"></div>
+		<!-- <div class="main-bg"></div> -->
 
-		<header class="header navbar navbar-expand-lg navbar-dark navbar-sticky navbar-stuck">
+		<header class="header navbar navbar-expand-lg navbar-dark navbar-sticky navbar-stuck hidden">
 			<a href="#home" class="navbar-brand pe-3 scroll-link scroll-animate" onclick="closeNav()">
 				<img data-src="assets/img/logo_w.svg" alt="netwrk" class="lazy">
 			</a>
@@ -91,7 +101,8 @@
 			<div class="container position-relative text-center zindex-5">
 				<div class="row">
 					<div class="col-12 text-content">
-						<h4 class="scroll-animate">Where Social Capital <span>Meets Real Value:</span></h4>
+						<img src="assets/img/iso_w.svg" alt="">
+						<h4 class="scroll-animate">Where Social Capital <span>meets Real Value:</span></h4>
 						<h1 class="scroll-animate">Driving Growth <span>Through Relationships</span></h1>
 						<p class="scroll-animate">We connect visionary founders <span>with the resources they need to
 								fuel</span>fast-paced growth.</p>
@@ -100,11 +111,20 @@
 				</div>
 			</div>
 
+			<div class="elipses">
+				<div class="elipse-inside"></div>
+				<div class="elipse-inside"></div>
+				<div class="elipse-inside"></div>
+			</div>
 			<div class="bg bg1">
-				<img src="assets/img/home-bg.gif" alt="">
+				<img src="assets/img/home-bg.webp" alt="">
 			</div>
 			<div class="bg bg2">
-				<img src="assets/img/home-bg.gif" alt="">
+				<img src="assets/img/home-bg.webp" alt="">
+			</div>
+			<div class="bg-home">
+				<img src="assets/img/back-gif.png" class="mob-no" alt="">
+				<img src="assets/img/back-mob.png" class="mob-ok" alt="">
 			</div>
 
 		</section>
@@ -754,31 +774,35 @@
 			<div class="investors-container">
 
 				<a href="https://foundersfund.com/" target="_blank" class="style-content scroll-animate">
-					<img data-src="assets/img/brands/co-investors/founders-fund.svg" alt="" class="lazy">
+					<img data-src="assets/img/brands/co-investors/founders-fund.svg" alt=""
+						class="scroll-animate fade-in lazy">
 					<div class="style-fill"></div>
 					<div class="style-fill style-hover"></div>
 				</a>
 
 				<a href="https://www.friendsandfamilycapital.com/" target="_blank" class="style-content scroll-animate">
-					<img data-src="assets/img/brands/co-investors/friends-family-capital.svg" alt="" class="lazy">
+					<img data-src="assets/img/brands/co-investors/friends-family-capital.svg" alt=""
+						class="scroll-animate fade-in lazy">
 					<div class="style-fill"></div>
 					<div class="style-fill style-hover"></div>
 				</a>
 				<a href="https://www.goldcrest.com/" target="_blank" class="style-content scroll-animate">
 					<img data-src="assets/img/brands/co-investors/goldcrest-capital.svg" alt="" style="max-height: 47%;"
-						class="lazy">
+						class="scroll-animate fade-in lazy">
 					<div class="style-fill"></div>
 					<div class="style-fill style-hover"></div>
 				</a>
 
 				<a href="https://www.khoslaventures.com/" target="_blank" class="style-content scroll-animate">
-					<img data-src="assets/img/brands/co-investors/khosla-ventures.svg" alt="" class="lazy">
+					<img data-src="assets/img/brands/co-investors/khosla-ventures.svg" alt=""
+						class="scroll-animate fade-in lazy">
 					<div class="style-fill"></div>
 					<div class="style-fill style-hover"></div>
 				</a>
 
 				<a href="https://www.fifthdown.com/" target="_blank" class="style-content scroll-animate">
-					<img data-src="assets/img/brands/co-investors/fifth-down-dapital.svg" alt="" class="lazy">
+					<img data-src="assets/img/brands/co-investors/fifth-down-dapital.svg" alt=""
+						class="scroll-animate fade-in lazy">
 					<div class="style-fill"></div>
 					<div class="style-fill style-hover"></div>
 				</a>
@@ -938,7 +962,7 @@
 	<script src="assets/js/lazy.js"></script>
 	<script src="assets/js/parallax.js"></script>
 
-	<script>
+	<!-- <script>
 		// Cada vez que se produzca un scroll:
 		window.addEventListener('scroll', () => {
 			// Si detectamos scroll horizontal:
@@ -947,8 +971,8 @@
 				window.scrollTo(0, window.scrollY);
 			}
 		});
-	</script>
-	<script>
+	</script> -->
+	<!-- <script>
 		// Interceptamos la rueda para bloquear deltaX
 		window.addEventListener('wheel', function (e) {
 			if (e.deltaX !== 0) {
@@ -958,7 +982,7 @@
 				window.scrollBy(0, e.deltaY);
 			}
 		}, {passive: false});
-	</script>
+	</script> -->
 
 </body>
 

@@ -92,13 +92,13 @@ function initializeSwipers (containerSelector) {
     }, 350);
   });
 
-  // Ajustar altura igual al iniciar en responsive
-  setEqualHeight (swiper);
+  // // Ajustar altura igual al iniciar en responsive
+  // setEqualHeight (swiper);
 
-  // Ajustar altura igual al redimensionar
-  window.addEventListener ('resize', () => {
-    setEqualHeight (swiper);
-  });
+  // // Ajustar altura igual al redimensionar
+  // window.addEventListener ('resize', () => {
+  //   setEqualHeight (swiper);
+  // });
 
   updateActiveLink ();
 }
