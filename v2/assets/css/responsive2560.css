@@ -550,4 +550,38 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
     #Contact #footer p {
         font-size: 18px;
     }
+
+    /** revisar **/
+
+    #home .text-content img {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
+    }
+
+    #home .text-content h4 {
+        font-size: 16.8px;
+        line-height: 32.8px;
+    }
+
+    #home .text-content h1 {
+        font-size: 50.4px;
+        line-height: 130%;
+        letter-spacing: .4px;
+    }
+
+    #home .elipses .elipse-inside:nth-child(1) {
+        width: 496px;
+        height: 496px;
+    }
+
+    #home .elipses .elipse-inside:nth-child(2) {
+        width: 456px;
+        height: 456px;
+    }
+
+    #home .elipses .elipse-inside:nth-child(3) {
+        width: 416px;
+        height: 416px;
+    }
 }

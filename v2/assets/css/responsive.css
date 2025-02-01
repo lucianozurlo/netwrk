@@ -337,6 +337,7 @@
 
     #home {
         margin-bottom: 110px;
+        height: 90vh;
     }
 
     #home .container {
@@ -380,14 +381,20 @@
         justify-content: center;
     }
 
+    #home .text-content img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 3px;
+    }
+
     #home .text-content p.lead {
         font-size: 24px;
         line-height: 33px;
     }
 
     #home .text-content h4 {
-        font-size: 24px;
-        line-height: 33px;
+        font-size: 20px;
+        line-height: 27px;
         margin-bottom: 0;
     }
 
@@ -408,6 +415,26 @@
     #home .text-content a {
         font-size: 14px;
         width: 160px;
+        margin-top: 10px;
+    }
+
+    #home .elipses .elipse-inside {
+        backdrop-filter: blur(6px);
+    }
+
+    #home .elipses .elipse-inside:nth-child(1) {
+        width: 120.1vw;
+        height: 120.1vw;
+    }
+
+    #home .elipses .elipse-inside:nth-child(2) {
+        width: 110.36vw;
+        height: 110.36vw;
+    }
+
+    #home .elipses .elipse-inside:nth-child(3) {
+        width: 100.61vw;
+        height: 100.61vw;
     }
 
     #About {

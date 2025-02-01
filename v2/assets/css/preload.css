@@ -43,11 +43,16 @@
     vertical-align: middle;
 }
 
+.page-spinner img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
 .progress-bar-container {
     background: #333;
     /*grisoscuro*/
     width: 120px;
-    height: 14px;
+    height: 4px;
     border-radius: 10px;
     overflow: hidden;
     margin: 0 auto;
@@ -73,6 +78,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #111;
+    color: transparent;
     font-size: 12px;
     font-weight: 600;
 }
