@@ -610,27 +610,34 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 12.80px;
+        gap: 14.08px;
+        /* 12.80px * 1.1 */
     }
 
     #home .text-content img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 10px;
+        width: 44px;
+        /* 40px * 1.1 */
+        height: 44px;
+        /* 40px * 1.1 */
+        margin-bottom: 11px;
+        /* 10px * 1.1 */
     }
 
     #home .text-content h4 {
         font-family: 'PP Telegraf';
         font-weight: 400;
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 24.2px;
+        /* 22px * 1.1 */
+        line-height: 33px;
+        /* 30px * 1.1 */
         text-align: center;
         color: #f9f9f9;
     }
 
     #home .text-content h1 {
         font-weight: 800;
-        font-size: 60px;
+        font-size: 66px;
+        /* 60px * 1.1 */
         line-height: 122%;
         text-align: center;
         margin-bottom: 0 !important;
@@ -643,7 +650,8 @@
     #home .text-content p {
         font-family: 'Montserrat';
         font-weight: normal;
-        font-size: 14.40px;
+        font-size: 15.84px;
+        /* 14.40px * 1.1 */
         font-weight: 400;
         line-height: 130%;
         color: #f9f9f9;
@@ -656,13 +664,18 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        width: 148.80px;
-        height: 32.00px;
-        font-size: 12.80px;
-        margin-top: 20.00px;
+        width: 163.68px;
+        /* 148.80px * 1.1 */
+        height: 35.2px;
+        /* 32.00px * 1.1 */
+        font-size: 14.08px;
+        /* 12.80px * 1.1 */
+        margin-top: 22px;
+        /* 20.00px * 1.1 */
         background: #f9f9f9;
         color: #000;
-        border-radius: 40.00px;
+        border-radius: 44px;
+        /* 40.00px * 1.1 */
         transition: all .2s ease-in-out;
     }
 
@@ -682,8 +695,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 0.80px;
-        border-radius: 40.00px;
+        padding: 0.88px;
+        /* 0.80px * 1.1 */
+        border-radius: 44px;
+        /* 40.00px * 1.1 */
         background: linear-gradient(130deg, #ffe7e7aa -7%, #f9f9f9aa 0%, #22222200 24%, #f9f9f922 65%, #7381ff50 88%, #00074900 111%);
         mask: linear-gradient(#f9f9f9 0 0) content-box, linear-gradient(#f9f9f9 0 0);
         -webkit-mask-composite: destination-out;
@@ -722,8 +737,10 @@
         width: 100%;
         height: 100%;
         z-index: 1;
-        border-radius: 8.00px;
-        backdrop-filter: blur(12.56px);
+        border-radius: 8.8px;
+        /* 8.00px * 1.1 */
+        backdrop-filter: blur(13.82px);
+        /* 12.56px * 1.1 ≈ 13.82px */
         transition: all .3s ease-in-out;
         will-change: transform;
     }
@@ -734,18 +751,24 @@
     }
 
     #home .elipses .elipse-inside:nth-child(1) {
-        width: 620px;
-        height: 620px;
+        width: 682px;
+        /* 620px * 1.1 */
+        height: 682px;
+        /* 620px * 1.1 */
     }
 
     #home .elipses .elipse-inside:nth-child(2) {
-        width: 570px;
-        height: 570px;
+        width: 627px;
+        /* 570px * 1.1 */
+        height: 627px;
+        /* 570px * 1.1 */
     }
 
     #home .elipses .elipse-inside:nth-child(3) {
-        width: 520px;
-        height: 520px;
+        width: 572px;
+        /* 520px * 1.1 */
+        height: 572px;
+        /* 520px * 1.1 */
     }
 
     #home .elipses .elipse-inside::before {
@@ -755,15 +778,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 1.00px;
+        padding: 1.1px;
+        /* 1.00px * 1.1 */
         background: linear-gradient(130deg, #ffe7e7aa -7%, #f9f9f9aa 0%, #22222200 24%, #f9f9f922 65%, #7381ff50 88%, #00074900 111%);
         mask: linear-gradient(#f9f9f9 0 0) content-box, linear-gradient(#f9f9f9 0 0);
         -webkit-mask-composite: destination-out;
         mask-composite: exclude;
         z-index: 2;
     }
-
-
 
     /* #home .bg1 {
     align-items: flex-end;
@@ -813,11 +835,13 @@
 
     /** HOME **/
     #home {
-        margin-bottom: 130px;
+        margin-bottom: 143px;
+        /* 130px * 1.1 */
     }
 
     #home .text-content {
-        gap: 12px;
+        gap: 13.2px;
+        /* 12px * 1.1 */
     }
 
     #home .text-content>* {
@@ -829,32 +853,43 @@
     }
 
     #home .text-content h4 {
-        font-size: 21px;
+        font-size: 23.1px;
+        /* 21px * 1.1 */
         font-weight: 400;
         margin-bottom: 0;
     }
 
     #home .text-content h1 {
-        font-size: 63px;
+        font-size: 69.3px;
+        /* 63px * 1.1 */
         line-height: 130%;
-        letter-spacing: .5px;
+        letter-spacing: 0.55px;
+        /* 0.5px * 1.1 */
     }
 
     #home .text-content p {
-        font-size: 18px;
+        font-size: 19.8px;
+        /* 18px * 1.1 */
     }
 
     #home .text-content a {
-        width: 164px;
-        height: 32px;
-        font-size: 15px;
-        margin-top: 20px;
-        border-radius: 50px;
+        width: 180.4px;
+        /* 164px * 1.1 */
+        height: 35.2px;
+        /* 32px * 1.1 */
+        font-size: 16.5px;
+        /* 15px * 1.1 */
+        margin-top: 22px;
+        /* 20px * 1.1 */
+        border-radius: 55px;
+        /* 50px * 1.1 */
     }
 
     #home .text-content a:hover:before {
-        padding: 1px;
-        border-radius: 50px;
+        padding: 1.1px;
+        /* 1px * 1.1 */
+        border-radius: 55px;
+        /* 50px * 1.1 */
     }
 
     #home {
