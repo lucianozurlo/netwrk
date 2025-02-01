@@ -126,8 +126,8 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
 
     /** ABOUT **/
     #About {
-        gap: 51.2px;
-        margin-bottom: 160px;
+        gap: 46.08px;
+        margin-bottom: 144px;
     }
 
     #About .bg img {
@@ -135,232 +135,232 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
     }
 
     #About .team-content {
-        padding: 14.4px 40px 40px !important;
-        width: 897.6px;
-        backdrop-filter: blur(12px);
-        border-radius: 6.96px;
+        padding: 12.96px 36px 36px !important;
+        width: 807.84px;
+        backdrop-filter: blur(10.8px);
+        border-radius: 6.264px;
     }
 
     #About .team-content h3 {
-        font-size: 20.8px;
-        line-height: 28px;
-        margin-top: 11.2px;
-        margin-bottom: 24px;
+        font-size: 18.72px;
+        line-height: 25.2px;
+        margin-top: 10.08px;
+        margin-bottom: 21.6px;
     }
 
     #About .team-frame {
-        gap: 17.6px;
-        width: 352.8px;
+        gap: 15.84px;
+        width: 317.52px;
     }
 
     #About .team-philosophy {
-        max-width: 785.6px;
-        margin-top: 24px;
-        padding: 25.6px;
-        backdrop-filter: blur(12px);
+        max-width: 707.04px;
+        margin-top: 21.6px;
+        padding: 23.04px;
+        backdrop-filter: blur(10.8px);
     }
 
     #About .team-philosophy h3 {
-        margin-bottom: 8px;
+        margin-bottom: 7.2px;
     }
 
     #About .team-philosophy p {
-        font-size: 12.8px;
+        font-size: 11.52px;
     }
 
     /* Imágenes circulares del equipo */
     #About .style-content:before,
     #About .team-img {
-        width: 240px;
-        height: 240px;
+        width: 216px;
+        height: 216px;
     }
 
     #About .team-img:hover:before,
     #About .team-img:active:before {
-        width: 240px;
-        height: 240px;
+        width: 216px;
+        height: 216px;
     }
 
     #About .team-img img {
+        width: 162px;
+        height: 162px;
+    }
+
+    #About a:hover .team-img img {
         width: 180px;
         height: 180px;
     }
 
-    #About a:hover .team-img img {
-        width: 200px;
-        height: 200px;
-    }
-
     #About .team-txt h3 {
-        font-size: 24px;
-        line-height: 24px;
+        font-size: 21.6px;
+        line-height: 21.6px;
         margin-bottom: 0;
     }
 
     #About .team-txt p {
-        font-size: 19.2px;
-        line-height: 26.4px;
+        font-size: 17.28px;
+        line-height: 23.76px;
     }
 
     #About .aboutus-content h3 {
-        font-size: 20.8px;
-        line-height: 28px;
+        font-size: 18.72px;
+        line-height: 25.2px;
     }
 
     #About .aboutus-content p {
-        font-size: 12.8px;
+        font-size: 11.52px;
     }
 
     /** OUR NETWORK **/
     #OurNetwork {
-        margin-bottom: 112px;
+        margin-bottom: 100.8px;
     }
 
     #OurNetwork h1 {
-        margin-bottom: 76px;
+        margin-bottom: 68.4px;
     }
 
     .circle-div {
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(7.2px);
     }
 
     .parallax-layer.circle1 .circle-div {
-        width: 736px;
-        height: 736px;
+        width: 662.4px;
+        height: 662.4px;
     }
 
     .parallax-layer.circle2 .circle-div {
-        width: 622.4px;
-        height: 622.4px;
-        left: 56.8px;
-        top: 56.8px;
+        width: 560.16px;
+        height: 560.16px;
+        left: 51.12px;
+        top: 51.12px;
     }
 
     .parallax-layer.circle3 .circle-div {
-        width: 508.8px;
-        height: 508.8px;
-        left: 113.6px;
-        top: 113.6px;
+        width: 457.92px;
+        height: 457.92px;
+        left: 102.24px;
+        top: 102.24px;
     }
 
     .parallax-layer.circle4 .circle-div {
-        width: 395.2px;
-        height: 395.2px;
-        left: 170.4px;
-        top: 170.4px;
+        width: 355.68px;
+        height: 355.68px;
+        left: 153.36px;
+        top: 153.36px;
     }
 
     .parallax-layer.circle5 .circle-div {
-        width: 281.6px;
-        height: 281.6px;
-        left: 227.2px;
-        top: 227.2px;
+        width: 253.44px;
+        height: 253.44px;
+        left: 204.48px;
+        top: 204.48px;
     }
 
     .parallax-layer.circle6 .circle-div {
-        width: 168px;
-        height: 168px;
-        left: 284px;
-        top: 284px;
+        width: 151.2px;
+        height: 151.2px;
+        left: 255.6px;
+        top: 255.6px;
     }
 
     .parallax-layer.button .iso {
-        width: 115.2px;
-        height: 115.2px;
+        width: 103.68px;
+        height: 103.68px;
     }
 
     .parallax-layer .iso .startup p {
-        font-size: 14.4px;
-        line-height: 28px;
+        font-size: 12.96px;
+        line-height: 25.2px;
     }
 
     .parallax-layer .iso .startup:hover img {
-        filter: blur(20px) drop-shadow(0 0 20px #f9f9f9);
+        filter: blur(18px) drop-shadow(0 0 18px #f9f9f9);
     }
 
     .base {
-        width: 72.32px;
-        height: 72.32px;
-        border-radius: 6.53px;
-        backdrop-filter: blur(16px);
+        width: 65.088px;
+        height: 65.088px;
+        border-radius: 5.877px;
+        backdrop-filter: blur(14.4px);
     }
 
     /** KEY INVESTMENTS **/
     #KeyInvestments {
-        gap: 51.2px;
-        margin-bottom: 160px;
+        gap: 46.08px;
+        margin-bottom: 144px;
     }
 
     #KeyInvestments .key-content {
-        gap: 15.2px;
-        width: 901.6px;
+        gap: 13.68px;
+        width: 811.44px;
     }
 
     #KeyInvestments .nav {
-        width: 215.2px;
-        gap: 19.2px;
+        width: 193.68px;
+        gap: 17.28px;
     }
 
     #KeyInvestments li.nav-item {
-        width: 215.2px;
-        height: 64px;
-        border-radius: 8px;
+        width: 193.68px;
+        height: 57.6px;
+        border-radius: 7.2px;
     }
 
     #KeyInvestments li.nav-item:before {
-        width: 215.2px;
-        height: 64px;
-        border-radius: 8px;
+        width: 193.68px;
+        height: 57.6px;
+        border-radius: 7.2px;
     }
 
     #KeyInvestments li.nav-item .nav-link .back-fill {
-        width: 215.2px;
-        height: 64px;
+        width: 193.68px;
+        height: 57.6px;
     }
 
     #KeyInvestments .nav-tabs .nav-link {
-        backdrop-filter: blur(12px);
-        border-radius: 8px;
+        backdrop-filter: blur(10.8px);
+        border-radius: 7.2px;
     }
 
     #KeyInvestments .nav-tabs .nav-link img {
-        max-height: 48px;
+        max-height: 43.2px;
     }
 
     #KeyInvestments .box-shadow-all {
-        width: 901.6px;
-        height: 480px;
+        width: 811.44px;
+        height: 432px;
     }
 
     #KeyInvestments .box-shadow-container {
-        width: 215.2px;
-        height: 480px;
-        gap: 19.2px;
+        width: 193.68px;
+        height: 432px;
+        gap: 17.28px;
     }
 
     #KeyInvestments .box-shadow-container .box-shadow {
-        width: 215.2px;
-        height: 64px;
-        border-radius: 8px;
+        width: 193.68px;
+        height: 57.6px;
+        border-radius: 7.2px;
         /* box-shadow: 0 0 22px #f9f9f955; */
     }
 
     #KeyInvestments .tab-content {
-        width: 671.2px;
-        height: 480px;
-        border-radius: 8px;
-        backdrop-filter: blur(12px);
+        width: 604.08px;
+        height: 432px;
+        border-radius: 7.2px;
+        backdrop-filter: blur(10.8px);
     }
 
     #KeyInvestments .tab-content>.tab-pane {
-        width: 671.2px;
-        height: 480px;
+        width: 604.08px;
+        height: 432px;
     }
 
     #KeyInvestments .tab-content>.tab-pane.active {
-        width: 671.2px;
-        height: 480px;
-        padding: 80px;
+        width: 604.08px;
+        height: 432px;
+        padding: 72px;
     }
 
     #KeyInvestments .tab-content>.tab-pane .back-fill.style-fill {
@@ -368,58 +368,58 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
     }
 
     #KeyInvestments .tab-content>.tab-pane .back-fill {
-        gap: 12.8px;
+        gap: 11.52px;
     }
 
     #KeyInvestments .tab-content>.tab-pane .back-fill h3 {
-        width: 426.4px;
-        font-size: 32px;
-        line-height: 44px;
+        width: 383.76px;
+        font-size: 28.8px;
+        line-height: 39.6px;
     }
 
     #KeyInvestments .tab-content>.tab-pane .back-fill p {
-        width: 426.4px;
-        font-size: 12.8px;
-        margin-bottom: 5.6px;
+        width: 383.76px;
+        font-size: 11.52px;
+        margin-bottom: 5.04px;
     }
 
     #KeyInvestments .tab-content>.tab-pane .back-fill-image {
-        background-size: 371.2px;
-        background-position: right -56px bottom -112px;
+        background-size: 334.08px;
+        background-position: right -50.4px bottom -100.8px;
     }
 
     /** CO-INVESTORS **/
     #CoInvestors {
-        gap: 51.2px;
-        margin-bottom: 160px;
+        gap: 46.08px;
+        margin-bottom: 144px;
     }
 
     #CoInvestors .investors-container {
-        max-width: 960px;
-        gap: 51.2px 38.4px;
+        max-width: 864px;
+        gap: 46.08px 34.56px;
     }
 
     #CoInvestors .style-content,
     #CoInvestors .style-fill {
-        border-radius: 15.52px;
+        border-radius: 13.968px;
     }
 
     #CoInvestors .investors-container a {
-        width: 272.59px;
-        height: 103.45px;
-        border-radius: 15.52px;
+        width: 245.33px;
+        height: 93.11px;
+        border-radius: 13.968px;
     }
 
     #CoInvestors .investors-container a:hover {
-        width: 280.59px;
-        height: 111.45px;
+        width: 252.53px;
+        height: 100.31px;
         margin: 0;
     }
 
     /** CONTACT **/
     #Contact {
-        padding: 96px 0 50.4px;
-        gap: 43.2px;
+        padding: 86.4px 0 45.36px;
+        gap: 38.88px;
     }
 
     #Contact .bg img {
@@ -428,80 +428,80 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
     }
 
     #Contact .text-content {
-        gap: 12.8px;
+        gap: 11.52px;
     }
 
     #Contact .text-content h2 {
-        font-size: 32px;
-        line-height: 44px;
+        font-size: 28.8px;
+        line-height: 39.6px;
     }
 
     #Contact .text-content p {
-        font-size: 14.4px;
+        font-size: 12.96px;
     }
 
     #Contact .swiper-container {
-        border-radius: 4px;
-        gap: 51.2px;
-        width: 672px;
+        border-radius: 3.6px;
+        gap: 46.08px;
+        width: 604.8px;
     }
 
     #Contact .swiper-container .selector-container {
-        gap: 8px;
-        width: 398.4px;
-        height: 48px;
-        border-radius: 40px;
+        gap: 7.2px;
+        width: 358.56px;
+        height: 43.2px;
+        border-radius: 36px;
     }
 
     #Contact .swiper-container .selector-container:before {
-        padding: 0.8px;
-        width: 398.4px;
-        height: 48px;
-        border-radius: 40px;
+        padding: 0.72px;
+        width: 358.56px;
+        height: 43.2px;
+        border-radius: 36px;
     }
 
     #Contact .swiper.mySwiper {
-        padding: 8px 0 0;
-        gap: 51.2px;
+        padding: 7.2px 0 0;
+        gap: 46.08px;
     }
 
     #Contact .swiper-container .selector-container .selector .go-to-slide {
-        width: 188px;
-        height: 32px;
-        font-size: 12.8px;
+        width: 169.2px;
+        height: 28.8px;
+        font-size: 11.52px;
     }
 
     #Contact .swiper-container .selector-container .selector .highlight {
-        height: 32px;
-        border-radius: 40px;
+        height: 28.8px;
+        border-radius: 36px;
     }
 
     #Contact .swiper-slide {
-        font-size: 14.4px;
+        font-size: 12.96px;
     }
 
     #Contact .swiper-slide form {
-        gap: 12px;
+        gap: 10.8px;
     }
 
     #Contact .swiper-slide form .form-inputs {
-        gap: 14.4px;
+        gap: 12.96px;
     }
 
     #Contact .swiper-slide form .form-inputs h4 {
-        padding-left: 19.2px;
-        font-size: 14.4px;
+        padding-left: 17.28px;
+        font-size: 12.96px;
     }
 
     #Contact .swiper-slide form .form-inputs .row-input {
         padding: 0;
-        gap: 19.2px;
-        margin-bottom: 11.2px;
+        gap: 17.28px;
+        margin-bottom: 10.08px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input {
-        gap: 6.4px;
-        width: calc(50% - 9.6px);
+        gap: 5.76px;
+        width: calc(50% - 8.64px);
     }
 
     #Contact .swiper-slide form .form-inputs .column-input.full {
@@ -509,46 +509,46 @@ only screen and (min-resolution: 192dpi) and (min-width: 1000px) {
     }
 
     #Contact .swiper-slide form .form-inputs .column-input label {
-        height: 16.8px;
-        font-size: 12.8px;
+        height: 15.12px;
+        font-size: 11.52px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input label span {
-        font-size: 9.6px;
+        font-size: 8.64px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input input,
     #Contact .swiper-slide form .form-inputs .column-input textarea {
-        height: 32px;
-        padding: 0 11.2px !important;
-        font-size: 11.2px;
+        height: 28.8px;
+        padding: 0 10.08px !important;
+        font-size: 10.08px;
     }
 
     #Contact .swiper-slide form .form-inputs .column-input textarea {
-        height: 64px;
+        height: 57.6px;
     }
 
     #Contact .swiper-slide form input[type="submit"] {
-        width: 120px;
-        height: 32px;
-        margin: 17.6px auto 68.8px;
-        font-size: 12.8px;
+        width: 108px;
+        height: 28.8px;
+        margin: 15.84px auto 61.92px;
+        font-size: 11.52px;
     }
 
     #Contact .drag-drop-area {
-        max-width: 313.6px;
-        height: 64px;
-        border-radius: 4px;
-        font-size: 11.2px;
+        max-width: 282.24px;
+        height: 57.6px;
+        border-radius: 3.6px;
+        font-size: 10.08px;
     }
 
     #Contact #footer img {
-        width: 133.38px;
-        margin-top: 8px;
+        width: 120.04px;
+        margin-top: 7.2px;
     }
 
     #Contact #footer p {
-        font-size: 14.4px;
+        font-size: 12.96px;
     }
 
     /** revisar **/
